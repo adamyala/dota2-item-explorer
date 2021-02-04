@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+
+<body>
+
+  <main id="app-4">
+    <section>
+      <header>
+        <h2>DotA 2 Item Explorer 7.28b</h2>
+      </header>
+    </section>
+
+    <section>
+      <header>
+        <h3>Filters</h3>
+      </header>
+
+      <div v-for="attribute in attributes">
+        <input type="checkbox" v-bind:value="attribute" v-model="filteredAttributes">
+        <label>{{attribute}}</label><br>
+      </div>
+
+    </section>
+
+    <section>
+      <p>Selected Attributes: {{ filteredAttributes }}</p>
+    </section>
+
+    <section>
+
+      <aside v-for="item in filteredItems">
+
+        <img :src="item['image-url']">
+
+        <h3>{{ item.name }}</h3>
+
+        <p v-html="item['description-html']"></p>
+
+        <p>{{ item.cost }}</p>
+
+        <p v-html="item['attributes-html']"></p>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
