@@ -3,14 +3,15 @@
 
 <head>
   <title></title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="vue.js"></script>
+  <script src="items.js"></script>
 
-  <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  <link rel="stylesheet" href="mvp.css">
 </head>
 
 <body>
 
-  <main id="app-4">
+  <main id="app">
     <section>
       <header>
         <h2>DotA 2 Item Explorer 7.28b</h2>
@@ -35,19 +36,28 @@
 
     <section>
 
-      <aside v-for="item in filteredItems">
+      <table>
+        <thead>
+          <th></th>
+          <th>Name</th>
+          <th>Cost</th>
+          <th>Attributes</th>
+        </thead>
 
-        <img :src="item['image-url']">
+        <tbody>
+          <tr v-for="item in filteredItems">
 
-        <h3>{{ item.name }}</h3>
+            <td><img :src="item.imageUrl"></td>
 
-        <p v-html="item['description-html']"></p>
+            <td>{{ item.name }}</td>
+    
+            <td>{{ item.cost }}</td>
+    
+            <td v-html="item.attributesHtml"></td>
 
-        <p>{{ item.cost }}</p>
-
-        <p v-html="item['attributes-html']"></p>
-
-      </aside>
+          </tr>
+        </tbody>
+      </table>
 
     </section>
 
