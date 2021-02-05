@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta charset="utf-8"/>
   <title></title>
   <script src="vue.js"></script>
   <script src="items.js"></script>
@@ -41,7 +42,8 @@
           <th></th>
           <th>Name</th>
           <th>Cost</th>
-          <th>Attributes</th>
+          <th v-for="attribute in filteredAttributes">{{ attribute }}</th>
+          <th>All Attributes</th>
         </thead>
 
         <tbody>
@@ -53,6 +55,10 @@
     
             <td>{{ item.cost }}</td>
     
+            <td v-for="attribute in filteredAttributes">
+              {{ item.attributesObject[attribute] }}
+            </td>
+
             <td v-html="item.attributesHtml"></td>
 
           </tr>
