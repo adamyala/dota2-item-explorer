@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <title></title>
   <script src="vue.js"></script>
   <script src="items.js"></script>
@@ -20,20 +20,37 @@
     </section>
 
     <section>
-      <header>
-        <h3>Filters</h3>
-      </header>
-
-      <div v-for="attribute in attributes">
-        <input type="checkbox" v-bind:value="attribute" v-model="filteredAttributes">
-        <label>{{attribute}}</label><br>
-      </div>
-
+      <p><b>Attribute Filter</b></p>
     </section>
 
     <section>
-      <p>Selected Attributes: {{ filteredAttributes }}</p>
+      <p>Selected Attributes: {{ filterAttributes }}</p>
     </section>
+
+    <section>
+      <div v-for="attribute in attributes">
+        <input type="checkbox" v-bind:value="attribute" v-model="filterAttributes">
+        <label>{{attribute}}</label><br>
+      </div>
+    </section>
+
+    <section>
+      <p>
+        <b>
+          Cost Sort
+        </b>
+      </p>
+    </section>
+
+    <section>
+      <input type="radio" value="false" v-model="filterCostSort">
+      <label>Lowest to Highest</label><br>
+
+      <input type="radio" value="true" v-model="filterCostSort">
+      <label>Highest to Lowest</label><br>
+    </section>
+
+    <hr>
 
     <section>
 
@@ -42,20 +59,22 @@
           <th></th>
           <th>Name</th>
           <th>Cost</th>
-          <th v-for="attribute in filteredAttributes">{{ attribute }}</th>
+          <th v-for="attribute in filterAttributes">{{ attribute }}</th>
           <th>All Attributes</th>
         </thead>
 
         <tbody>
           <tr v-for="item in filteredItems">
 
-            <td><img :src="item.imageUrl"></td>
+            <td>
+              <img :src="item.imageUrl">
+            </td>
 
             <td>{{ item.name }}</td>
-    
+
             <td>{{ item.cost }}</td>
-    
-            <td v-for="attribute in filteredAttributes">
+
+            <td v-for="attribute in filterAttributes">
               {{ item.attributesObject[attribute] }}
             </td>
 
