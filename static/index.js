@@ -1,13 +1,33 @@
 let appData = {
   el: '#app',
   data: {
-    attributes: attributes,
     items: items,
 
     filterAttributes: [],
     filterCostSort: null,
 
     filteredItems: items,
+  },
+  computed: {
+    attributes: function () {
+      let attributes = [];
+
+      this.items.forEach(
+        function (item) {
+          if (!item.attributesArray) {
+            return
+          }
+          attributes = attributes.concat(item.attributesArray);
+        }
+      )
+
+      let uniqueAttributes = new Set(attributes);
+      let uniqueAttributeArray = Array.from(uniqueAttributes);
+
+      uniqueAttributeArray.sort();
+
+      return uniqueAttributeArray;
+    }
   },
   methods: {
     filterItemsByAttribute: function (selectedAttributes) {
@@ -34,7 +54,7 @@ let appData = {
 
     },
     sortItemsByCost: function (costSort) {
-        this.filteredItems = this.sortItems(this.filteredItems);
+      this.filteredItems = this.sortItems(this.filteredItems);
     },
     sortItems: function (items) {
       if (this.filterCostSort === "false") {
