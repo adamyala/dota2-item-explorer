@@ -48,7 +48,14 @@ def process_item_data(unprocessed_json_file_name):
             continue
 
         ids_to_skip = [
+            30, # gem
+            182,  # stout_shield
             218,  # ward_dispenser
+            304,  # ironwood_tree
+            371,  # fallen_sky
+            655, # grandmasters_glaive
+            609, # aghanims_shard
+            1032, # pocket_roshan
         ]
         if item_json['id'] in ids_to_skip:
             continue
