@@ -1,139 +1,120 @@
 import json
-from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
 
-DOTA_2_ITEMS_JSON_URL = 'http://www.dota2.com/jsfeed/itemdata'
-ITEM_IMAGE_TEMPLATE = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{}'
+BASE_URL = 'https://www.dotabuff.com'
 
-"""
-Steps in this script:
-    1. Download item data from dota2.com. We save this with the date since this data can change any time.
-    2. Parse text fields in the json so we're dealing with just json objects 
-"""
+session = requests.Session()
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:86.0) Gecko/20100101 Firefox/86.0'}
+session.headers.update(headers)
 
 
-def download_unprocessed_item_data():
-    response = requests.get(url=DOTA_2_ITEMS_JSON_URL)
-    unprocessed_items_json = response.json()
+def process_stats_exceptions(name, stats):
+    if name == 'Phase Boots':
+        # {"Movement Speed": "45", "Damage (MELEE)": "18", "Damage (RANGED)": "12", "Armor": "4"}
+        combined_value = stats["Damage (RANGED)"] + '/' + stats["Damage (MELEE)"]
+        stats['Damage'] = combined_value
+        del stats["Damage (MELEE)"]
+        del stats["Damage (RANGED)"]
 
-    today_date_string = str(datetime.today().date())
-    unprocessed_json_file_name = f'dota-items-unprocessed-json-{today_date_string}.json'
+    elif name == 'Power Treads':
+        # {"Movement Speed": "45", "Selected Attribute": "10", "Attack Speed": "25"}
+        stat_value = stats['Selected Attribute']
+        stats['Intelligence'] = stats['Strength'] = stats['Agility'] = stat_value
+        del stats['Selected Attribute']
 
-    with open(file=unprocessed_json_file_name, mode='w') as file:
-        json.dump(unprocessed_items_json, file)
+    elif name == 'Eternal Shroud':
+        # {"Magic Resistance": "20%", "HP Regeneration": "8.5", "Spell Lifesteal (Heroes)": "20.0%", "Spell Lifesteal (Creeps)": "4.0%"}
+        stats['Spell Lifesteal (Hero)'] = stats['Spell Lifesteal (Heroes)']
+        del stats['Spell Lifesteal (Heroes)']
+        stats['Spell Lifesteal (Creep)'] = stats['Spell Lifesteal (Creeps)']
+        del stats['Spell Lifesteal (Creeps)']
 
-    return unprocessed_json_file_name
-
-
-def process_item_data(unprocessed_json_file_name):
-    with open(file=unprocessed_json_file_name) as file:
-        unprocessed_items_json = json.load(file)
-
-    parsed_items_json = []
-
-    item_data = unprocessed_items_json['itemdata']
-    for _, item_json in item_data.items():
-        item_name = item_json['dname']
-        parsed_item = {'name': item_name}
-
-        item_cost = item_json['cost']
-        if item_cost == 0:
-            continue
-        parsed_item['cost'] = item_cost
-
-        is_consumable = item_json['qual'] == 'consumable'
-        if is_consumable:
-            continue
-
-        ids_to_skip = [
-            30, # gem
-            182,  # stout_shield
-            218,  # ward_dispenser
-            304,  # ironwood_tree
-            371,  # fallen_sky
-            655, # grandmasters_glaive
-            609, # aghanims_shard
-            1032, # pocket_roshan
-        ]
-        if item_json['id'] in ids_to_skip:
-            continue
-
-        item_image = item_json['img']
-        image_url = ITEM_IMAGE_TEMPLATE.format(item_image)
-        parsed_item['imageUrl'] = image_url
-
-        item_description = item_json['desc']
-        parsed_item['descriptionHtml'] = item_description
-
-        attributes = item_json['attrib']
-        if attributes:
-            parsed_item['attributesHtml'] = attributes
-
-            attribute_pairs = parse_attributes(attributes)
-            parsed_item['attributesObject'] = attribute_pairs
-
-            attribute_list = [key for key in attribute_pairs]
-            parsed_item['attributesArray'] = attribute_list
-
-        parsed_items_json.append(parsed_item)
-
-    return parsed_items_json
+    return stats
 
 
-def write_processed_data(processed_data):
-    today_date_string = str(datetime.today().date())
-    processed_json_file_name = f'dota-items-processed-json-{today_date_string}.json'
-    with open(processed_json_file_name, 'w') as file:
-        json.dump(processed_data, file)
+response = session.get(f'{BASE_URL}/items')
+soup = BeautifulSoup(response.content, 'html.parser')
+item_tds = soup.find_all(class_='cell-xlarge')
+item_ids = []
+for td in item_tds:
+    a = td.next
+    item_path = a.attrs['href']
+    item_path_parts = item_path.split('/')
+    item_id = item_path_parts[-1]
+    item_ids.append(item_id)
 
+item_data = []
+for item_id in item_ids:
+    url = f'{BASE_URL}/items/{item_id}/tooltip'
+    response = session.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
 
-def parse_attributes(attributes):
-    attributes_without_spans = [
-        'Spell Amplification ',
-        'Damage (MELEE)',
-        'Damage (RANGED)',
-        'Spell Lifesteal Amplification',
-        'Mana Regen Amplification',
-        'Spell Lifesteal (Hero)',
-        'Spell Lifesteal (Creep)',
-        'Status Resistance',
-        'Self HP Regen and Lifesteal Amp',
-    ]
-    for attribute in attributes_without_spans:
-        attributes = attributes.replace(attribute, f'<span class=\"attribValText\">{attribute}<\/span>')
+    item = {}
 
-    # unescape backslashes
-    attributes = attributes.encode('utf-8').decode('unicode_escape')
-    # remove html cruft
-    attributes = attributes.replace('+', '').replace('\\', '').replace('\n', '')
+    name_div = soup.find(class_='name')
+    item_name = name_div.text
+    item['name'] = item_name
 
-    soup = BeautifulSoup(attributes, 'html.parser')
+    price_div = soup.find(class_='price')
+    price_text = price_div.text
+    price_only_digits = price_text.replace(',', '')
+    if price_only_digits == 'No Cost':
+        item['price'] = 0
+    elif price_only_digits == 'Neutral Item':
+        continue
+    else:
+        item['price'] = int(price_only_digits)
 
-    attribute_pairs = {}
-    spans = soup.find_all('span')
-    span_iterable = iter(spans)
-    span_pairs = list(zip(span_iterable, span_iterable))
+    image_div = soup.find(alt=item['name'])
+    image_path = image_div.attrs['src']
+    item['imageUrl'] = BASE_URL + image_path
 
-    for span_one, span_two in span_pairs:
-        span_one_class = span_one.attrs['class'][0]
-        if span_one_class == 'attribVal':
-            value_span, attribute_span = span_one, span_two
-        else:
-            value_span, attribute_span = span_two, span_one
+    description_div = soup.find(class_='description-block')
+    if description_div:
+        item['description'] = description_div.text
 
-        value = value_span.text
-        attribute = attribute_span.text
-        attribute_pairs[attribute] = value
+    stats = {}
+    stat_attribute_divs = soup.find_all(class_='stat attribute')
+    for stat_attribute_div in stat_attribute_divs:
+        stat_label_div = stat_attribute_div.find(class_='label')
+        stat_value_div = stat_attribute_div.find(class_='value')
+        label_text = stat_label_div.text.lstrip('-')
+        stats[label_text] = stat_value_div.text
 
-    return attribute_pairs
+    processed_stats = process_stats_exceptions(item_name, stats)
 
+    item['statsObject'] = stats
+    item['statsArray'] = list(stats.keys())
 
-def main():
-    unprocessed_file = download_unprocessed_item_data()
-    processed_data = process_item_data(unprocessed_file)
-    write_processed_data(processed_data)
+    builds_into_div = soup.find(class_='item-builds-into')
+    if builds_into_div:
+        builds_into = []
+        item_divs = builds_into_div.find_all('img')
+        for item_div in item_divs:
+            item_tooltip_path = item_div.attrs['data-tooltip-url']
+            _, _, item_id, _ = item_tooltip_path.split('/')
+            builds_into.append(item_id)
+        item['buildsInto'] = builds_into
 
+    builds_from_div = soup.find(class_='item-builds-from')
+    if builds_from_div:
+        builds_from = []
+        item_divs = builds_from_div.find_all('img')
+        for item_div in item_divs:
+            item_tooltip_path = item_div.attrs['data-tooltip-url']
+            _, _, item_id, _ = item_tooltip_path.split('/')
+            builds_from.append(item_id)
+        item['buildsFrom'] = builds_from
 
-main()
+    item_data.append(item)
+
+items_file = 'static/items.js'
+with open(items_file, 'w') as file:
+    json.dump(item_data, file)
+
+with open(items_file, 'r') as original:
+    data = original.read()
+with open(items_file, 'w') as modified:
+    modified.write('let items = ' + data)

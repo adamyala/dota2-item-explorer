@@ -2,92 +2,130 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <title></title>
-  <script src="static/vue.js"></script>
-  <script src="static/items.js"></script>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="static/vue.js"></script>
+    <script src="static/items.js"></script>
 
-  <link rel="stylesheet" href="static/mvp.css">
+    <link rel="stylesheet" href="static/mvp.css">
+    <link rel="stylesheet" href="static/dota2-item-explorer.css">
 </head>
 
 <body>
 
-  <main id="app">
+<main id="app">
     <section>
-      <header>
-        <h2>DotA 2 Item Explorer 7.28b</h2>
-      </header>
+        <header>
+            <h2>DotA 2 Item Explorer 7.28c</h2>
+        </header>
     </section>
 
     <section>
-      <p><b>Attribute Filter</b></p>
+        <p><b>Stat Filter</b></p>
     </section>
 
     <section>
-      <p>Selected Attributes: {{ filterAttributes }}</p>
+        <div style="padding: 10px" v-for="stat in stats">
+            <input type="checkbox" v-bind:value="stat" v-model="filterStats">
+            <label>{{stat}}</label>
+        </div>
+    </section>
+
+    <article v-if="filterStats.length">
+        <aside>
+            <p>
+                <b>Selected Stats:</b>
+                <span v-for="(stat, index) in filterStats">
+                    <span v-if="index != 0">, </span>
+                    <span>{{ stat }}</span>
+                </span>
+            </p>
+        </aside>
+    </article>
+
+    <section>
+        <p>
+            <b>
+                Sorting
+            </b>
+        </p>
     </section>
 
     <section>
-      <div v-for="attribute in attributes">
-        <input type="checkbox" v-bind:value="attribute" v-model="filterAttributes">
-        <label>{{attribute}}</label><br>
-      </div>
+        <p>
+            Price
+        </p>
     </section>
 
     <section>
-      <p>
-        <b>
-          Cost Sort
-        </b>
-      </p>
+        <input type="radio" value=false v-model="sortPrice">
+        <label>&nbsp;Lowest to Highest</label>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="radio" value=true v-model="sortPrice">
+        <label>&nbsp;Highest to Lowest</label>
     </section>
 
     <section>
-      <input type="radio" value="false" v-model="filterCostSort">
-      <label>Lowest to Highest</label><br>
+        <p>
+            Name
+        </p>
+    </section>
 
-      <input type="radio" value="true" v-model="filterCostSort">
-      <label>Highest to Lowest</label><br>
+    <section>
+        <input type="radio" value=false v-model="sortName">
+        <label>&nbsp;A-Z</label><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="radio" value=true v-model="sortName">
+        <label>&nbsp;Z-A</label><br>
     </section>
 
     <hr>
+    <img src="https://www.dotabuff.com/assets/items/magic-wand-7a4f7e78733470ac31dd40d01c85661493535044e799bc6676971fb90e2ed747.jpg"
+         onmouseover="document.getElementById('place-holder-1').src='./static/magic-wand.png';"
+         onmouseout="document.getElementById('place-holder-1').src='';"
+    >
+    <img src="" id="place-holder-1" style="zindex: 100; position: absolute; width: 500px;"/>
+    </img>
 
     <section>
 
-      <table>
-        <thead>
-          <th></th>
-          <th>Name</th>
-          <th>Cost</th>
-          <th v-for="attribute in filterAttributes">{{ attribute }}</th>
-          <th>All Attributes</th>
-        </thead>
+        <table>
+            <thead>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th v-for="stat in filterStats">{{ stat }}</th>
+            <th>All Stats</th>
+            </thead>
 
-        <tbody>
-          <tr v-for="item in filteredItems">
+            <tbody>
+            <tr v-for="item in filteredItems">
 
-            <td>
-              <img :src="item.imageUrl">
-            </td>
+                <td>
+                    <img :src="item.imageUrl">
+                </td>
 
-            <td>{{ item.name }}</td>
+                <td>{{ item.name }}</td>
 
-            <td>{{ item.cost }}</td>
+                <td>{{ item.price }}</td>
 
-            <td v-for="attribute in filterAttributes">
-              {{ item.attributesObject[attribute] }}
-            </td>
+                <td v-for="stat in filterStats">
+                    {{ item.statsObject[stat] }}
+                </td>
 
-            <td v-html="item.attributesHtml"></td>
+                <!--            <td v-html="item.attributesHtml"></td>-->
 
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+            </tbody>
+        </table>
 
     </section>
 
-  </main>
-
+</main>
 
 
 </body>

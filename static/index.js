@@ -3,48 +3,48 @@ let appData = {
   data: {
     items: items,
 
-    filterAttributes: [],
-    filterCostSort: null,
+    filterStats: [],
+    sortPrice: null,
 
     filteredItems: items,
   },
   computed: {
-    attributes: function () {
-      let attributes = [];
+    stats: function () {
+      let stats = [];
 
       this.items.forEach(
         function (item) {
-          if (!item.attributesArray) {
+          if (!item.statsArray) {
             return
           }
-          attributes = attributes.concat(item.attributesArray);
+          stats = stats.concat(item.statsArray);
         }
       )
 
-      let uniqueAttributes = new Set(attributes);
-      let uniqueAttributeArray = Array.from(uniqueAttributes);
+      let uniqueStats = new Set(stats);
+      let uniqueStatArray = Array.from(uniqueStats);
 
-      uniqueAttributeArray.sort();
+      uniqueStatArray.sort();
 
-      return uniqueAttributeArray;
+      return uniqueStatArray;
     }
   },
   methods: {
-    filterItemsByAttribute: function (selectedAttributes) {
+    filterItemsByStat: function (selectedStats) {
       this.filteredItems = this.sortItems(this.items);
 
       this.filteredItems = this.filteredItems.filter(
 
         function (item) {
-          if (!selectedAttributes) {
+          if (!selectedStats) {
             return item
           }
 
-          if (!item.attributesArray) {
+          if (!item.statsArray) {
             return
           }
 
-          let filterIsSubset = selectedAttributes.every(val => item.attributesArray.includes(val));
+          let filterIsSubset = selectedStats.every(val => item.statsArray.includes(val));
           if (filterIsSubset) {
             return item
           }
@@ -53,20 +53,20 @@ let appData = {
       );
 
     },
-    sortItemsByCost: function (costSort) {
+    sortItemsByPrice: function () {
       this.filteredItems = this.sortItems(this.filteredItems);
     },
     sortItems: function (items) {
-      if (this.filterCostSort === "false") {
+      if (this.sortPrice === "false") {
         return items.sort(
           function (a, b) {
-            return a.cost - b.cost
+            return a.price - b.price
           }
         )
       } else {
         return items.sort(
           function (a, b) {
-            return b.cost - a.cost
+            return b.price - a.price
           }
         )
       }
@@ -76,6 +76,6 @@ let appData = {
 
 let app = new Vue(appData)
 
-app.$watch('filterAttributes', app.filterItemsByAttribute)
+app.$watch('filterStats', app.filterItemsByStat)
 
-app.$watch('filterCostSort', app.sortItemsByCost)
+app.$watch('sortPrice', app.sortItemsByPrice)
