@@ -73,23 +73,17 @@
         </p>
     </section>
 
-    <section>
-        <input type="radio" value=false v-model="sortName">
-        <label>&nbsp;A-Z</label><br>
+<!--    <section>-->
+<!--        <input type="radio" value=false v-model="sortName">-->
+<!--        <label>&nbsp;A-Z</label><br>-->
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+<!--        &nbsp;&nbsp;&nbsp;&nbsp;-->
 
-        <input type="radio" value=true v-model="sortName">
-        <label>&nbsp;Z-A</label><br>
-    </section>
+<!--        <input type="radio" value=true v-model="sortName">-->
+<!--        <label>&nbsp;Z-A</label><br>-->
+<!--    </section>-->
 
     <hr>
-    <img src="https://www.dotabuff.com/assets/items/magic-wand-7a4f7e78733470ac31dd40d01c85661493535044e799bc6676971fb90e2ed747.jpg"
-         onmouseover="document.getElementById('place-holder-1').src='./static/magic-wand.png';"
-         onmouseout="document.getElementById('place-holder-1').src='';"
-    >
-    <img src="" id="place-holder-1" style="zindex: 100; position: absolute; width: 500px;"/>
-    </img>
 
     <section>
 
@@ -99,14 +93,15 @@
             <th>Name</th>
             <th>Price</th>
             <th v-for="stat in filterStats">{{ stat }}</th>
-            <th>All Stats</th>
+            <th>Stats</th>
             </thead>
 
             <tbody>
             <tr v-for="item in filteredItems">
 
                 <td>
-                    <img :src="item.imageUrl">
+                    <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut">
+                    <img v-show="active" src="./static/magic-wand.png" id="place-holder-1" style="zindex: 100; position: absolute; width: 500px;"/>
                 </td>
 
                 <td>{{ item.name }}</td>
@@ -114,10 +109,15 @@
                 <td>{{ item.price }}</td>
 
                 <td v-for="stat in filterStats">
-                    {{ item.statsObject[stat] }}
+                    <div v-if="item.statsObject[stat] === true">
+                        ✅
+                    </div>
+                    <div v-else>
+                        {{ item.statsObject[stat] }}
+                    </div>
                 </td>
 
-                <!--            <td v-html="item.attributesHtml"></td>-->
+                <td v-html="item.statsHtml"></td>
 
             </tr>
             </tbody>
