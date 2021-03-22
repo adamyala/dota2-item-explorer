@@ -5,10 +5,11 @@
     <meta charset="utf-8"/>
     <title>DotA 2 Item Explorer 7.28c</title>
     <script src="static/vue.js"></script>
-    <script src="static/items.js"></script>
+    <script src="static/app/items.js"></script>
 
     <link rel="stylesheet" href="static/mvp.css">
-    <link rel="stylesheet" href="static/dota2-item-explorer.css">
+    <link rel="stylesheet" href="static/app/dota2-item-explorer.css">
+    <link rel="stylesheet" href="static/app/dota2-item-explorer.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 <main id="app">
     <section>
         <header>
-            <h2>DotA 2 Item Explorer 7.28c</h2>
+            <h2>DotA 2 Item Explorer 7.28c&nbsp;🔍</h2>
         </header>
     </section>
 
@@ -42,8 +43,11 @@
             </p>
         </aside>
     </article>
-
-    <hr>
+    <section>
+        <p>
+            ☝️ Select stats to add new table columns.
+        </p>
+    </section>
 
     <section>
         <p>
@@ -87,9 +91,9 @@
             <tr v-for="item in filteredItems">
 
                 <td>
-                    <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut">
-                    <img v-show="active" src="./static/magic-wand.png" id="place-holder-1"
-                         style="zindex: 100; position: absolute; width: 500px;"/>
+                    <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
+
+                    <img v-show="activeTooltip === item.id" :src="'/static/images/' + item.id + '.png'" style="zindex: 100; position: absolute; width: 500px;"/>
                 </td>
 
                 <td>{{ item.name }}</td>
@@ -118,6 +122,6 @@
 
 </body>
 
-<script src="static/index.js"></script>
+<script src="static/app/index.js"></script>
 
 </html>

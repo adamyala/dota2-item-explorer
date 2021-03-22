@@ -2,6 +2,8 @@ import json
 
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from PIL import Image
 
 
 skip_item_ids = ['aghanims-blessing', 'aghanims-shard', 'town-portal-scroll', 'refresher-shard', 'tango-shared',
@@ -233,6 +235,11 @@ class Item:
 
             self.stats_html = '+ 1.4 Mana Regeneration'
 
+        elif self.name == 'Satanic':
+            self.stats['Lifesteal'] = '25%'
+
+            self.stats_html += '+ 25% Lifesteal'
+
         elif self.name == 'Veil of Discord':
             self.stats['Mana Regeneration'] = 1.4
 
@@ -281,8 +288,12 @@ def get_items_json():
 
         items_json.append(item_json)
 
-    items_file = 'static/items.js'
+    json_file = 'items.json'
+    items_file = 'static/app/items.js'
     with open(items_file, 'w') as file:
+        json.dump(items_json, file)
+
+    with open(json_file, 'w') as file:
         json.dump(items_json, file)
 
     with open(items_file, 'r') as original:
@@ -291,4 +302,44 @@ def get_items_json():
         modified.write('let items = ' + data)
 
 
-get_items_json()
+def get_item_tooltips():
+    from selenium import webdriver
+    from selenium.webdriver.firefox.options import Options
+    # object of Options class
+    op = Options()
+    # disable JavaScript
+    op.set_preference('javascript.enabled', False)
+    # set geckodriver.exe path
+    driver = webdriver.Firefox(executable_path='./geckodriver', options=op)
+    driver.maximize_window()
+
+    with open('items.json', 'r') as file:
+        data = json.load(file)
+
+    for item in data:
+        url = f'https://www.dotabuff.com/items/{item["id"]}'
+        driver.get(url)
+
+        from time import sleep
+        sleep(2)
+
+        element = driver.find_element_by_class_name("embedded-tooltip")
+        location = element.location
+        size = element.size
+        driver.save_screenshot("pageImage.png")
+
+        # crop image
+        # x = location['x']
+        # y = location['y']
+        x = 2260
+        y = 370
+        width = x + size['width'] * 2.1
+        height = y + size['height'] * 2.2
+        im = Image.open('pageImage.png')
+        im = im.crop((int(x), int(y), int(width), int(height)))
+        im.save(f'./static/images/{item["id"]}.png')
+
+    driver.close()
+
+# get_items_json()
+get_item_tooltips()

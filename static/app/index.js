@@ -1,7 +1,7 @@
 let appData = {
     el: '#app',
     data: {
-        active: false,
+        activeTooltip: null,
 
         items: items,
 
@@ -162,11 +162,11 @@ let appData = {
                 return items.sort(lowToHigh(this.sortStatKey))
             }
         },
-        mouseOver: function () {
-            this.active = !this.active;
+        mouseOver: function (event) {
+            this.activeTooltip = event.target.id;
         },
         mouseOut: function () {
-            this.active = !this.active;
+            this.activeTooltip = null;
         }
     }
 };
