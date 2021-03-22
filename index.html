@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>DotA 2 Item Explorer 7.28c</title>
     <script src="static/vue.js"></script>
     <script src="static/items.js"></script>
 
@@ -36,63 +36,50 @@
             <p>
                 <b>Selected Stats:</b>
                 <span v-for="(stat, index) in filterStats">
-                    <span v-if="index != 0">, </span>
+                    <span v-if="index !== 0">, </span>
                     <span>{{ stat }}</span>
                 </span>
             </p>
         </aside>
     </article>
 
-    <section>
-        <p>
-            <b>
-                Sorting
-            </b>
-        </p>
-    </section>
-
-    <section>
-        <p>
-            Price
-        </p>
-    </section>
-
-    <section>
-        <input type="radio" value=false v-model="sortPrice">
-        <label>&nbsp;Lowest to Highest</label>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;
-
-        <input type="radio" value=true v-model="sortPrice">
-        <label>&nbsp;Highest to Lowest</label>
-    </section>
-
-    <section>
-        <p>
-            Name
-        </p>
-    </section>
-
-<!--    <section>-->
-<!--        <input type="radio" value=false v-model="sortName">-->
-<!--        <label>&nbsp;A-Z</label><br>-->
-
-<!--        &nbsp;&nbsp;&nbsp;&nbsp;-->
-
-<!--        <input type="radio" value=true v-model="sortName">-->
-<!--        <label>&nbsp;Z-A</label><br>-->
-<!--    </section>-->
-
     <hr>
+
+    <section>
+        <p>
+            👇 Click table headers to sort.
+        </p>
+    </section>
 
     <section>
 
         <table>
             <thead>
             <th></th>
-            <th>Name</th>
-            <th>Price</th>
-            <th v-for="stat in filterStats">{{ stat }}</th>
+            <th id="name-header" class="sort-header" v-on:click="sortItems($event)">
+                Name&nbsp;
+                <span v-if="sortName !== null">
+                    <span v-if="sortName">⬇️</span>
+                    <span v-else>⬆️️</span>
+                </span>
+            </th>
+
+            <th id="price-header" class="sort-header" v-on:click="sortItems($event)">
+                Price&nbsp;
+                <span v-if="sortPrice !== null">
+                    <span v-if="sortPrice">⬇️</span>
+                    <span v-else>⬆️️</span>
+                </span>
+            </th>
+
+            <th :id="stat" class="sort-header" v-for="stat in filterStats" v-on:click="sortItems($event)">
+                {{ stat }}&nbsp;
+                <span v-if="sortStatKey === stat">
+                    <span v-if="sortStat">⬇️</span>
+                    <span v-else>⬆️️</span>
+                </span>
+            </th>
+
             <th>Stats</th>
             </thead>
 
@@ -101,7 +88,8 @@
 
                 <td>
                     <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut">
-                    <img v-show="active" src="./static/magic-wand.png" id="place-holder-1" style="zindex: 100; position: absolute; width: 500px;"/>
+                    <img v-show="active" src="./static/magic-wand.png" id="place-holder-1"
+                         style="zindex: 100; position: absolute; width: 500px;"/>
                 </td>
 
                 <td>{{ item.name }}</td>

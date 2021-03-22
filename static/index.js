@@ -7,6 +7,9 @@ let appData = {
 
         filterStats: [],
         sortPrice: null,
+        sortName: null,
+        sortStat: null,
+        sortStatKey: null,
 
         filteredItems: items,
     },
@@ -33,9 +36,9 @@ let appData = {
     },
     methods: {
         filterItemsByStat: function (selectedStats) {
-            this.filteredItems = this.sortItems(this.items);
+            this.sortItems();
 
-            this.filteredItems = this.filteredItems.filter(
+            this.filteredItems = this.items.filter(
                 function (item) {
                     if (!selectedStats) {
                         return item
@@ -53,11 +56,31 @@ let appData = {
             );
 
         },
-        sortItemsByPrice: function () {
-            this.filteredItems = this.sortItems(this.filteredItems);
+        sortItems: function(event) {
+            if (!event) {
+                return
+            }
+
+            if (event.target.id === 'name-header') {
+                this.sortItemsByName()
+            } else if (event.target.id === 'price-header') {
+                this.sortItemsByPrice()
+            } else {
+                this.sortStatKey = event.target.id
+                this.sortItemsByStat()
+            }
         },
-        sortItems: function (items) {
-            if (this.sortPrice === "false") {
+        sortItemsByPrice: function (event) {
+            this.sortName = null;
+            this.sortStat = null;
+            this.sortStatKey = null;
+
+            this.sortPrice = !this.sortPrice;
+
+            this.filteredItems = this.priceSort(this.filteredItems);
+        },
+        priceSort: function (items) {
+            if (this.sortPrice === false) {
                 return items.sort(
                     function (a, b) {
                         return a.price - b.price
@@ -69,6 +92,56 @@ let appData = {
                         return b.price - a.price
                     }
                 )
+            }
+        },
+        sortItemsByName: function (event) {
+            this.sortPrice = null;
+            this.sortStat = null;
+            this.sortStatKey = null;
+
+            this.sortName = !this.sortName;
+
+            this.filteredItems = this.nameSort(this.filteredItems);
+        },
+        nameSort: function (items) {
+            if (this.sortName === false) {
+                return items.sort(
+                    function (a, b) {
+                        return a.name > b.name
+                    }
+                )
+            } else {
+                return items.sort(
+                    function (a, b) {
+                        return a.name < b.name
+                    }
+                )
+            }
+        },
+        sortItemsByStat: function (event) {
+            this.sortName = null;
+            this.sortPrice = null;
+
+            this.sortStat = !this.sortStat;
+
+            this.filteredItems = this.statSort(this.filteredItems);
+        },
+        statSort: function (items) {
+            let highToLow = function (stat) {
+                return function (a, b) {
+                    return a.statsObject[stat] - b.statsObject[stat]
+                }
+            }
+            let lowToHigh = function (stat) {
+                return function (a, b) {
+                    return b.statsObject[stat] - a.statsObject[stat]
+                }
+            }
+
+            if (this.sortStat === false) {
+                return items.sort(highToLow(this.sortStatKey))
+            } else {
+                return items.sort(lowToHigh(this.sortStatKey))
             }
         },
         mouseOver: function () {
@@ -83,5 +156,3 @@ let appData = {
 let app = new Vue(appData)
 
 app.$watch('filterStats', app.filterItemsByStat)
-
-app.$watch('sortPrice', app.sortItemsByPrice)

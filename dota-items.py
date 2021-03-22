@@ -126,25 +126,35 @@ class Item:
         return self.name
 
     def to_json(self):
+        stats_array = list(self.stats.keys())
+
+        stats_object = {}
+        for key, value in self.stats.items():
+            try:
+                numeric_value = float(value)
+            except ValueError:
+                numeric_value = value
+            stats_object[key] = numeric_value
+
         return {
             'id': self.item_id,
             'name': self.name,
             'price': self.price,
             'imageUrl': self.image_url,
-            'statsObject': self.stats,
             'statsHtml': self.stats_html,
-            'statsArray': list(self.stats.keys()),
+            'statsObject': stats_object,
+            'statsArray': stats_array
         }
 
     def patch_stats(self):
         if self.name == 'Aether Lens':
-            self.stats["Cast Range"] = "250"
+            self.stats["Cast Range"] = 250
 
         elif self.name == 'Assault Cuirass':
             self.stats['Aura'] = True
 
-            self.stats["Attack Speed"] = "60"
-            self.stats["Armor"] = "15"
+            self.stats["Attack Speed"] = 60
+            self.stats["Armor"] = 15
 
             self.stats_html += '+ 30 Attack Speed (Aura)' \
                               '<br>+ 5 Armor (Aura)'
@@ -182,7 +192,7 @@ class Item:
 
         elif self.name == 'Mekansm':
             self.stats['Aura'] = True
-            self.stats['HP Regeneration'] = '2'
+            self.stats['HP Regeneration'] = 2
 
             self.stats_html += '+ 2 HP Regeneration (Aura)'
 
@@ -200,7 +210,7 @@ class Item:
 
         elif self.name == 'Pipe of Insight':
             self.stats['Aura'] = True
-            self.stats['HP Regeneration'] = '10.5'
+            self.stats['HP Regeneration'] = 10.5
             self.stats["Magic Resistance"] = "~40%"
 
             self.stats_html += '+ 2 HP Regeneration (Aura)' \
