@@ -36,8 +36,6 @@ let appData = {
     },
     methods: {
         filterItemsByStat: function (selectedStats) {
-            this.sortItems();
-
             this.filteredItems = this.items.filter(
                 function (item) {
                     if (!selectedStats) {
@@ -55,6 +53,7 @@ let appData = {
                 }
             );
 
+            this.sortItems();
         },
         sortItems: function(event) {
             if (!event) {
@@ -127,14 +126,33 @@ let appData = {
             this.filteredItems = this.statSort(this.filteredItems);
         },
         statSort: function (items) {
+            let nonNumericToNumeric = function (value) {
+                let stringValue = value.toString();
+                let isPercent = stringValue.indexOf('%');
+                let isMultiple = stringValue.indexOf('/');
+
+                if (isPercent !== -1) {
+                    let parts = stringValue.split('%')
+                    return parseInt(parts[0])
+                } else if (isMultiple !== -1) {
+                    let parts = stringValue.split('/')
+                    return parseInt(parts[0])
+                } else {
+                    return value
+                }
+            }
             let highToLow = function (stat) {
                 return function (a, b) {
-                    return a.statsObject[stat] - b.statsObject[stat]
+                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
+                    return aStat - bStat;
                 }
             }
             let lowToHigh = function (stat) {
                 return function (a, b) {
-                    return b.statsObject[stat] - a.statsObject[stat]
+                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
+                    return bStat - aStat;
                 }
             }
 
