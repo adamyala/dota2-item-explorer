@@ -1,0 +1,13 @@
+/*center radio buttons*/
+input[type="radio"] {
+    margin-top: 7px
+}
+
+/*center purple text box*/
+article aside p {
+    text-align: center
+}
+
+.sort-header {
+    cursor: pointer;
+}
