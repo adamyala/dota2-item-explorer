@@ -141,25 +141,25 @@ let appData = {
             this.filteredItems = this.priceStatSort(this.filteredItems);
         },
         statSort: function (items) {
-            let highToLow = function (stat) {
+            let highToLow = function (stat, nonNumericToNumeric) {
                 return function (a, b) {
-                    let aStat = this.nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = this.nonNumericToNumeric(b.statsObject[stat]);
+                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
                     return aStat - bStat;
                 }
             }
-            let lowToHigh = function (stat) {
+            let lowToHigh = function (stat, nonNumericToNumeric) {
                 return function (a, b) {
-                    let aStat = this.nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = this.nonNumericToNumeric(b.statsObject[stat]);
+                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
                     return bStat - aStat;
                 }
             }
 
             if (this.sortStat === false) {
-                return items.sort(highToLow(this.sortStatKey))
+                return items.sort(highToLow(this.sortStatKey, this.nonNumericToNumeric))
             } else {
-                return items.sort(lowToHigh(this.sortStatKey))
+                return items.sort(lowToHigh(this.sortStatKey, this.nonNumericToNumeric))
             }
         },
         priceStatSort: function (items) {
