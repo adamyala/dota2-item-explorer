@@ -234,13 +234,14 @@ class Item:
         elif self.name == 'Quelling Blade':
             self.stats['Damage'] = '6 / 13'
 
-            self.stats_html = '+ 13 Damage (MELEE) (Creep)<br>' \
-                              '+ 6 Damage (RANGED) (Creep)'
+            self.stats_html = '+ 6 Damage (RANGED) (Creep)<br>' \
+                              '+ 13 Damage (MELEE) (Creep)'
 
-        elif self.name == 'Ring of Bassilius':
+        elif self.name == 'Ring of Basilius':
+            self.stats['Aura'] = True
             self.stats['Mana Regeneration'] = 1.4
 
-            self.stats_html = '+ 1.4 Mana Regeneration'
+            self.stats_html += '+ 1.4 Mana Regeneration (Aura)'
 
         elif self.name == 'Satanic':
             self.stats['Lifesteal'] = '25%'

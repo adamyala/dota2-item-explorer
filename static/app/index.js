@@ -10,6 +10,8 @@ let appData = {
         sortName: null,
         sortStat: null,
         sortStatKey: null,
+        sortPriceStat: null,
+        sortPriceStatKey: null,
 
         filteredItems: items,
     },
@@ -64,6 +66,10 @@ let appData = {
                 this.sortItemsByName()
             } else if (event.target.id === 'price-header') {
                 this.sortItemsByPrice()
+            } else if (event.target.id.startsWith('cost-per')) {
+                let parts = event.target.id.split('-')
+                this.sortPriceStatKey = parts.pop()
+                this.sortItemsByPriceStat()
             } else {
                 this.sortStatKey = event.target.id
                 this.sortItemsByStat()
@@ -125,33 +131,27 @@ let appData = {
 
             this.filteredItems = this.statSort(this.filteredItems);
         },
-        statSort: function (items) {
-            let nonNumericToNumeric = function (value) {
-                let stringValue = value.toString();
-                let isPercent = stringValue.indexOf('%');
-                let isMultiple = stringValue.indexOf('/');
+        sortItemsByPriceStat: function (event) {
+            this.sortName = null;
+            this.sortPrice = null;
+            this.sortStat = null;
 
-                if (isPercent !== -1) {
-                    let parts = stringValue.split('%')
-                    return parseInt(parts[0])
-                } else if (isMultiple !== -1) {
-                    let parts = stringValue.split('/')
-                    return parseInt(parts[0])
-                } else {
-                    return value
-                }
-            }
+            this.sortPriceStat = !this.sortPriceStat;
+
+            this.filteredItems = this.priceStatSort(this.filteredItems);
+        },
+        statSort: function (items) {
             let highToLow = function (stat) {
                 return function (a, b) {
-                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
+                    let aStat = this.nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = this.nonNumericToNumeric(b.statsObject[stat]);
                     return aStat - bStat;
                 }
             }
             let lowToHigh = function (stat) {
                 return function (a, b) {
-                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
+                    let aStat = this.nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = this.nonNumericToNumeric(b.statsObject[stat]);
                     return bStat - aStat;
                 }
             }
@@ -160,6 +160,47 @@ let appData = {
                 return items.sort(highToLow(this.sortStatKey))
             } else {
                 return items.sort(lowToHigh(this.sortStatKey))
+            }
+        },
+        priceStatSort: function (items) {
+            let highToLow = function (stat, nonNumericToNumeric) {
+                return function (a, b) {
+                    let aStat = a.price / nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = b.price /nonNumericToNumeric(b.statsObject[stat]);
+                    return aStat - bStat;
+                }
+            }
+            let lowToHigh = function (stat, nonNumericToNumeric) {
+                return function (a, b) {
+                    let aStat = a.price / nonNumericToNumeric(a.statsObject[stat]);
+                    let bStat = b.price / nonNumericToNumeric(b.statsObject[stat]);
+                    return bStat - aStat;
+                }
+            }
+
+            if (this.sortPriceStat === false) {
+                return items.sort(highToLow(this.sortPriceStatKey, this.nonNumericToNumeric))
+            } else {
+                return items.sort(lowToHigh(this.sortPriceStatKey, this.nonNumericToNumeric))
+            }
+        },
+        nonNumericToNumeric: function (value) {
+            if (!value) {
+                return value
+            }
+
+            let stringValue = value.toString();
+            let isPercent = stringValue.indexOf('%');
+            let isMultiple = stringValue.indexOf('/');
+
+            if (isPercent !== -1) {
+                let parts = stringValue.split('%')
+                return parseInt(parts[0])
+            } else if (isMultiple !== -1) {
+                let parts = stringValue.split('/')
+                return parseInt(parts[0])
+            } else {
+                return value
             }
         },
         mouseOver: function (event) {

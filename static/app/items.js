@@ -111,7 +111,7 @@ let items = [{
     "name": "Quelling Blade",
     "price": 130,
     "imageUrl": "https://www.dotabuff.com/assets/items/quelling-blade-4bbd2e05b0275d116ba7edb8cac4d186123f37645ab63dfed7f2d05cf905cf79.jpg",
-    "statsHtml": "+ 13 Damage (MELEE) (Creep)<br>+ 6 Damage (RANGED) (Creep)",
+    "statsHtml": "+ 6 Damage (RANGED) (Creep)<br>+ 13 Damage (MELEE) (Creep)",
     "statsObject": {"Damage": "6 / 13"},
     "statsArray": ["Damage"]
 }, {
@@ -646,14 +646,6 @@ let items = [{
     "statsObject": {"Health": 250.0, "HP Regeneration": 7.0},
     "statsArray": ["Health", "HP Regeneration"]
 }, {
-    "id": "shivas-guard",
-    "name": "Shiva's Guard",
-    "price": 4850,
-    "imageUrl": "https://www.dotabuff.com/assets/items/shivas-guard-c5ca9a34428ba32ea0600cfdf9db58c92151629057f3a6ccce6016a27f7d6005.jpg",
-    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
-    "statsObject": {"Intelligence": 30.0, "Armor": 15.0},
-    "statsArray": ["Intelligence", "Armor"]
-}, {
     "id": "witch-blade",
     "name": "Witch Blade",
     "price": 2600,
@@ -662,13 +654,21 @@ let items = [{
     "statsObject": {"Attack Speed": 35.0, "Intelligence": 12.0, "Armor": 6.0, "Projectile Speed": 300.0},
     "statsArray": ["Attack Speed", "Intelligence", "Armor", "Projectile Speed"]
 }, {
+    "id": "shivas-guard",
+    "name": "Shiva's Guard",
+    "price": 4850,
+    "imageUrl": "https://www.dotabuff.com/assets/items/shivas-guard-c5ca9a34428ba32ea0600cfdf9db58c92151629057f3a6ccce6016a27f7d6005.jpg",
+    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
+    "statsObject": {"Intelligence": 30.0, "Armor": 15.0},
+    "statsArray": ["Intelligence", "Armor"]
+}, {
     "id": "ring-of-basilius",
     "name": "Ring of Basilius",
     "price": 425,
     "imageUrl": "https://www.dotabuff.com/assets/items/ring-of-basilius-73a0661f20b91901a86b8ae4eec2d9c71152fab49d7e866d0ec50a6ea993c825.jpg",
-    "statsHtml": "",
-    "statsObject": {},
-    "statsArray": []
+    "statsHtml": "+ 1.4 Mana Regeneration (Aura)",
+    "statsObject": {"Aura": 1.0, "Mana Regeneration": 1.4},
+    "statsArray": ["Aura", "Mana Regeneration"]
 }, {
     "id": "eternal-shroud",
     "name": "Eternal Shroud",

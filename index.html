@@ -84,6 +84,18 @@
                 </span>
             </th>
 
+            <th
+                :id="'cost-per-' + stat" class="sort-header"
+                v-for="stat in filterStats"
+                v-on:click="sortItems($event)"
+            >
+                Cost per {{ stat }}
+                <span v-if="sortPriceStatKey === stat">
+                    <span v-if="sortPriceStat">⬇️</span>
+                    <span v-else>⬆️️</span>
+                </span>
+            </th>
+
             <th>Stats</th>
             </thead>
 
@@ -101,12 +113,11 @@
                 <td>{{ item.price }}</td>
 
                 <td v-for="stat in filterStats">
-                    <div v-if="item.statsObject[stat] === 1">
-                        ✅
-                    </div>
-                    <div v-else>
-                        {{ item.statsObject[stat] }}
-                    </div>
+                    {{ item.statsObject[stat] }}
+                </td>
+
+                <td v-for="stat in filterStats">
+                    {{ Math.round(item.price / nonNumericToNumeric(item.statsObject[stat])) }}
                 </td>
 
                 <td v-html="item.statsHtml"></td>
