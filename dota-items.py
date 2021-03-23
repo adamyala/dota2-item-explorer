@@ -169,8 +169,8 @@ class Item:
             del self.stats['Spell Lifesteal (Hero)']
 
         elif self.name == 'Buckler':
-            self.stats['Aura']: True
-            self.stats['Armor']: 2
+            self.stats['Aura'] = True
+            self.stats['Armor'] = 2
             self.stats_html = '+ 2 Armor (Aura)'
 
         elif self.name == 'Eternal Shroud':
@@ -341,5 +341,5 @@ def get_item_tooltips():
 
     driver.close()
 
-# get_items_json()
-get_item_tooltips()
+get_items_json()
+# get_item_tooltips()
