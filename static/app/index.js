@@ -1,3 +1,6 @@
+import Vue from '../vue.esm.browser.js'
+import {items} from './items.js'
+
 let appData = {
     el: '#app',
     data: {
@@ -57,7 +60,7 @@ let appData = {
 
             this.sortItems();
         },
-        sortItems: function(event) {
+        sortItems: function (event) {
             if (!event) {
                 return
             }
@@ -171,7 +174,7 @@ let appData = {
             let highToLow = function (stat, nonNumericToNumeric) {
                 return function (a, b) {
                     let aStat = a.price / nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = b.price /nonNumericToNumeric(b.statsObject[stat]);
+                    let bStat = b.price / nonNumericToNumeric(b.statsObject[stat]);
                     return aStat - bStat;
                 }
             }

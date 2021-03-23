@@ -1,4 +1,4 @@
-let items = [{
+export let items = [{
     "id": "magic-wand",
     "name": "Magic Wand",
     "price": 450,
