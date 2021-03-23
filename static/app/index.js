@@ -103,6 +103,8 @@ let appData = {
             this.sortPrice = null;
             this.sortStat = null;
             this.sortStatKey = null;
+            this.sortPriceStat = null;
+            this.sortPriceStatKey = null;
 
             this.sortName = !this.sortName;
 
@@ -126,6 +128,8 @@ let appData = {
         sortItemsByStat: function (event) {
             this.sortName = null;
             this.sortPrice = null;
+            this.sortPriceStat = null;
+            this.sortPriceStatKey = null;
 
             this.sortStat = !this.sortStat;
 
@@ -135,6 +139,7 @@ let appData = {
             this.sortName = null;
             this.sortPrice = null;
             this.sortStat = null;
+            this.sortStatKey = null;
 
             this.sortPriceStat = !this.sortPriceStat;
 
