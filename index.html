@@ -93,7 +93,7 @@
                 <td>
                     <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
 
-                    <img v-show="activeTooltip === item.id" :src="'/static/images/' + item.id + '.png'" style="zindex: 100; position: absolute; width: 500px;"/>
+                    <img v-show="activeTooltip === item.id" :src="'static/images/' + item.id + '.png'" style="zindex: 100; position: absolute; width: 500px;"/>
                 </td>
 
                 <td>{{ item.name }}</td>
@@ -101,7 +101,7 @@
                 <td>{{ item.price }}</td>
 
                 <td v-for="stat in filterStats">
-                    <div v-if="item.statsObject[stat] === true">
+                    <div v-if="item.statsObject[stat] === 1">
                         ✅
                     </div>
                     <div v-else>
