@@ -2,7 +2,6 @@ import json
 
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
 from PIL import Image
 
 
@@ -181,6 +180,14 @@ class Item:
             del self.stats['Spell Lifesteal (Heroes)']
             del self.stats['Spell Lifesteal (Creeps)']
 
+        elif self.name == 'Guardian Greaves':
+            self.stats['Aura'] = True
+            self.stats['HP Regeneration'] = 2.5
+            self.stats['Armor'] = 3
+
+            self.stats_html += '+ 2.5 HP Regeneration (Aura)<br>' \
+                               '+ 3 Armor (Aura)'
+
         elif self.name == 'Headdress':
             self.stats['Aura'] = True
             self.stats['HP Regeneration'] = 2
@@ -215,8 +222,8 @@ class Item:
             self.stats['HP Regeneration'] = 10.5
             self.stats["Magic Resistance"] = "~40%"
 
-            self.stats_html += '+ 2 HP Regeneration (Aura)' \
-                              '<br>+ 10% Magic Resistance (Aura)'
+            self.stats_html += '+ 2 HP Regeneration (Aura)<br>' \
+                              '+ 10% Magic Resistance (Aura)'
 
         elif self.name == 'Power Treads':
             # {"Movement Speed": "45", "Selected Attribute": "10", "Attack Speed": "25"}
@@ -241,9 +248,10 @@ class Item:
             self.stats_html += '+ 25% Lifesteal'
 
         elif self.name == 'Veil of Discord':
-            self.stats['Mana Regeneration'] = 1.4
+            self.stats['Aura'] = True
+            self.stats['Mana Regeneration'] = 1.5
 
-            self.stats_html += '+ 1.4 Mana Regeneration'
+            self.stats_html += '+ 1.5 Mana Regeneration (Aura)'
 
         elif self.name == 'Vladmir\'s Offering':
             self.stats['Aura'] = True

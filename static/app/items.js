@@ -463,9 +463,9 @@ let items = [{
     "name": "Guardian Greaves",
     "price": 5250,
     "imageUrl": "https://www.dotabuff.com/assets/items/guardian-greaves-9074138bd6e55fcba6d627022300ae1d497d26e860b8609f318606bb2623b530.jpg",
-    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">50</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">Armor</span></div></div>",
-    "statsObject": {"Movement Speed": 50.0, "Mana": 250.0, "Armor": 4.0},
-    "statsArray": ["Movement Speed", "Mana", "Armor"]
+    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">50</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">Armor</span></div></div>+ 2.5 HP Regeneration (Aura)<br>+ 3 Armor (Aura)",
+    "statsObject": {"Movement Speed": 50.0, "Mana": 250.0, "Armor": 3.0, "Aura": 1.0, "HP Regeneration": 2.5},
+    "statsArray": ["Movement Speed", "Mana", "Armor", "Aura", "HP Regeneration"]
 }, {
     "id": "staff-of-wizardry",
     "name": "Staff of Wizardry",
@@ -507,14 +507,6 @@ let items = [{
     "statsObject": {"Intelligence": 13.0, "HP Regeneration": 2.5, "Agility": 20.0, "Strength": 15.0},
     "statsArray": ["Intelligence", "HP Regeneration", "Agility", "Strength"]
 }, {
-    "id": "mask-of-madness",
-    "name": "Mask of Madness",
-    "price": 1775,
-    "imageUrl": "https://www.dotabuff.com/assets/items/mask-of-madness-9f59e9e1136545770c30d43a6916f207adb48ea2aa2616403193f106ad7e1142.jpg",
-    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div></div>+ 20% Lifesteal",
-    "statsObject": {"Damage": 10.0, "Attack Speed": 10.0, "Lifesteal": "20%"},
-    "statsArray": ["Damage", "Attack Speed", "Lifesteal"]
-}, {
     "id": "lotus-orb",
     "name": "Lotus Orb",
     "price": 3950,
@@ -522,6 +514,14 @@ let items = [{
     "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">4.0</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div></div>",
     "statsObject": {"Armor": 10.0, "HP Regeneration": 6.5, "Mana Regeneration": 4.0, "Mana": 250.0},
     "statsArray": ["Armor", "HP Regeneration", "Mana Regeneration", "Mana"]
+}, {
+    "id": "mask-of-madness",
+    "name": "Mask of Madness",
+    "price": 1775,
+    "imageUrl": "https://www.dotabuff.com/assets/items/mask-of-madness-9f59e9e1136545770c30d43a6916f207adb48ea2aa2616403193f106ad7e1142.jpg",
+    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div></div>+ 20% Lifesteal",
+    "statsObject": {"Damage": 10.0, "Attack Speed": 10.0, "Lifesteal": "20%"},
+    "statsArray": ["Damage", "Attack Speed", "Lifesteal"]
 }, {
     "id": "butterfly",
     "name": "Butterfly",
@@ -646,14 +646,6 @@ let items = [{
     "statsObject": {"Health": 250.0, "HP Regeneration": 7.0},
     "statsArray": ["Health", "HP Regeneration"]
 }, {
-    "id": "witch-blade",
-    "name": "Witch Blade",
-    "price": 2600,
-    "imageUrl": "https://www.dotabuff.com/assets/items/witch-blade-5ff8609bd0c0e69e8d45e884dfd0414e929127ca358d4cfee3d7124d5eac5aab.jpg",
-    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Projectile Speed</span></div></div>",
-    "statsObject": {"Attack Speed": 35.0, "Intelligence": 12.0, "Armor": 6.0, "Projectile Speed": 300.0},
-    "statsArray": ["Attack Speed", "Intelligence", "Armor", "Projectile Speed"]
-}, {
     "id": "shivas-guard",
     "name": "Shiva's Guard",
     "price": 4850,
@@ -661,6 +653,14 @@ let items = [{
     "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
     "statsObject": {"Intelligence": 30.0, "Armor": 15.0},
     "statsArray": ["Intelligence", "Armor"]
+}, {
+    "id": "witch-blade",
+    "name": "Witch Blade",
+    "price": 2600,
+    "imageUrl": "https://www.dotabuff.com/assets/items/witch-blade-5ff8609bd0c0e69e8d45e884dfd0414e929127ca358d4cfee3d7124d5eac5aab.jpg",
+    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Projectile Speed</span></div></div>",
+    "statsObject": {"Attack Speed": 35.0, "Intelligence": 12.0, "Armor": 6.0, "Projectile Speed": 300.0},
+    "statsArray": ["Attack Speed", "Intelligence", "Armor", "Projectile Speed"]
 }, {
     "id": "ring-of-basilius",
     "name": "Ring of Basilius",
@@ -815,9 +815,9 @@ let items = [{
     "name": "Veil of Discord",
     "price": 1525,
     "imageUrl": "https://www.dotabuff.com/assets/items/veil-of-discord-d4c01d20607b62bbe04fe81544392e44398791284dc3863256a33fd2cc4b8710.jpg",
-    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>+ 1.4 Mana Regeneration",
-    "statsObject": {"Mana Regeneration": 1.4, "Intelligence": 4.0, "Strength": 4.0, "Agility": 4.0},
-    "statsArray": ["Mana Regeneration", "Intelligence", "Strength", "Agility"]
+    "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>+ 1.5 Mana Regeneration (Aura)",
+    "statsObject": {"Aura": 1.0, "Mana Regeneration": 1.5, "Intelligence": 4.0, "Strength": 4.0, "Agility": 4.0},
+    "statsArray": ["Aura", "Mana Regeneration", "Intelligence", "Strength", "Agility"]
 }, {
     "id": "mekansm",
     "name": "Mekansm",
@@ -848,8 +848,8 @@ let items = [{
     "price": 375,
     "imageUrl": "https://www.dotabuff.com/assets/items/buckler-88c55ac729e5c3e17db10dba129887b01fc614d4f38dd283e5da8bf930ef2da2.jpg",
     "statsHtml": "+ 2 Armor (Aura)",
-    "statsObject": {},
-    "statsArray": []
+    "statsObject": {"Aura": 1.0, "Armor": 2.0},
+    "statsArray": ["Aura", "Armor"]
 }, {
     "id": "swift-blink",
     "name": "Swift Blink",
