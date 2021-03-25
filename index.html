@@ -5,8 +5,12 @@
     <meta charset="utf-8"/>
     <title>DotA 2 Item Explorer 7.28c</title>
 
-    <link rel="stylesheet" href="static/mvp.css">
+    <link rel="stylesheet" href="static/dependencies/mvp.css">
     <link rel="stylesheet" href="static/app/dota2-item-explorer.css">
+
+    <script src="static/dependencies/vue.js"></script>
+    <script src="static/dependencies/httpVueLoader.js"></script>
+    <script type="module" src="static/app/index.js"></script>
 </head>
 
 <body>
@@ -24,7 +28,7 @@
 
     <section>
         <div style="padding: 10px" v-for="stat in stats">
-            <input type="checkbox" v-bind:value="stat" v-model="filterStats">
+            <input type="checkbox" :value="stat" v-model="filterStats">
             <label>{{stat}}</label>
         </div>
     </section>
@@ -138,7 +142,5 @@
 
 
 </body>
-
-<script type="module" src="static/app/index.js"></script>
 
 </html>

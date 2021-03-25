@@ -1,8 +1,10 @@
-import Vue from '../vue.esm.browser.js'
 import {items} from './items.js'
 
 let appData = {
     el: '#app',
+    components: {
+        'hello': window.httpVueLoader('static/app/components/Hello.vue')
+    },
     data: {
         activeTooltip: null,
 
