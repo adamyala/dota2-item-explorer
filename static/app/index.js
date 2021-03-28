@@ -3,7 +3,7 @@ import {items} from './items.js'
 let appData = {
     el: '#app',
     components: {
-        'hello': window.httpVueLoader('static/app/components/Hello.vue')
+        hello: window.httpVueLoader('static/app/components/StatFilter.vue')
     },
     data: {
         activeTooltip: null,
