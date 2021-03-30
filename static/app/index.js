@@ -1,14 +1,12 @@
-import {items} from './items.js'
-
 let appData = {
     el: '#app',
     components: {
-        hello: window.httpVueLoader('static/app/components/StatFilter.vue')
+        // hello: window.httpVueLoader('static/app/components/StatFilter.vue')
     },
     data: {
         activeTooltip: null,
 
-        items: items,
+        items: [],
 
         filterStats: [],
         sortPrice: null,
@@ -18,7 +16,7 @@ let appData = {
         sortPriceStat: null,
         sortPriceStatKey: null,
 
-        filteredItems: items,
+        filteredItems: [],
     },
     computed: {
         stats: function () {
@@ -41,7 +39,15 @@ let appData = {
             return uniqueStatArray;
         }
     },
+    mounted() {
+        this.fetchItems()
+    },
     methods: {
+        fetchItems: function() {
+            fetch('items.json')
+              .then(response => response.json())
+              .then(data => this.items = this.filteredItems = data);
+        },
         filterItemsByStat: function (selectedStats) {
             this.filteredItems = this.items.filter(
                 function (item) {
