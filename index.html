@@ -23,7 +23,7 @@
     </section>
 
     <section>
-        <div style="padding: 10px" v-for="stat in stats">
+        <div id="stat-selection" v-for="stat in stats">
             <input type="checkbox" v-bind:value="stat" v-model="filterStats">
             <label>{{stat}}</label>
         </div>
@@ -102,8 +102,8 @@
                 <td>
                     <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
 
-                    <img v-show="activeTooltip === item.id" :src="'static/images/' + item.id + '.png'"
-                         style="zindex: 100; position: absolute; width: 500px;"/>
+                    <img id="tooltip-image" v-show="activeTooltip === item.id" :src="'static/images/' + item.id + '.png'"
+                         />
                 </td>
 
                 <td>{{ item.name }}</td>

@@ -94,6 +94,21 @@ section aside img {
     max-width: 100%;
 }
 
+
+
+/* Stat Filter */
+
+#stat-selection {
+    padding: 10px;
+}
+
+/* Image Pop-up */
+#tooltip-image {
+    z-index: 100;
+    position: absolute;
+    width: 500px;
+}
+
 [hidden] {
     display: none;
 }
