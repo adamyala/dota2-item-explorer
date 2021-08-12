@@ -105,9 +105,9 @@
             <tr v-for="item in filteredItems">
 
                 <td>
-                    <img :src="item.imageUrl" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
+                    <img :src="'static/images/thumbnails/' + item.id + '.jpg'" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
 
-                    <img v-show="activeTooltip === item.id" :src="'static/images/' + item.id + '.png'"
+                    <img v-show="activeTooltip === item.id" :src="'static/images/tooltips/' + item.id + '.png'"
                          style="zindex: 100; position: absolute; width: 500px;"/>
                 </td>
 

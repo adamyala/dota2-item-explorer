@@ -1,8 +1,5 @@
 let appData = {
     el: '#app',
-    components: {
-        // hello: window.httpVueLoader('static/app/components/StatFilter.vue')
-    },
     data: {
         activeTooltip: null,
 
@@ -99,9 +96,9 @@ let appData = {
             let sortCheapest = (a, b) => { return a.price - b.price }
 
             if (this.sortPrice === false) {
-                return items.sort(sortCheapest())
+                return items.sort(sortCheapest)
             } else {
-                return items.sort(sortCheapest()).reverse()
+                return items.sort(sortCheapest).reverse()
             }
         },
         sortItemsByName: function (event) {
@@ -116,12 +113,12 @@ let appData = {
             this.filteredItems = this.nameSort(this.filteredItems)
         },
         nameSort: function (items) {
-            let sortAlphabetically = (a, b) => { return a.name > b.name }
+            function sortAlphabetically(a, b){ return a.name > b.name }
 
             if (this.sortName === false) {
-                return items.sort(sortAlphabetically())
+                return items.sort(sortAlphabetically)
             } else {
-                return items.sort(sortAlphabetically()).reverse
+                return items.sort(sortAlphabetically).reverse()
             }
         },
         sortItemsByStat: function (event) {
@@ -156,9 +153,9 @@ let appData = {
             }
 
             if (this.sortStat === false) {
-                return items.sort(sortHighToLow())
+                return items.sort(sortHighToLow)
             } else {
-                return items.sort(sortHighToLow()).reverse()
+                return items.sort(sortHighToLow).reverse()
             }
         },
         priceStatSort: (items) => {
@@ -174,9 +171,9 @@ let appData = {
             }
 
             if (this.sortPriceStat === false) {
-                return items.sort(sortHighToLow())
+                return items.sort(sortHighToLow)
             } else {
-                return items.sort(sortHighToLow()).reverse()
+                return items.sort(sortHighToLow).reverse()
             }
         },
         nonNumericToNumeric: function (value) {
@@ -210,4 +207,4 @@ let appData = {
 
 let app = new Vue(appData)
 
-// app.$watch('filterStats', app.filterItemsByStat)
+app.$watch('filterStats', app.filterItemsByStat)

@@ -1,14 +1,20 @@
+import io
 import json
+from time import sleep
 
-import requests
+import httpx
 from bs4 import BeautifulSoup
 from PIL import Image
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 
 skip_item_ids = [
     "aegis-of-the-immortal",
     "aghanims-blessing",
+    "aghanims-blessing-roshan",
     "aghanims-shard",
+    "aghanims-shard-roshan",
     "bottle",
     "cheese",
     "clarity",
@@ -31,7 +37,7 @@ class DotaBuffClient:
     BASE_URL = "https://www.dotabuff.com"
 
     def __init__(self):
-        self.session = requests.Session()
+        self.session = httpx.Client()
         headers = {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:86.0) Gecko/20100101 Firefox/86.0"
         }
@@ -90,8 +96,7 @@ class DotaBuffClient:
 
         image_div = soup.find(alt=name)
         image_path = image_div.attrs["src"]
-        image_url = self.BASE_URL + image_path
-        return image_url
+        return image_path
 
     def parse_tooltip_stats(self, soup):
         stats = {}
@@ -128,6 +133,12 @@ class DotaBuffClient:
         stats_html = self.parse_tooltip_stats_html(soup)
 
         return name, price, image_url, stats, stats_html
+
+    def get_item_thumbnail(self, item_id, image_url):
+        response = self._get(image_url)
+        image_stream = io.BytesIO(response)
+        im = Image.open(image_stream)
+        im.save(f'./static/images/thumbnails/{item_id}.jpg')
 
 
 class Item:
@@ -347,10 +358,19 @@ def get_items_json():
         modified.write("let items = " + data)
 
 
-def get_item_tooltips():
-    from selenium import webdriver
-    from selenium.webdriver.firefox.options import Options
+def get_image_thumbnails():
+    with open('items.json') as file:
+        json_data = json.load(file)
 
+    client = DotaBuffClient()
+
+    for item in json_data:
+        image_url = item['imageUrl']
+        item_id = item['id']
+        client.get_item_thumbnail(item_id, image_url)
+
+
+def get_item_tooltips():
     # object of Options class
     op = Options()
     # disable JavaScript
@@ -366,28 +386,19 @@ def get_item_tooltips():
         url = f'https://www.dotabuff.com/items/{item["id"]}'
         driver.get(url)
 
-        from time import sleep
-
         sleep(2)
 
-        element = driver.find_element_by_class_name("embedded-tooltip")
-        location = element.location
-        size = element.size
-        driver.save_screenshot("pageImage.png")
-
-        # crop image
-        # x = location['x']
-        # y = location['y']
-        x = 2260
-        y = 370
-        width = x + size["width"] * 2.1
-        height = y + size["height"] * 2.2
-        im = Image.open("pageImage.png")
-        im = im.crop((int(x), int(y), int(width), int(height)))
-        im.save(f'./static/images/{item["id"]}.png')
+        element = driver.find_element_by_class_name(
+            "embedded-tooltip"
+        ).find_element_by_xpath("./..")
+        image = element.screenshot_as_png
+        image_stream = io.BytesIO(image)
+        im = Image.open(image_stream)
+        im.save(f'./static/images/tooltips/{item["id"]}.png')
 
     driver.close()
 
 
-get_items_json()
+# get_items_json()
+get_image_thumbnails()
 # get_item_tooltips()
