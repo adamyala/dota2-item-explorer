@@ -137,8 +137,8 @@ class DotaBuffClient:
     def get_item_thumbnail(self, item_id, image_url):
         response = self._get(image_url)
         image_stream = io.BytesIO(response)
-        im = Image.open(image_stream)
-        im.save(f'./static/images/thumbnails/{item_id}.jpg')
+        image_file = Image.open(image_stream)
+        image_file.save(f"./static/images/thumbnails/{item_id}.jpg")
 
 
 class Item:
@@ -177,151 +177,171 @@ class Item:
         }
 
     def patch_stats(self):
-        if self.name == "Aether Lens":
+        if self.item_id == "aether-lens":
             self.stats["Cast Range"] = 250
 
-        elif self.name == "Assault Cuirass":
-            self.stats["Aura"] = True
+        elif self.item_id == "assault-cuirass":
 
             self.stats["Attack Speed"] = 60
             self.stats["Armor"] = 15
 
-            self.stats_html += "+ 30 Attack Speed (Aura)" "<br>+ 5 Armor (Aura)"
+            self.stats_html += "+ 30 Attack Speed (Aura)<br>" "+ 5 Armor (Aura)"
 
-        elif self.name == "Bloodstone":
-            stat_value = (
-                self.stats["Spell Lifesteal (Creep)"]
-                + " / "
-                + self.stats["Spell Lifesteal (Hero)"]
-            )
+        elif self.item_id == "bloodstone":
+            stat_value = f"{self.stats['Spell Lifesteal (Creep)']}/{self.stats['Spell Lifesteal (Hero)']}"
             self.stats["Spell Lifesteal"] = stat_value
 
             del self.stats["Spell Lifesteal (Creep)"]
             del self.stats["Spell Lifesteal (Hero)"]
 
-        elif self.name == "Buckler":
-            self.stats["Aura"] = True
-            self.stats["Armor"] = 2
-            self.stats_html = "+ 2 Armor (Aura)"
+        elif self.item_id == "boots-of-travel":
+            # squash html note about tp scroll cd
+            self.stats_html = f"+ {self.stats['Movement Speed']} Movement Speed"
 
-        elif self.name == "Eternal Shroud":
-            # {"Magic Resistance": "20%", "HP Regeneration": "8.5", "Spell Lifesteal (Heroes)": "20.0%", "Spell Lifesteal (Creeps)": "4.0%"}
-            stat_value = (
-                self.stats["Spell Lifesteal (Creeps)"]
-                + " / "
-                + self.stats["Spell Lifesteal (Heroes)"]
-            )
+        elif self.item_id == "boots-of-travel-level-2":
+            # squash html note about tp scroll cd
+            self.stats_html = f"+ {self.stats['Movement Speed']} Movement Speed"
+
+        elif self.item_id == "buckler":
+            self.stats["Armor"] = 2
+            self.stats_html = f"+ {self.stats['Armor']} Armor (Aura)"
+
+        elif self.item_id == "eternal-shroud":
+            stat_value = f"{self.stats['Spell Lifesteal (Creeps)']}/{self.stats['Spell Lifesteal (Heroes)']}"
             self.stats["Spell Lifesteal"] = stat_value
 
             del self.stats["Spell Lifesteal (Heroes)"]
             del self.stats["Spell Lifesteal (Creeps)"]
 
-        elif self.name == "Guardian Greaves":
-            self.stats["Aura"] = True
+        elif self.item_id == "guardian-greaves":
             self.stats["HP Regeneration"] = 2.5
             self.stats["Armor"] = 3
 
-            self.stats_html += "+ 2.5 HP Regeneration (Aura)<br>" "+ 3 Armor (Aura)"
+            self.stats_html += (
+                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)<br>"
+                f"+ {self.stats['Armor']} Armor (Aura)"
+            )
 
-        elif self.name == "Headdress":
-            self.stats["Aura"] = True
+        elif self.item_id == "headdress":
             self.stats["HP Regeneration"] = 2
 
-            self.stats_html = "+ 2 HP Regeneration (Aura)"
+            self.stats_html = (
+                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)"
+            )
 
-        elif self.name == "Mask of Madness":
+        elif self.item_id == "mask-of-madness":
             self.stats["Lifesteal"] = "20%"
 
-            self.stats_html += "+ 20% Lifesteal"
+            self.stats_html += f"+ {self.stats['Lifesteal']} Lifesteal"
 
-        elif self.name == "Mekansm":
-            self.stats["Aura"] = True
+        elif self.item_id == "mekansm":
             self.stats["HP Regeneration"] = 2
 
-            self.stats_html += "+ 2 HP Regeneration (Aura)"
+            self.stats_html += (
+                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)"
+            )
 
-        elif self.name == "Morbid Mask":
+        elif self.item_id == "morbid-mask":
             self.stats["Lifesteal"] = "15%"
 
-            self.stats_html = "+ 15% Lifesteal"
+            self.stats_html = f"+ {self.stats['Lifesteal']} Lifesteal"
 
-        elif self.name == "Phase Boots":
+        elif self.item_id == "phase-boots":
             # {"Movement Speed": "45", "Damage (MELEE)": "18", "Damage (RANGED)": "12", "Armor": "4"}
             stat_value = (
-                self.stats["Damage (RANGED)"] + " / " + self.stats["Damage (MELEE)"]
+                f"{self.stats['Damage (RANGED)']}/{self.stats['Damage (MELEE)']}"
             )
             self.stats["Damage"] = stat_value
             del self.stats["Damage (MELEE)"]
             del self.stats["Damage (RANGED)"]
 
-        elif self.name == "Pipe of Insight":
-            self.stats["Aura"] = True
-            self.stats["HP Regeneration"] = 10.5
-            self.stats["Magic Resistance"] = "~40%"
+        elif self.item_id == "pipe-of-insight":
+            self.stats["HP Regeneration"] = 11
+            self.stats["Magic Resistance"] = "40%"
 
             self.stats_html += (
                 "+ 2 HP Regeneration (Aura)<br>" "+ 10% Magic Resistance (Aura)"
             )
 
-        elif self.name == "Power Treads":
+        elif self.item_id == "power-treads":
             # {"Movement Speed": "45", "Selected Attribute": "10", "Attack Speed": "25"}
             stat_value = self.stats["Selected Attribute"]
-            self.stats["Intelligence"] = self.stats["Strength"] = self.stats[
-                "Agility"
-            ] = stat_value
+            self.stats["Intelligence"] = stat_value
+            self.stats["Strength"] = stat_value
+            self.stats["Agility"] = stat_value
             del self.stats["Selected Attribute"]
 
-        elif self.name == "Quelling Blade":
+        elif self.item_id == "quelling-blade":
             self.stats["Damage"] = "6 / 13"
 
             self.stats_html = (
                 "+ 6 Damage (RANGED) (Creep)<br>" "+ 13 Damage (MELEE) (Creep)"
             )
 
-        elif self.name == "Ring of Basilius":
-            self.stats["Aura"] = True
-            self.stats["Mana Regeneration"] = 1.4
-
-            self.stats_html += "+ 1.4 Mana Regeneration (Aura)"
-
-        elif self.name == "Satanic":
-            self.stats["Lifesteal"] = "25%"
-
-            self.stats_html += "+ 25% Lifesteal"
-
-        elif self.name == "Veil of Discord":
-            self.stats["Aura"] = True
+        elif self.item_id == "ring-of-basilius":
             self.stats["Mana Regeneration"] = 1.5
 
-            self.stats_html += "+ 1.5 Mana Regeneration (Aura)"
-
-        elif self.name == "Vladmir's Offering":
-            self.stats["Aura"] = True
-            self.stats["Armor"] = 2
-            self.stats["Damage"] = "18%"
-            self.stats["Lifesteal"] = "15%"
-            self.stats["Mana Regeneration"] = 1.4
-
             self.stats_html += (
-                "+ 15% Lifesteal (Aura)<br>"
-                "+ 1.4 Mana Regeneration (Aura)<br>"
-                "+ 18% Attack Damage (Aura)<br>"
-                "+ 2 Armor (Aura)"
+                f"+ {self.stats['Mana Regeneration']} Mana Regeneration (Aura)"
             )
 
-        elif self.name == "Voodoo Mask":
+        elif self.item_id == "satanic":
+            self.stats["Lifesteal"] = "25%"
+
+            self.stats_html += f"+ {self.stats['Lifesteal']} Lifesteal"
+
+        elif self.item_id == "veil-of-discord":
+            self.stats["Mana Regeneration"] = 1.75
+
+            self.stats_html += (
+                f"+ {self.stats['Mana Regeneration']} Mana Regeneration (Aura)"
+            )
+
+        elif self.item_id == "vladmirs-offering":
+            self.stats["Lifesteal"] = "15%"
+            self.stats["Mana Regeneration"] = 1.75
+            self.stats["Damage"] = "18%"
+            self.stats["Armor"] = 3
+
+            self.stats_html += (
+                f"+ {self.stats['Lifesteal']} Lifesteal (Aura)<br>"
+                f"+ {self.stats['Mana Regeneration']} Mana Regeneration (Aura)<br>"
+                f"+ {self.stats['Damage']} Attack Damage (Aura)<br>"
+                f"+ {self.stats['Armor']} Armor (Aura)"
+            )
+
+        elif self.item_id == "voodoo-mask":
             self.stats["Spell Lifesteal"] = "2% / 10%"
             self.stats_html = (
-                "+2% Spell Lifesteal (Creep)<br>+10% Spell Lifesteal (Hero)"
+                "+2% Spell Lifesteal (Creep)<br>" "+10% Spell Lifesteal (Hero)"
             )
 
         if "All Attributes" in self.stats:
-            self.stats["Intelligence"] = self.stats["Strength"] = self.stats[
-                "Agility"
-            ] = self.stats["All Attributes"]
+            stat_value = self.stats["All Attributes"]
+            self.stats["Intelligence"] = stat_value
+            self.stats["Strength"] = stat_value
+            self.stats["Agility"] = stat_value
+
             del self.stats["All Attributes"]
 
+        self.set_aura_flag()
+
         return self.stats
+
+    def set_aura_flag(self):
+        aura_items = [
+            "assault-cuirass",
+            "buckler",
+            "guardian-greaves",
+            "headdress",
+            "mekansm",
+            "pipe-of-insight",
+            "ring-of-basilius",
+            "veil-of-discord",
+            "vladmirs-offering",
+        ]
+        if self.item_id in aura_items:
+            self.stats["Aura"] = True
 
 
 def get_items_json():
@@ -359,23 +379,22 @@ def get_items_json():
 
 
 def get_image_thumbnails():
-    with open('items.json') as file:
+    with open("items.json") as file:
         json_data = json.load(file)
 
     client = DotaBuffClient()
 
     for item in json_data:
-        image_url = item['imageUrl']
-        item_id = item['id']
+        image_url = item["imageUrl"]
+        item_id = item["id"]
         client.get_item_thumbnail(item_id, image_url)
 
 
 def get_item_tooltips():
-    # object of Options class
     op = Options()
     # disable JavaScript
     op.set_preference("javascript.enabled", False)
-    # set geckodriver.exe path
+
     driver = webdriver.Firefox(executable_path="./geckodriver", options=op)
     driver.maximize_window()
 
@@ -399,6 +418,6 @@ def get_item_tooltips():
     driver.close()
 
 
-# get_items_json()
+get_items_json()
 get_image_thumbnails()
-# get_item_tooltips()
+get_item_tooltips()
