@@ -20,53 +20,53 @@ let appData = {
     },
     computed: {
         stats: function () {
-            let stats = [];
+            let stats = []
 
             this.items.forEach(
                 function (item) {
                     if (!item.statsArray) {
                         return
                     }
-                    stats = stats.concat(item.statsArray);
+                    stats = stats.concat(item.statsArray)
                 }
             )
 
-            let uniqueStats = new Set(stats);
-            let uniqueStatArray = Array.from(uniqueStats);
+            let uniqueStats = new Set(stats)
+            let uniqueStatArray = Array.from(uniqueStats)
 
-            uniqueStatArray.sort();
+            uniqueStatArray.sort()
 
-            return uniqueStatArray;
+            return uniqueStatArray
         }
     },
     mounted() {
         this.fetchItems()
     },
     methods: {
-        fetchItems: function() {
+        fetchItems: function () {
             fetch('items.json')
-              .then(response => response.json())
-              .then(data => this.items = this.filteredItems = data);
+                .then(response => response.json())
+                .then(data => this.items = this.filteredItems = data)
         },
         filterItemsByStat: function (selectedStats) {
-            this.filteredItems = this.items.filter(
-                function (item) {
-                    if (!selectedStats) {
-                        return item
-                    }
-
-                    if (!item.statsArray) {
-                        return
-                    }
-
-                    let filterIsSubset = selectedStats.every(val => item.statsArray.includes(val));
-                    if (filterIsSubset) {
-                        return item
-                    }
+            let filterByStat = (item) => {
+                if (!selectedStats) {
+                    return item
                 }
-            );
 
-            this.sortItems();
+                if (!item.statsArray) {
+                    return
+                }
+
+                let filterIsSubset = selectedStats.every(val => item.statsArray.includes(val))
+                if (filterIsSubset) {
+                    return item
+                }
+            }
+
+            this.filteredItems = this.items.filter(filterByStat)
+
+            this.sortItems()
         },
         sortItems: function (event) {
             if (!event) {
@@ -87,117 +87,96 @@ let appData = {
             }
         },
         sortItemsByPrice: function (event) {
-            this.sortName = null;
-            this.sortStat = null;
-            this.sortStatKey = null;
+            this.sortName = null
+            this.sortStat = null
+            this.sortStatKey = null
 
-            this.sortPrice = !this.sortPrice;
+            this.sortPrice = !this.sortPrice
 
-            this.filteredItems = this.priceSort(this.filteredItems);
+            this.filteredItems = this.priceSort(this.filteredItems)
         },
         priceSort: function (items) {
+            let sortCheapest = (a, b) => { return a.price - b.price }
+
             if (this.sortPrice === false) {
-                return items.sort(
-                    function (a, b) {
-                        return a.price - b.price
-                    }
-                )
+                return items.sort(sortCheapest())
             } else {
-                return items.sort(
-                    function (a, b) {
-                        return b.price - a.price
-                    }
-                )
+                return items.sort(sortCheapest()).reverse()
             }
         },
         sortItemsByName: function (event) {
-            this.sortPrice = null;
-            this.sortStat = null;
-            this.sortStatKey = null;
-            this.sortPriceStat = null;
-            this.sortPriceStatKey = null;
+            this.sortPrice = null
+            this.sortStat = null
+            this.sortStatKey = null
+            this.sortPriceStat = null
+            this.sortPriceStatKey = null
 
-            this.sortName = !this.sortName;
+            this.sortName = !this.sortName
 
-            this.filteredItems = this.nameSort(this.filteredItems);
+            this.filteredItems = this.nameSort(this.filteredItems)
         },
         nameSort: function (items) {
+            let sortAlphabetically = (a, b) => { return a.name > b.name }
+
             if (this.sortName === false) {
-                return items.sort(
-                    function (a, b) {
-                        return a.name > b.name
-                    }
-                )
+                return items.sort(sortAlphabetically())
             } else {
-                return items.sort(
-                    function (a, b) {
-                        return a.name < b.name
-                    }
-                )
+                return items.sort(sortAlphabetically()).reverse
             }
         },
         sortItemsByStat: function (event) {
-            this.sortName = null;
-            this.sortPrice = null;
-            this.sortPriceStat = null;
-            this.sortPriceStatKey = null;
+            this.sortName = null
+            this.sortPrice = null
+            this.sortPriceStat = null
+            this.sortPriceStatKey = null
 
-            this.sortStat = !this.sortStat;
+            this.sortStat = !this.sortStat
 
-            this.filteredItems = this.statSort(this.filteredItems);
+            this.filteredItems = this.statSort(this.filteredItems)
         },
         sortItemsByPriceStat: function (event) {
-            this.sortName = null;
-            this.sortPrice = null;
-            this.sortStat = null;
-            this.sortStatKey = null;
+            this.sortName = null
+            this.sortPrice = null
+            this.sortStat = null
+            this.sortStatKey = null
 
-            this.sortPriceStat = !this.sortPriceStat;
+            this.sortPriceStat = !this.sortPriceStat
 
-            this.filteredItems = this.priceStatSort(this.filteredItems);
+            this.filteredItems = this.priceStatSort(this.filteredItems)
         },
         statSort: function (items) {
-            let highToLow = function (stat, nonNumericToNumeric) {
-                return function (a, b) {
-                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
-                    return aStat - bStat;
-                }
-            }
-            let lowToHigh = function (stat, nonNumericToNumeric) {
-                return function (a, b) {
-                    let aStat = nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = nonNumericToNumeric(b.statsObject[stat]);
-                    return bStat - aStat;
-                }
+            let sortHighToLow = (a, b) => {
+                let aStatValue = a.statsObject[this.sortStatKey]
+                let aStat = this.nonNumericToNumeric(aStatValue)
+
+                let bStatValue = b.statsObject[this.sortStatKey]
+                let bStat = this.nonNumericToNumeric(bStatValue)
+
+                return aStat - bStat
             }
 
             if (this.sortStat === false) {
-                return items.sort(highToLow(this.sortStatKey, this.nonNumericToNumeric))
+                return items.sort(sortHighToLow())
             } else {
-                return items.sort(lowToHigh(this.sortStatKey, this.nonNumericToNumeric))
+                return items.sort(sortHighToLow()).reverse()
             }
         },
-        priceStatSort: function (items) {
-            let highToLow = function (stat, nonNumericToNumeric) {
-                return function (a, b) {
-                    let aStat = a.price / nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = b.price / nonNumericToNumeric(b.statsObject[stat]);
-                    return aStat - bStat;
-                }
-            }
-            let lowToHigh = function (stat, nonNumericToNumeric) {
-                return function (a, b) {
-                    let aStat = a.price / nonNumericToNumeric(a.statsObject[stat]);
-                    let bStat = b.price / nonNumericToNumeric(b.statsObject[stat]);
-                    return bStat - aStat;
-                }
+        priceStatSort: (items) => {
+            let sortHighToLow = (a, b) => {
+                let aStatValue = a.statsObject[this.sortStatKey]
+                let aStatNumeric = this.nonNumericToNumeric(aStatValue)
+                let aStat = a.price / aStatNumeric
+
+                let bStatValue = b.statsObject[this.sortStatKey]
+                let bStatNumeric = this.nonNumericToNumeric(bStatValue)
+                let bStat = b.price / bStatNumeric
+                return aStat - bStat
             }
 
             if (this.sortPriceStat === false) {
-                return items.sort(highToLow(this.sortPriceStatKey, this.nonNumericToNumeric))
+                return items.sort(sortHighToLow())
             } else {
-                return items.sort(lowToHigh(this.sortPriceStatKey, this.nonNumericToNumeric))
+                return items.sort(sortHighToLow()).reverse()
             }
         },
         nonNumericToNumeric: function (value) {
@@ -205,29 +184,30 @@ let appData = {
                 return value
             }
 
-            let stringValue = value.toString();
-            let isPercent = stringValue.indexOf('%');
-            let isMultiple = stringValue.indexOf('/');
+            let stringValue = value.toString()
 
-            if (isPercent !== -1) {
-                let parts = stringValue.split('%')
-                return parseInt(parts[0])
-            } else if (isMultiple !== -1) {
-                let parts = stringValue.split('/')
-                return parseInt(parts[0])
-            } else {
-                return value
+            let delimiters = ['%', ' / ']
+            for (let index = 0; index < delimiters.length; index++) {
+                let delimiter = delimiters[index]
+                let delimiterPosition = stringValue.indexOf(delimiter)
+
+                if (delimiterPosition !== -1) {
+                    let parts = stringValue.split(delimiter)
+                    return parseInt(parts[0])
+                }
             }
+
+            return value
         },
         mouseOver: function (event) {
-            this.activeTooltip = event.target.id;
+            this.activeTooltip = event.target.id
         },
         mouseOut: function () {
-            this.activeTooltip = null;
+            this.activeTooltip = null
         }
     }
-};
+}
 
 let app = new Vue(appData)
 
-app.$watch('filterStats', app.filterItemsByStat)
+// app.$watch('filterStats', app.filterItemsByStat)
