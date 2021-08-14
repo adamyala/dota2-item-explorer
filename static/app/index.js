@@ -158,7 +158,7 @@ let appData = {
                 return items.sort(sortHighToLow).reverse()
             }
         },
-        priceStatSort: (items) => {
+        priceStatSort: function (items) {
             let sortHighToLow = (a, b) => {
                 let aStatValue = a.statsObject[this.sortStatKey]
                 let aStatNumeric = this.nonNumericToNumeric(aStatValue)
