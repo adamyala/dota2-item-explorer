@@ -293,40 +293,35 @@ def get_image_thumbnails():
     with open("items.json") as file:
         json_data = json.load(file)
 
-    client = DotaBuffClient()
-
     for item in json_data:
         image_url = item["imageUrl"]
         item_id = item["id"]
-        client.get_item_thumbnail(item_id, image_url)
+        dotabuff_client.get_item_thumbnail(item_id, image_url)
 
 
 def get_item_tooltips():
+    with open("items.json", "r") as file:
+        data = json.load(file)
+
     op = Options()
     # disable JavaScript
     op.set_preference("javascript.enabled", False)
 
-    driver = webdriver.Firefox(executable_path="./geckodriver", options=op)
-    driver.maximize_window()
+    with webdriver.Firefox(executable_path="./geckodriver", options=op) as driver:
+        driver.maximize_window()
 
-    with open("items.json", "r") as file:
-        data = json.load(file)
+        for item in data:
+            url = f'https://www.dotabuff.com/items/{item["id"]}'
+            driver.get(url)
 
-    for item in data:
-        url = f'https://www.dotabuff.com/items/{item["id"]}'
-        driver.get(url)
+            sleep(2)
 
-        sleep(2)
-
-        element = driver.find_element_by_class_name(
-            "embedded-tooltip"
-        ).find_element_by_xpath("./..")
-        image = element.screenshot_as_png
-        image_stream = io.BytesIO(image)
-        im = Image.open(image_stream)
-        im.save(f'./static/images/tooltips/{item["id"]}.png')
-
-    driver.close()
+            element = driver.find_element_by_class_name("embedded-tooltip")
+            parent_element = element.find_element_by_xpath("./..")
+            image = parent_element.screenshot_as_png
+            image_stream = io.BytesIO(image)
+            image_file = Image.open(image_stream)
+            image_file.save(f'./static/images/tooltips/{item["id"]}.png')
 
 
 get_items_json()
