@@ -9,7 +9,9 @@ from selenium.webdriver.firefox.options import Options
 from dotabuff import dotabuff_client
 
 
-skip_item_ids = [
+JSON_FILE = "items.json"
+
+ITEM_IDS_TO_SKIP = [
     "aegis-of-the-immortal",
     "aghanims-blessing",
     "aghanims-blessing-roshan",
@@ -95,8 +97,7 @@ class Item:
             self.stats_html = f"+ {self.stats['Movement Speed']} Movement Speed"
 
         elif self.item_id == "buckler":
-            self.stats["Armor"] = 2
-            self.stats_html = f"+ {self.stats['Armor']} Armor (Aura)"
+            self.stats_html = "+ 2 Armor (Aura)"
 
         elif self.item_id == "eternal-shroud":
             stat_value = f"{self.stats['Spell Lifesteal (Creeps)']}/{self.stats['Spell Lifesteal (Heroes)']}"
@@ -106,20 +107,13 @@ class Item:
             del self.stats["Spell Lifesteal (Creeps)"]
 
         elif self.item_id == "guardian-greaves":
-            self.stats["HP Regeneration"] = 2.5
-            self.stats["Armor"] = 3
-
             self.stats_html += (
-                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)<br>"
-                f"+ {self.stats['Armor']} Armor (Aura)"
+                f"+ 2.5 HP Regeneration (Aura)<br>"
+                f"+ 3 Armor (Aura)"
             )
 
         elif self.item_id == "headdress":
-            self.stats["HP Regeneration"] = 2
-
-            self.stats_html = (
-                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)"
-            )
+            self.stats_html = "+ 2 HP Regeneration (Aura)"
 
         elif self.item_id == "mask-of-madness":
             self.stats["Lifesteal"] = "20%"
@@ -127,11 +121,7 @@ class Item:
             self.stats_html += f"+ {self.stats['Lifesteal']} Lifesteal"
 
         elif self.item_id == "mekansm":
-            self.stats["HP Regeneration"] = 2
-
-            self.stats_html += (
-                f"+ {self.stats['HP Regeneration']} HP Regeneration (Aura)"
-            )
+            self.stats_html += "+ 2.5 HP Regeneration (Aura)"
 
         elif self.item_id == "morbid-mask":
             self.stats["Lifesteal"] = "15%"
@@ -152,11 +142,11 @@ class Item:
             self.stats["Magic Resistance"] = "40%"
 
             self.stats_html += (
-                "+ 2 HP Regeneration (Aura)<br>" "+ 10% Magic Resistance (Aura)"
+                "+ 2.5 HP Regeneration (Aura)<br>" 
+                "+ 10% Magic Resistance (Aura)"
             )
 
         elif self.item_id == "power-treads":
-            # {"Movement Speed": "45", "Selected Attribute": "10", "Attack Speed": "25"}
             stat_value = self.stats["Selected Attribute"]
             self.stats["Intelligence"] = stat_value
             self.stats["Strength"] = stat_value
@@ -171,11 +161,7 @@ class Item:
             )
 
         elif self.item_id == "ring-of-basilius":
-            self.stats["Mana Regeneration"] = 1.5
-
-            self.stats_html += (
-                f"+ {self.stats['Mana Regeneration']} Mana Regeneration (Aura)"
-            )
+            self.stats_html += "+ 1.0 Mana Regeneration (Aura)"
 
         elif self.item_id == "satanic":
             self.stats["Lifesteal"] = "25%"
@@ -183,11 +169,7 @@ class Item:
             self.stats_html += f"+ {self.stats['Lifesteal']} Lifesteal"
 
         elif self.item_id == "veil-of-discord":
-            self.stats["Mana Regeneration"] = 1.75
-
-            self.stats_html += (
-                f"+ {self.stats['Mana Regeneration']} Mana Regeneration (Aura)"
-            )
+            self.stats_html += "+ 1.75 Mana Regeneration (Aura)"
 
         elif self.item_id == "vladmirs-offering":
             self.stats["Lifesteal"] = "15%"
@@ -262,7 +244,7 @@ def get_items_json():
 
     items_json = []
     for item_id in item_ids:
-        if item_id in skip_item_ids:
+        if item_id in ITEM_IDS_TO_SKIP:
             continue
 
         item_properties = dotabuff_client.item_tooltip_data(item_id)
@@ -275,17 +257,12 @@ def get_items_json():
 
         items_json.append(item_json)
 
-    json_file = "items.json"
-    items_file = "static/app/items.js"
-    with open(items_file, "w") as file:
-        json.dump(items_json, file)
-
-    with open(json_file, "w") as file:
+    with open(JSON_FILE, "w") as file:
         json.dump(items_json, file, indent=4, sort_keys=True)
 
 
 def get_image_thumbnails():
-    with open("items.json") as file:
+    with open(JSON_FILE) as file:
         json_data = json.load(file)
 
     for item in json_data:
