@@ -7,12 +7,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 3.0,
+            "Armor": 0.5,
+            "Attack Speed": 3.0,
+            "HP Regeneration": 0.3,
+            "Health": 60.0,
             "Intelligence": 3.0,
+            "Mana": 36.0,
+            "Mana Regeneration": 0.3,
             "Strength": 3.0
         }
     },
@@ -26,13 +38,23 @@
             "Attack Speed",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Selected Attribute</span></div><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Attack Speed</span></div></div>",
         "statsObject": {
             "Agility": 10.0,
-            "Attack Speed": 25.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0,
             "Movement Speed": 45.0,
             "Strength": 10.0
         }
@@ -53,11 +75,15 @@
         "price": 4050,
         "statsArray": [
             "Strength",
-            "Damage"
+            "Damage",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div></div>",
         "statsObject": {
             "Damage": 24.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Strength": 10.0
         }
     },
@@ -71,14 +97,22 @@
             "Mana",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana Regeneration",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Mana</span></div></div>",
         "statsObject": {
             "Agility": 10.0,
-            "Health": 175.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0,
+            "HP Regeneration": 1.0,
+            "Health": 375.0,
             "Intelligence": 10.0,
-            "Mana": 175.0,
+            "Mana": 295.0,
+            "Mana Regeneration": 1.0,
             "Strength": 10.0
         }
     },
@@ -171,14 +205,22 @@
             "Strength",
             "Intelligence",
             "Attack Speed",
-            "Armor"
+            "Armor",
+            "Health",
+            "HP Regeneration",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.5</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Agility": 5.0,
-            "Armor": 1.5,
+            "Armor": 0.84,
             "Attack Speed": 5.0,
+            "HP Regeneration": 0.2,
+            "Health": 40.0,
             "Intelligence": 2.0,
+            "Mana": 24.0,
+            "Mana Regeneration": 0.2,
             "Strength": 2.0
         }
     },
@@ -205,13 +247,23 @@
             "Strength",
             "Agility",
             "Spell Amplification",
-            "Mana Regeneration"
+            "Mana Regeneration",
+            "Mana",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">3%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">0.6</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 2.0,
+            "Armor": 0.33,
+            "Attack Speed": 2.0,
+            "HP Regeneration": 0.2,
+            "Health": 40.0,
             "Intelligence": 5.0,
-            "Mana Regeneration": 0.6,
+            "Mana": 60.0,
+            "Mana Regeneration": 1.1,
             "Spell Amplification": "3%",
             "Strength": 2.0
         }
@@ -237,12 +289,14 @@
         "statsArray": [
             "Intelligence",
             "Mana Regeneration",
-            "Movement Speed"
+            "Movement Speed",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Movement Speed</span></div></div>",
         "statsObject": {
             "Intelligence": 10.0,
-            "Mana Regeneration": 2.5,
+            "Mana": 120.0,
+            "Mana Regeneration": 3.5,
             "Movement Speed": 20.0
         }
     },
@@ -256,13 +310,23 @@
             "Agility",
             "Intelligence",
             "Attack Speed",
-            "Movement Speed"
+            "Movement Speed",
+            "Health",
+            "HP Regeneration",
+            "Armor",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">26</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Movement Speed</span></div></div>",
         "statsObject": {
             "Agility": 26.0,
-            "Attack Speed": 12.0,
+            "Armor": 4.34,
+            "Attack Speed": 26.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0,
             "Movement Speed": "8%",
             "Strength": 10.0
         }
@@ -274,12 +338,16 @@
         "price": 2200,
         "statsArray": [
             "Intelligence",
-            "Health"
+            "Health",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">150</span> <span class=\"label\">Health</span></div></div>",
         "statsObject": {
             "Health": 150.0,
-            "Intelligence": 10.0
+            "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0
         }
     },
     {
@@ -320,14 +388,24 @@
             "Agility",
             "Intelligence",
             "Damage",
-            "HP Regeneration"
+            "HP Regeneration",
+            "Health",
+            "Attack Speed",
+            "Armor",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 2.0,
+            "Armor": 0.33,
+            "Attack Speed": 2.0,
             "Damage": 3.0,
-            "HP Regeneration": 1.0,
+            "HP Regeneration": 1.5,
+            "Health": 100.0,
             "Intelligence": 2.0,
+            "Mana": 24.0,
+            "Mana Regeneration": 0.2,
             "Strength": 5.0
         }
     },
@@ -380,14 +458,22 @@
             "Mana",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana Regeneration",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Mana</span></div></div>",
         "statsObject": {
             "Agility": 25.0,
-            "Health": 200.0,
+            "Armor": 4.17,
+            "Attack Speed": 25.0,
+            "HP Regeneration": 2.5,
+            "Health": 700.0,
             "Intelligence": 25.0,
-            "Mana": 200.0,
+            "Mana": 500.0,
+            "Mana Regeneration": 2.5,
             "Strength": 25.0
         }
     },
@@ -398,11 +484,15 @@
         "price": 680,
         "statsArray": [
             "Strength",
-            "Armor"
+            "Armor",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Armor": 2.0,
+            "HP Regeneration": 0.6,
+            "Health": 120.0,
             "Strength": 6.0
         }
     },
@@ -418,13 +508,19 @@
             "Attack Speed",
             "Movement Speed",
             "Self HP Regen and Lifesteal Amp",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Health",
+            "HP Regeneration",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">25%</span> <span class=\"label\">Status Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">10%</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">22%</span> <span class=\"label\">Self HP Regen and Lifesteal Amp</span></div></div>",
         "statsObject": {
             "Agility": 16.0,
-            "Attack Speed": 12.0,
+            "Armor": 2.67,
+            "Attack Speed": 16.0,
             "Can Disassemble": 1.0,
+            "HP Regeneration": 1.6,
+            "Health": 320.0,
             "Movement Speed": "10%",
             "Self HP Regen and Lifesteal Amp": "22%",
             "Status Resistance": "25%",
@@ -442,15 +538,21 @@
             "Intelligence",
             "Attack Speed",
             "Mana Regeneration",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Health",
+            "HP Regeneration",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.25</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Attack Speed": 10.0,
             "Can Disassemble": 1.0,
             "Damage": 15.0,
+            "HP Regeneration": 1.5,
+            "Health": 300.0,
             "Intelligence": 10.0,
-            "Mana Regeneration": 2.25,
+            "Mana": 120.0,
+            "Mana Regeneration": 3.25,
             "Strength": 15.0
         }
     },
@@ -497,10 +599,14 @@
         "name": "Ogre Axe",
         "price": 1000,
         "statsArray": [
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Strength": 10.0
         }
     },
@@ -512,12 +618,20 @@
         "statsArray": [
             "Agility",
             "Strength",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Attack Speed",
+            "Armor",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
             "Agility": 16.0,
+            "Armor": 2.67,
+            "Attack Speed": 16.0,
             "Can Disassemble": 1.0,
+            "HP Regeneration": 1.2,
+            "Health": 240.0,
             "Strength": 12.0
         }
     },
@@ -544,12 +658,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 5.0,
+            "Armor": 0.84,
+            "Attack Speed": 5.0,
+            "HP Regeneration": 0.5,
+            "Health": 100.0,
             "Intelligence": 5.0,
+            "Mana": 60.0,
+            "Mana Regeneration": 0.5,
             "Strength": 5.0
         }
     },
@@ -560,11 +686,15 @@
         "price": 2950,
         "statsArray": [
             "Damage",
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
             "Damage": 25.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Strength": 10.0
         }
     },
@@ -606,12 +736,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 1.0,
+            "Armor": 0.17,
+            "Attack Speed": 1.0,
+            "HP Regeneration": 0.1,
+            "Health": 20.0,
             "Intelligence": 1.0,
+            "Mana": 12.0,
+            "Mana Regeneration": 0.1,
             "Strength": 1.0
         }
     },
@@ -623,11 +765,13 @@
         "statsArray": [
             "Strength",
             "Health",
-            "Max Health Regen"
+            "Max Health Regen",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.6%</span> <span class=\"label\">Max Health Regen</span></div></div>",
         "statsObject": {
-            "Health": 250.0,
+            "HP Regeneration": 4.5,
+            "Health": 1150.0,
             "Max Health Regen": "1.6%",
             "Strength": 45.0
         }
@@ -640,11 +784,15 @@
         "statsArray": [
             "Strength",
             "Damage",
-            "Lifesteal"
+            "Lifesteal",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">55</span> <span class=\"label\">Damage</span></div></div>+ 25% Lifesteal",
         "statsObject": {
             "Damage": 55.0,
+            "HP Regeneration": 2.5,
+            "Health": 500.0,
             "Lifesteal": "25%",
             "Strength": 25.0
         }
@@ -660,15 +808,21 @@
             "Armor",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "HP Regeneration",
+            "Attack Speed"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.75</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Agility": 2.0,
-            "Armor": 2.0,
-            "Health": 250.0,
+            "Armor": 0.33,
+            "Attack Speed": 2.0,
+            "HP Regeneration": 0.2,
+            "Health": 290.0,
             "Intelligence": 2.0,
-            "Mana Regeneration": 1.75,
+            "Mana": 24.0,
+            "Mana Regeneration": 1.95,
             "Strength": 2.0
         }
     },
@@ -698,13 +852,23 @@
             "Intelligence",
             "Health",
             "Agility",
-            "Strength"
+            "Strength",
+            "Mana",
+            "Mana Regeneration",
+            "Attack Speed",
+            "Armor",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
             "Agility": 20.0,
-            "Health": 200.0,
+            "Armor": 3.34,
+            "Attack Speed": 20.0,
+            "HP Regeneration": 1.5,
+            "Health": 500.0,
             "Intelligence": 15.0,
+            "Mana": 180.0,
+            "Mana Regeneration": 1.5,
             "Strength": 15.0
         }
     },
@@ -728,12 +892,20 @@
         "price": 3150,
         "statsArray": [
             "Agility",
-            "Intelligence"
+            "Intelligence",
+            "Attack Speed",
+            "Armor",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
             "Agility": 24.0,
-            "Intelligence": 12.0
+            "Armor": 4.01,
+            "Attack Speed": 24.0,
+            "Intelligence": 12.0,
+            "Mana": 144.0,
+            "Mana Regeneration": 1.2
         }
     },
     {
@@ -763,8 +935,8 @@
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">10.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
             "Damage": 25.0,
-            "HP Regeneration": 10.0,
-            "Health": 250.0,
+            "HP Regeneration": 11.0,
+            "Health": 450.0,
             "Strength": 10.0
         }
     },
@@ -777,14 +949,16 @@
             "Intelligence",
             "Attack Speed",
             "Damage",
-            "Mana Regeneration"
+            "Mana Regeneration",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">4.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Attack Speed": 25.0,
             "Damage": 30.0,
             "Intelligence": 20.0,
-            "Mana Regeneration": 4.0
+            "Mana": 240.0,
+            "Mana Regeneration": 6.0
         }
     },
     {
@@ -877,11 +1051,13 @@
             "Agility",
             "Evasion",
             "Attack Speed",
-            "Damage"
+            "Damage",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">35%</span> <span class=\"label\">Evasion</span></div><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div></div>",
         "statsObject": {
             "Agility": 30.0,
+            "Armor": 5.01,
             "Attack Speed": 30.0,
             "Damage": 25.0,
             "Evasion": "35%"
@@ -918,14 +1094,22 @@
             "Mana Regeneration",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Health",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 14.0,
-            "HP Regeneration": 7.0,
+            "Armor": 2.34,
+            "Attack Speed": 14.0,
+            "HP Regeneration": 8.4,
+            "Health": 280.0,
             "Intelligence": 14.0,
-            "Mana Regeneration": 5.0,
+            "Mana": 168.0,
+            "Mana Regeneration": 6.4,
             "Strength": 14.0
         }
     },
@@ -954,12 +1138,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 12.0,
+            "Armor": 2.0,
+            "Attack Speed": 12.0,
+            "HP Regeneration": 1.2,
+            "Health": 240.0,
             "Intelligence": 24.0,
+            "Mana": 288.0,
+            "Mana Regeneration": 2.4,
             "Strength": 12.0
         }
     },
@@ -1019,13 +1215,23 @@
             "Strength",
             "Agility",
             "Intelligence",
-            "Mana Regeneration"
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">9.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 10.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 35.0,
-            "Mana Regeneration": 9.0,
+            "Mana": 420.0,
+            "Mana Regeneration": 12.5,
             "Strength": 10.0
         }
     },
@@ -1054,11 +1260,15 @@
         "name": "Staff of Wizardry",
         "price": 1000,
         "statsArray": [
-            "Intelligence"
+            "Intelligence",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Intelligence": 10.0
+            "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0
         }
     },
     {
@@ -1071,12 +1281,16 @@
             "Strength",
             "Status Resistance",
             "Self HP Regen and Lifesteal Amp",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Evasion</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">16%</span> <span class=\"label\">Status Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Self HP Regen and Lifesteal Amp</span></div></div>",
         "statsObject": {
             "Can Disassemble": 1.0,
             "Evasion": "20%",
+            "HP Regeneration": 2.0,
+            "Health": 400.0,
             "Self HP Regen and Lifesteal Amp": "20%",
             "Status Resistance": "16%",
             "Strength": 20.0
@@ -1092,14 +1306,22 @@
             "Armor",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1.4</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Agility": 2.0,
-            "Armor": 2.0,
+            "Armor": 0.33,
+            "Attack Speed": 2.0,
+            "HP Regeneration": 0.2,
+            "Health": 40.0,
             "Intelligence": 2.0,
-            "Mana Regeneration": 1.4,
+            "Mana": 24.0,
+            "Mana Regeneration": 1.6,
             "Strength": 2.0
         }
     },
@@ -1121,13 +1343,25 @@
             "Agility",
             "Strength",
             "Intelligence",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Attack Speed",
+            "Armor",
+            "Health",
+            "HP Regeneration",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
             "Agility": 40.0,
+            "Armor": 6.68,
+            "Attack Speed": 40.0,
             "Can Disassemble": 1.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0,
             "Strength": 10.0
         }
     },
@@ -1183,13 +1417,17 @@
             "Attack Speed",
             "Intelligence",
             "Armor",
-            "Projectile Speed"
+            "Projectile Speed",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Projectile Speed</span></div></div>",
         "statsObject": {
             "Armor": 6.0,
             "Attack Speed": 35.0,
             "Intelligence": 12.0,
+            "Mana": 144.0,
+            "Mana Regeneration": 1.2,
             "Projectile Speed": 300.0
         }
     },
@@ -1264,12 +1502,16 @@
         "price": 4850,
         "statsArray": [
             "Intelligence",
-            "Armor"
+            "Armor",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Armor": 15.0,
-            "Intelligence": 30.0
+            "Intelligence": 30.0,
+            "Mana": 360.0,
+            "Mana Regeneration": 3.0
         }
     },
     {
@@ -1296,12 +1538,16 @@
             "Intelligence",
             "Spell Amplification",
             "Mana Regen Amplification",
-            "Spell Lifesteal Amplification"
+            "Spell Lifesteal Amplification",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">50%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">24%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
         "statsObject": {
             "Intelligence": 16.0,
+            "Mana": 192.0,
             "Mana Regen Amplification": "50%",
+            "Mana Regeneration": 1.6,
             "Spell Amplification": "8%",
             "Spell Lifesteal Amplification": "24%"
         }
@@ -1324,13 +1570,25 @@
             "Damage",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 14.0,
+            "Armor": 2.34,
+            "Attack Speed": 14.0,
             "Damage": 30.0,
+            "HP Regeneration": 1.4,
+            "Health": 280.0,
             "Intelligence": 24.0,
+            "Mana": 288.0,
+            "Mana Regeneration": 2.4,
             "Strength": 14.0
         }
     },
@@ -1345,14 +1603,22 @@
             "Mana Regeneration",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.75</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 5.0,
-            "Armor": 6.0,
+            "Armor": 0.84,
+            "Attack Speed": 5.0,
+            "HP Regeneration": 0.5,
+            "Health": 100.0,
             "Intelligence": 5.0,
-            "Mana Regeneration": 1.75,
+            "Mana": 60.0,
+            "Mana Regeneration": 2.25,
             "Movement Speed": 20.0,
             "Strength": 5.0
         }
@@ -1367,14 +1633,22 @@
             "Mana Regeneration",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Health",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 8.0,
-            "HP Regeneration": 6.5,
+            "Armor": 1.34,
+            "Attack Speed": 8.0,
+            "HP Regeneration": 7.3,
+            "Health": 160.0,
             "Intelligence": 8.0,
-            "Mana Regeneration": 2.5,
+            "Mana": 96.0,
+            "Mana Regeneration": 3.3,
             "Strength": 8.0
         }
     },
@@ -1391,13 +1665,21 @@
             "Spell Amplification",
             "Self HP Regen and Lifesteal Amp",
             "Spell Lifesteal Amplification",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Health",
+            "HP Regeneration",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">25%</span> <span class=\"label\">Status Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">50%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">16%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">22%</span> <span class=\"label\">Self HP Regen and Lifesteal Amp</span></div><div class=\"stat attribute\">+ <span class=\"value\">30%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
         "statsObject": {
             "Can Disassemble": 1.0,
+            "HP Regeneration": 1.6,
+            "Health": 320.0,
             "Intelligence": 16.0,
+            "Mana": 192.0,
             "Mana Regen Amplification": "50%",
+            "Mana Regeneration": 1.6,
             "Self HP Regen and Lifesteal Amp": "22%",
             "Spell Amplification": "16%",
             "Spell Lifesteal Amplification": "30%",
@@ -1414,14 +1696,16 @@
             "Intelligence",
             "Attack Speed",
             "Damage",
-            "Mana Regeneration"
+            "Mana Regeneration",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">90</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.5</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Attack Speed": 90.0,
             "Damage": 30.0,
             "Intelligence": 25.0,
-            "Mana Regeneration": 5.5
+            "Mana": 300.0,
+            "Mana Regeneration": 8.0
         }
     },
     {
@@ -1449,12 +1733,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 10.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 10.0,
+            "Mana": 120.0,
+            "Mana Regeneration": 1.0,
             "Strength": 10.0
         }
     },
@@ -1470,14 +1766,16 @@
             "Mana Regen Amplification",
             "Spell Amplification",
             "Spell Lifesteal Amplification",
-            "Spell Lifesteal"
+            "Spell Lifesteal",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">425</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">425</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">100%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">15.0%</span> <span class=\"label\">Spell Lifesteal (Hero)</span></div><div class=\"stat attribute\">+ <span class=\"value\">3.0%</span> <span class=\"label\">Spell Lifesteal (Creep)</span></div><div class=\"stat attribute\">+ <span class=\"value\">30%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
         "statsObject": {
             "Health": 425.0,
             "Intelligence": 16.0,
-            "Mana": 425.0,
+            "Mana": 617.0,
             "Mana Regen Amplification": "100%",
+            "Mana Regeneration": 1.6,
             "Spell Amplification": "8%",
             "Spell Lifesteal": "3.0%/15.0%",
             "Spell Lifesteal Amplification": "30%"
@@ -1491,12 +1789,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 2.0,
+            "Armor": 0.33,
+            "Attack Speed": 2.0,
+            "HP Regeneration": 0.2,
+            "Health": 40.0,
             "Intelligence": 2.0,
+            "Mana": 24.0,
+            "Mana Regeneration": 0.2,
             "Strength": 2.0
         }
     },
@@ -1521,12 +1831,14 @@
         "statsArray": [
             "Agility",
             "Attack Speed",
-            "Movement Speed"
+            "Movement Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Movement Speed</span></div></div>",
         "statsObject": {
             "Agility": 16.0,
-            "Attack Speed": 12.0,
+            "Armor": 2.67,
+            "Attack Speed": 16.0,
             "Movement Speed": "8%"
         }
     },
@@ -1536,11 +1848,15 @@
         "name": "Blade of Alacrity",
         "price": 1000,
         "statsArray": [
-            "Agility"
+            "Agility",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 10.0
+            "Agility": 10.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0
         }
     },
     {
@@ -1553,14 +1869,22 @@
             "Mana",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana Regeneration",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">325</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 3.0,
-            "Health": 250.0,
+            "Armor": 0.5,
+            "Attack Speed": 3.0,
+            "HP Regeneration": 0.3,
+            "Health": 310.0,
             "Intelligence": 3.0,
-            "Mana": 325.0,
+            "Mana": 361.0,
+            "Mana Regeneration": 0.3,
             "Strength": 3.0
         }
     },
@@ -1587,10 +1911,14 @@
         "name": "Overwhelming Blink",
         "price": 6800,
         "statsArray": [
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 2.5,
+            "Health": 500.0,
             "Strength": 25.0
         }
     },
@@ -1600,11 +1928,15 @@
         "name": "Arcane Blink",
         "price": 6800,
         "statsArray": [
-            "Intelligence"
+            "Intelligence",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Intelligence": 25.0
+            "Intelligence": 25.0,
+            "Mana": 300.0,
+            "Mana Regeneration": 2.5
         }
     },
     {
@@ -1641,11 +1973,15 @@
         "name": "Slippers of Agility",
         "price": 140,
         "statsArray": [
-            "Agility"
+            "Agility",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 3.0
+            "Agility": 3.0,
+            "Armor": 0.5,
+            "Attack Speed": 3.0
         }
     },
     {
@@ -1657,13 +1993,25 @@
             "Intelligence",
             "Strength",
             "Agility",
-            "Aura"
+            "Aura",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>+ 1.75 Mana Regeneration (Aura)",
         "statsObject": {
             "Agility": 4.0,
+            "Armor": 0.67,
+            "Attack Speed": 4.0,
             "Aura": 1.0,
+            "HP Regeneration": 0.4,
+            "Health": 80.0,
             "Intelligence": 4.0,
+            "Mana": 48.0,
+            "Mana Regeneration": 0.4,
             "Strength": 4.0
         }
     },
@@ -1673,11 +2021,15 @@
         "name": "Swift Blink",
         "price": 6800,
         "statsArray": [
-            "Agility"
+            "Agility",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 25.0
+            "Agility": 25.0,
+            "Armor": 4.17,
+            "Attack Speed": 25.0
         }
     },
     {
@@ -1820,10 +2172,14 @@
         "statsArray": [
             "Strength",
             "Status Resistance",
-            "Self HP Regen and Lifesteal Amp"
+            "Self HP Regen and Lifesteal Amp",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">12%</span> <span class=\"label\">Status Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Self HP Regen and Lifesteal Amp</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 1.6,
+            "Health": 320.0,
             "Self HP Regen and Lifesteal Amp": "20%",
             "Status Resistance": "12%",
             "Strength": 16.0
@@ -1865,10 +2221,14 @@
         "name": "Gauntlets of Strength",
         "price": 140,
         "statsArray": [
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 0.3,
+            "Health": 60.0,
             "Strength": 3.0
         }
     },
@@ -1880,12 +2240,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"value\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 14.0,
+            "Armor": 2.34,
+            "Attack Speed": 14.0,
+            "HP Regeneration": 1.4,
+            "Health": 280.0,
             "Intelligence": 22.0,
+            "Mana": 264.0,
+            "Mana Regeneration": 2.2,
             "Strength": 14.0
         }
     },
@@ -1895,10 +2267,14 @@
         "name": "Reaver",
         "price": 2800,
         "statsArray": [
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 2.5,
+            "Health": 500.0,
             "Strength": 25.0
         }
     },
@@ -1982,15 +2358,21 @@
             "Movement Speed",
             "Spell Amplification",
             "Spell Lifesteal Amplification",
-            "Can Disassemble"
+            "Can Disassemble",
+            "Armor",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">50%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">10%</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">16%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">30%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
         "statsObject": {
             "Agility": 16.0,
-            "Attack Speed": 12.0,
+            "Armor": 2.67,
+            "Attack Speed": 16.0,
             "Can Disassemble": 1.0,
             "Intelligence": 16.0,
+            "Mana": 192.0,
             "Mana Regen Amplification": "50%",
+            "Mana Regeneration": 1.6,
             "Movement Speed": "10%",
             "Spell Amplification": "16%",
             "Spell Lifesteal Amplification": "30%"
@@ -2045,11 +2427,15 @@
         "name": "Mystic Staff",
         "price": 2800,
         "statsArray": [
-            "Intelligence"
+            "Intelligence",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Intelligence": 25.0
+            "Intelligence": 25.0,
+            "Mana": 300.0,
+            "Mana Regeneration": 2.5
         }
     },
     {
@@ -2086,12 +2472,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>",
         "statsObject": {
             "Agility": 4.0,
+            "Armor": 0.67,
+            "Attack Speed": 4.0,
+            "HP Regeneration": 0.4,
+            "Health": 80.0,
             "Intelligence": 4.0,
+            "Mana": 48.0,
+            "Mana Regeneration": 0.4,
             "Strength": 4.0
         }
     },
@@ -2157,10 +2555,14 @@
         "name": "Belt of Strength",
         "price": 450,
         "statsArray": [
-            "Strength"
+            "Strength",
+            "Health",
+            "HP Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 0.6,
+            "Health": 120.0,
             "Strength": 6.0
         }
     },
@@ -2184,11 +2586,19 @@
         "price": 1700,
         "statsArray": [
             "Strength",
-            "Intelligence"
+            "Intelligence",
+            "Health",
+            "HP Regeneration",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
+            "HP Regeneration": 0.7,
+            "Health": 140.0,
             "Intelligence": 7.0,
+            "Mana": 84.0,
+            "Mana Regeneration": 0.7,
             "Strength": 7.0
         }
     },
@@ -2198,11 +2608,15 @@
         "name": "Mantle of Intelligence",
         "price": 140,
         "statsArray": [
-            "Intelligence"
+            "Intelligence",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Intelligence": 3.0
+            "Intelligence": 3.0,
+            "Mana": 36.0,
+            "Mana Regeneration": 0.3
         }
     },
     {
@@ -2241,7 +2655,8 @@
             "Attack Speed",
             "Damage",
             "Mana Regeneration",
-            "Intelligence"
+            "Intelligence",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Magic Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10.0</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
@@ -2249,7 +2664,8 @@
             "Damage": 20.0,
             "Intelligence": 10.0,
             "Magic Resistance": "20%",
-            "Mana Regeneration": 2.0
+            "Mana": 120.0,
+            "Mana Regeneration": 3.0
         }
     },
     {
@@ -2261,14 +2677,16 @@
             "Damage",
             "Intelligence",
             "Attack Speed",
-            "Mana Regeneration"
+            "Mana Regeneration",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.25</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
             "Attack Speed": 10.0,
             "Damage": 15.0,
             "Intelligence": 10.0,
-            "Mana Regeneration": 1.25
+            "Mana": 120.0,
+            "Mana Regeneration": 2.25
         }
     },
     {
@@ -2277,11 +2695,15 @@
         "name": "Eaglesong",
         "price": 2800,
         "statsArray": [
-            "Agility"
+            "Agility",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 25.0
+            "Agility": 25.0,
+            "Armor": 4.17,
+            "Attack Speed": 25.0
         }
     },
     {
@@ -2290,11 +2712,15 @@
         "name": "Band of Elvenskin",
         "price": 450,
         "statsArray": [
-            "Agility"
+            "Agility",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 6.0
+            "Agility": 6.0,
+            "Armor": 1.0,
+            "Attack Speed": 6.0
         }
     },
     {
@@ -2305,12 +2731,14 @@
         "statsArray": [
             "Movement Speed",
             "Mana Regeneration",
-            "Intelligence"
+            "Intelligence",
+            "Mana"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">50</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.0</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
             "Intelligence": 35.0,
-            "Mana Regeneration": 6.0,
+            "Mana": 420.0,
+            "Mana Regeneration": 9.5,
             "Movement Speed": 50.0
         }
     },
@@ -2322,12 +2750,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 6.0,
+            "Armor": 1.0,
+            "Attack Speed": 6.0,
+            "HP Regeneration": 0.6,
+            "Health": 120.0,
             "Intelligence": 14.0,
+            "Mana": 168.0,
+            "Mana Regeneration": 1.4,
             "Strength": 6.0
         }
     },
@@ -2350,11 +2790,15 @@
         "name": "Robe of the Magi",
         "price": 450,
         "statsArray": [
-            "Intelligence"
+            "Intelligence",
+            "Mana",
+            "Mana Regeneration"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Intelligence": 6.0
+            "Intelligence": 6.0,
+            "Mana": 72.0,
+            "Mana Regeneration": 0.6
         }
     },
     {
@@ -2380,14 +2824,22 @@
             "HP Regeneration",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "Attack Speed"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">8</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">8.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 8.0,
-            "Armor": 8.0,
-            "HP Regeneration": 8.0,
+            "Armor": 1.34,
+            "Attack Speed": 8.0,
+            "HP Regeneration": 8.8,
+            "Health": 160.0,
             "Intelligence": 8.0,
+            "Mana": 96.0,
+            "Mana Regeneration": 0.8,
             "Strength": 8.0
         }
     },
@@ -2399,12 +2851,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"value\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 10.0,
+            "Armor": 1.67,
+            "Attack Speed": 10.0,
+            "HP Regeneration": 1.0,
+            "Health": 200.0,
             "Intelligence": 18.0,
+            "Mana": 216.0,
+            "Mana Regeneration": 1.8,
             "Strength": 10.0
         }
     },
@@ -2444,12 +2908,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"value\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"value\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"value\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 8.0,
+            "Armor": 1.34,
+            "Attack Speed": 8.0,
+            "HP Regeneration": 0.8,
+            "Health": 160.0,
             "Intelligence": 16.0,
+            "Mana": 192.0,
+            "Mana Regeneration": 1.6,
             "Strength": 8.0
         }
     },
@@ -2461,12 +2937,24 @@
         "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "HP Regeneration",
+            "Attack Speed",
+            "Armor"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"value\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"value\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"value\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 12.0,
+            "Armor": 2.0,
+            "Attack Speed": 12.0,
+            "HP Regeneration": 1.2,
+            "Health": 240.0,
             "Intelligence": 20.0,
+            "Mana": 240.0,
+            "Mana Regeneration": 2.0,
             "Strength": 12.0
         }
     },
@@ -2480,14 +2968,22 @@
             "HP Regeneration",
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Mana",
+            "Mana Regeneration",
+            "Health",
+            "Attack Speed"
         ],
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
         "statsObject": {
             "Agility": 6.0,
-            "Armor": 6.0,
-            "HP Regeneration": 6.0,
+            "Armor": 1.0,
+            "Attack Speed": 6.0,
+            "HP Regeneration": 6.6,
+            "Health": 120.0,
             "Intelligence": 6.0,
+            "Mana": 72.0,
+            "Mana Regeneration": 0.6,
             "Strength": 6.0
         }
     },

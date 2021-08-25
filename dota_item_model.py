@@ -1,40 +1,3 @@
-import io
-import json
-from time import sleep
-
-from PIL import Image
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-
-from dotabuff import dotabuff_client
-
-
-JSON_FILE = "items.json"
-
-ITEM_IDS_TO_SKIP = [
-    "aegis-of-the-immortal",
-    "aghanims-blessing",
-    "aghanims-blessing-roshan",
-    "aghanims-shard",
-    "aghanims-shard-roshan",
-    "bottle",
-    "cheese",
-    "clarity",
-    "dust-of-appearance",
-    "gem-of-true-sight",
-    "healing-salve",
-    "observer-and-sentry-wards",
-    "observer-ward",
-    "refresher-shard",
-    "sentry-ward",
-    "smoke-of-deceit",
-    "tango",
-    "tango-shared",
-    "tome-of-knowledge",
-    "town-portal-scroll",
-]
-
-
 class Item:
     def __init__(self, item_id, name, price, image_url, stats, stats_html):
         self.item_id = item_id
@@ -238,64 +201,29 @@ class Item:
         if self.item_id in disassemble_items:
             self.stats["Can Disassemble"] = True
 
+    def add_computed_stats(self):
+        computed_stats = self.stats.copy()
 
-def get_items_json():
-    item_ids = dotabuff_client.item_ids()
+        for key, value in self.stats.items():
+            if key == 'Agility':
+                value = float(value)
+                current_attack_speed = getattr(self.stats, 'Attack Speed', 0)
+                computed_stats['Attack Speed'] = round(current_attack_speed + value, 2)
+                current_armor = getattr(self.stats, 'Armor', 0)
+                computed_stats['Armor'] = round(current_armor + (value * 0.167), 2)
 
-    items_json = []
-    for item_id in item_ids:
-        if item_id in ITEM_IDS_TO_SKIP:
-            continue
+            if key == 'Strength':
+                value = float(value)
+                current_health = float(self.stats.get('Health', 0))
+                computed_stats['Health'] = round(current_health + (value * 20), 2)
+                current_hp_regen = float(self.stats.get('HP Regeneration', 0))
+                computed_stats['HP Regeneration'] = round(current_hp_regen + (value * 0.1), 2)
 
-        item_properties = dotabuff_client.item_tooltip_data(item_id)
-        if not item_properties:
-            continue
+            if key == 'Intelligence':
+                value = float(value)
+                current_mana = float(self.stats.get('Mana', 0))
+                computed_stats['Mana'] = round(current_mana + (value * 12), 2)
+                current_mana_regen = float(self.stats.get('Mana Regeneration', 0))
+                computed_stats['Mana Regeneration'] = round(current_mana_regen + (value * 0.1), 2)
 
-        item = Item(item_id, *item_properties)
-
-        item_json = item.to_json()
-
-        items_json.append(item_json)
-
-    with open(JSON_FILE, "w") as file:
-        json.dump(items_json, file, indent=4, sort_keys=True)
-
-
-def get_image_thumbnails():
-    with open(JSON_FILE) as file:
-        json_data = json.load(file)
-
-    for item in json_data:
-        image_url = item["imageUrl"]
-        item_id = item["id"]
-        dotabuff_client.get_item_thumbnail(item_id, image_url)
-
-
-def get_item_tooltips():
-    with open("items.json", "r") as file:
-        data = json.load(file)
-
-    op = Options()
-    # disable JavaScript
-    op.set_preference("javascript.enabled", False)
-
-    with webdriver.Firefox(executable_path="./geckodriver", options=op) as driver:
-        driver.maximize_window()
-
-        for item in data:
-            url = f'https://www.dotabuff.com/items/{item["id"]}'
-            driver.get(url)
-
-            sleep(2)
-
-            element = driver.find_element_by_class_name("embedded-tooltip")
-            parent_element = element.find_element_by_xpath("./..")
-            image = parent_element.screenshot_as_png
-            image_stream = io.BytesIO(image)
-            image_file = Image.open(image_stream)
-            image_file.save(f'./static/images/tooltips/{item["id"]}.png')
-
-
-get_items_json()
-get_image_thumbnails()
-get_item_tooltips()
+        self.stats = computed_stats

@@ -4,6 +4,7 @@ let appData = {
         activeTooltip: null,
 
         items: [],
+        useComputedItems: false,
 
         filterStats: [],
         sortPrice: null,
@@ -41,7 +42,9 @@ let appData = {
     },
     methods: {
         fetchItems: function () {
-            fetch('items.json')
+            let itemFile = (this.useComputedItems ? 'computed-items.json' : 'items.json')
+
+            fetch(itemFile)
                 .then(response => response.json())
                 .then(data => this.items = this.filteredItems = data)
         },
@@ -209,3 +212,4 @@ let appData = {
 let app = new Vue(appData)
 
 app.$watch('filterStats', app.filterItemsByStat)
+app.$watch('useComputedItems', app.fetchItems)
