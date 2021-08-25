@@ -283,11 +283,6 @@ def get_items_json():
     with open(json_file, "w") as file:
         json.dump(items_json, file, indent=4, sort_keys=True)
 
-    with open(items_file, "r") as original:
-        data = original.read()
-    with open(items_file, "w") as modified:
-        modified.write("let items = " + data)
-
 
 def get_image_thumbnails():
     with open("items.json") as file:

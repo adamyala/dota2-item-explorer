@@ -159,7 +159,7 @@ let appData = {
             }
         },
         priceStatSort: function (items) {
-            let sortHighToLow = (a, b) => {
+            function sortHighToLow (a, b) {
                 let aStatValue = a.statsObject[this.sortStatKey]
                 let aStatNumeric = this.nonNumericToNumeric(aStatValue)
                 let aStat = a.price / aStatNumeric
