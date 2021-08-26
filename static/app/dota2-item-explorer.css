@@ -3,6 +3,23 @@ article aside p {
     text-align: center
 }
 
+/*make mouse a pointer when hovering on a table header*/
 .sort-header {
     cursor: pointer;
+}
+
+/*the tooltip image that pops up when hovering on an item thumbnail*/
+.tooltip-image {
+    position: absolute;
+    width: 500px;
+}
+
+/*div that spaces out stat checkboxes*/
+.checkbox-container {
+    padding: 10px;
+}
+
+/*text describing what computed item data is*/
+.computed-items-description {
+    text-align: center;
 }

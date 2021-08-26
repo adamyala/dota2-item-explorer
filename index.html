@@ -29,7 +29,7 @@
 
                 </p>
             </section>
-            <section style="text-align: center">
+            <section class="computed-items-description">
                 Computed stats are addition Armor, Mana Regeneration, Health, etc granted by attributes.
                 <br>
                 For example, when using computed stats Magic Wand would appear while sorting for Armor.
@@ -37,11 +37,13 @@
             </section>
 
             <section>
-                <p><b>Stat Filter</b></p>
+                <p>
+                    <b>Stat Filter</b>
+                </p>
             </section>
 
             <section>
-                <div style="padding: 10px" v-for="stat in stats">
+                <div class="checkbox-container" v-for="stat in stats">
                     <input type="checkbox" :value="stat" v-model="filterStats">
                     <label>{{stat}}</label>
                 </div>
@@ -77,44 +79,46 @@
 
                 <table>
                     <thead>
-                        <th></th>
-                        <th id="name-header" class="sort-header" v-on:click="sortItems($event)">
-                            Name&nbsp;
-                            <span v-if="sortName !== null">
-                                <span v-if="sortName">⬇️</span>
-                                <span v-else>⬆️️</span>
-                            </span>
-                        </th>
+                        <tr>
+                            <th></th>
+                            <th id="name-header" class="sort-header" v-on:click="sortItems($event)">
+                                Name&nbsp;
+                                <span v-if="sortName !== null">
+                                    <span v-if="sortName">⬇️</span>
+                                    <span v-else>⬆️️</span>
+                                </span>
+                            </th>
 
-                        <th id="price-header" class="sort-header" v-on:click="sortItems($event)">
-                            Price&nbsp;
-                            <span v-if="sortPrice !== null">
-                                <span v-if="sortPrice">⬇️</span>
-                                <span v-else>⬆️️</span>
-                            </span>
-                        </th>
+                            <th id="price-header" class="sort-header" v-on:click="sortItems($event)">
+                                Price&nbsp;
+                                <span v-if="sortPrice !== null">
+                                    <span v-if="sortPrice">⬇️</span>
+                                    <span v-else>⬆️️</span>
+                                </span>
+                            </th>
 
-                        <th :id="stat" class="sort-header" v-for="stat in filterStats" v-on:click="sortItems($event)">
-                            {{ stat }}&nbsp;
-                            <span v-if="sortStatKey === stat">
-                                <span v-if="sortStat">⬇️</span>
-                                <span v-else>⬆️️</span>
-                            </span>
-                        </th>
+                            <th :id="stat" class="sort-header" v-for="stat in filterStats" v-on:click="sortItems($event)">
+                                {{ stat }}&nbsp;
+                                <span v-if="sortStatKey === stat">
+                                    <span v-if="sortStat">⬇️</span>
+                                    <span v-else>⬆️️</span>
+                                </span>
+                            </th>
 
-                        <th
-                            :id="'cost-per-' + stat" class="sort-header"
-                            v-for="stat in filterStats"
-                            v-on:click="sortItems($event)"
-                        >
-                            Cost per {{ stat }}
-                            <span v-if="sortPriceStatKey === stat">
-                                <span v-if="sortPriceStat">⬇️</span>
-                                <span v-else>⬆️️</span>
-                            </span>
-                        </th>
+                            <th
+                                :id="'cost-per-' + stat" class="sort-header"
+                                v-for="stat in filterStats"
+                                v-on:click="sortItems($event)"
+                            >
+                                Cost per {{ stat }}
+                                <span v-if="sortPriceStatKey === stat">
+                                    <span v-if="sortPriceStat">⬇️</span>
+                                    <span v-else>⬆️️</span>
+                                </span>
+                            </th>
 
-                        <th>Stats</th>
+                            <th>Stats</th>
+                        </tr>
                     </thead>
 
                     <tbody>
@@ -123,8 +127,7 @@
                             <td>
                                 <img :src="'static/images/thumbnails/' + item.id + '.jpg'" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
 
-                                <img v-show="activeTooltip === item.id" :src="'static/images/tooltips/' + item.id + '.png'"
-                                    style="zindex: 100; position: absolute; width: 500px;"/>
+                                <img class="tooltip-image" v-show="activeTooltip === item.id" :src="'static/images/tooltips/' + item.id + '.png'"/>
                             </td>
 
                             <td>{{ item.name }}</td>
