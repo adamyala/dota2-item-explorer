@@ -9,7 +9,6 @@ from selenium.webdriver.firefox.options import Options
 from dota_client import dotabuff_client
 from dota_item_model import Item
 
-
 JSON_FILE = "items.json"
 
 ITEM_IDS_TO_SKIP = [
@@ -61,7 +60,7 @@ def get_items_json():
     with open(JSON_FILE, "w") as file:
         json.dump(items_json, file, indent=4, sort_keys=True)
 
-    with open('computed-' + JSON_FILE, "w") as file:
+    with open("computed-" + JSON_FILE, "w") as file:
         json.dump(computed_items_json, file, indent=4, sort_keys=True)
 
 
@@ -101,6 +100,5 @@ def get_item_tooltips():
 
 
 get_items_json()
-create_computed_items_json()
 get_image_thumbnails()
 get_item_tooltips()

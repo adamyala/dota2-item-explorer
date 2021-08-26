@@ -1,164 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8"/>
-    <title>DotA 2 Item Explorer 7.30b</title>
+    <head>
+        <meta charset="utf-8"/>
+        <title>DotA 2 Item Explorer 7.30b</title>
 
-    <link rel="stylesheet" href="static/dependencies/mvp.css">
-    <link rel="stylesheet" href="static/app/dota2-item-explorer.css">
+        <link rel="stylesheet" href="static/dependencies/mvp.css">
+        <link rel="stylesheet" href="static/app/dota2-item-explorer.css">
 
-    <script src="static/dependencies/vue.js"></script>
-    <script type="module" src="static/app/index.js"></script>
-</head>
+        <script src="static/dependencies/vue.js"></script>
+        <script type="module" src="static/app/index.js"></script>
+    </head>
 
-<body>
+    <body>
 
-<main id="app">
-    <section>
-        <header>
-            <h2>DotA 2 Item Explorer 7.30b&nbsp;🔍</h2>
-        </header>
-    </section>
+        <main id="app">
+            <section>
+                <header>
+                    <h2>DotA 2 Item Explorer 7.30b&nbsp;🔍</h2>
+                </header>
+            </section>
 
-    <section>
-        <p>
-            <b>Show computed stats?</b>
+            <section>
+                <p>
+                    <b>Show computed stats?</b>
 
-            <input type="checkbox" v-model="useComputedItems">
+                    <input type="checkbox" v-model="useComputedItems">
 
-        </p>
-    </section>
-    <section style="text-align: center">
-            Computed stats are addition Armor, Mana Regeneration, Health, etc granted by items.
+                </p>
+            </section>
+            <section style="text-align: center">
+                Computed stats are addition Armor, Mana Regeneration, Health, etc granted by attributes.
+                <br>
+                For example, when using computed stats Magic Wand would appear while sorting for Armor.
+                This is because Magic Wand grants Agility, which grants Armor.
+            </section>
+
+            <section>
+                <p><b>Stat Filter</b></p>
+            </section>
+
+            <section>
+                <div style="padding: 10px" v-for="stat in stats">
+                    <input type="checkbox" :value="stat" v-model="filterStats">
+                    <label>{{stat}}</label>
+                </div>
+            </section>
+
+            <article v-if="filterStats.length">
+                <aside>
+                    <p>
+                        <b>Selected Stats:</b>
+                        <span v-for="(stat, index) in filterStats">
+                            <span v-if="index !== 0">, </span>
+                            <span>{{ stat }}</span>
+                        </span>
+                    </p>
+                </aside>
+            </article>
+
+            <section>
+                <p>
+                    ☝️ Select stats to add new table columns.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    👇 Click table headers to sort.
+                </p>
+            </section>
+
             <br>
-            For example, when using computed stats Magic Wand would appear while sorting for Armor.
-            This is because Magic Wand grants Agility, which grants Armor.
-    </section>
 
-    <section>
-        <p><b>Stat Filter</b></p>
-    </section>
+            <section>
 
-    <section>
-        <div style="padding: 10px" v-for="stat in stats">
-            <input type="checkbox" :value="stat" v-model="filterStats">
-            <label>{{stat}}</label>
-        </div>
-    </section>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th id="name-header" class="sort-header" v-on:click="sortItems($event)">
+                            Name&nbsp;
+                            <span v-if="sortName !== null">
+                                <span v-if="sortName">⬇️</span>
+                                <span v-else>⬆️️</span>
+                            </span>
+                        </th>
 
-    <article v-if="filterStats.length">
-        <aside>
-            <p>
-                <b>Selected Stats:</b>
-                <span v-for="(stat, index) in filterStats">
-                    <span v-if="index !== 0">, </span>
-                    <span>{{ stat }}</span>
-                </span>
-            </p>
-        </aside>
-    </article>
+                        <th id="price-header" class="sort-header" v-on:click="sortItems($event)">
+                            Price&nbsp;
+                            <span v-if="sortPrice !== null">
+                                <span v-if="sortPrice">⬇️</span>
+                                <span v-else>⬆️️</span>
+                            </span>
+                        </th>
 
-    <section>
-        <p>
-            ☝️ Select stats to add new table columns.
-        </p>
-    </section>
+                        <th :id="stat" class="sort-header" v-for="stat in filterStats" v-on:click="sortItems($event)">
+                            {{ stat }}&nbsp;
+                            <span v-if="sortStatKey === stat">
+                                <span v-if="sortStat">⬇️</span>
+                                <span v-else>⬆️️</span>
+                            </span>
+                        </th>
 
-    <section>
-        <p>
-            👇 Click table headers to sort.
-        </p>
-    </section>
+                        <th
+                            :id="'cost-per-' + stat" class="sort-header"
+                            v-for="stat in filterStats"
+                            v-on:click="sortItems($event)"
+                        >
+                            Cost per {{ stat }}
+                            <span v-if="sortPriceStatKey === stat">
+                                <span v-if="sortPriceStat">⬇️</span>
+                                <span v-else>⬆️️</span>
+                            </span>
+                        </th>
 
-    <section>
+                        <th>Stats</th>
+                    </thead>
 
-        <table>
-            <thead>
-            <th></th>
-            <th id="name-header" class="sort-header" v-on:click="sortItems($event)">
-                Name&nbsp;
-                <span v-if="sortName !== null">
-                    <span v-if="sortName">⬇️</span>
-                    <span v-else>⬆️️</span>
-                </span>
-            </th>
+                    <tbody>
+                        <tr v-for="item in filteredItems">
 
-            <th id="price-header" class="sort-header" v-on:click="sortItems($event)">
-                Price&nbsp;
-                <span v-if="sortPrice !== null">
-                    <span v-if="sortPrice">⬇️</span>
-                    <span v-else>⬆️️</span>
-                </span>
-            </th>
+                            <td>
+                                <img :src="'static/images/thumbnails/' + item.id + '.jpg'" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
 
-            <th :id="stat" class="sort-header" v-for="stat in filterStats" v-on:click="sortItems($event)">
-                {{ stat }}&nbsp;
-                <span v-if="sortStatKey === stat">
-                    <span v-if="sortStat">⬇️</span>
-                    <span v-else>⬆️️</span>
-                </span>
-            </th>
+                                <img v-show="activeTooltip === item.id" :src="'static/images/tooltips/' + item.id + '.png'"
+                                    style="zindex: 100; position: absolute; width: 500px;"/>
+                            </td>
 
-            <th
-                    :id="'cost-per-' + stat" class="sort-header"
-                    v-for="stat in filterStats"
-                    v-on:click="sortItems($event)"
-            >
-                Cost per {{ stat }}
-                <span v-if="sortPriceStatKey === stat">
-                    <span v-if="sortPriceStat">⬇️</span>
-                    <span v-else>⬆️️</span>
-                </span>
-            </th>
+                            <td>{{ item.name }}</td>
 
-            <th>Stats</th>
-            </thead>
+                            <td>{{ item.price }}</td>
 
-            <tbody>
-            <tr v-for="item in filteredItems">
+                            <td v-for="stat in filterStats">
+                                {{ item.statsObject[stat] }}
+                            </td>
 
-                <td>
-                    <img :src="'static/images/thumbnails/' + item.id + '.jpg'" v-on:mouseover="mouseOver" v-on:mouseout="mouseOut" :id="item.id">
+                            <td v-for="stat in filterStats">
+                                {{ Math.round(item.price / nonNumericToNumeric(item.statsObject[stat])) }}
+                            </td>
 
-                    <img v-show="activeTooltip === item.id" :src="'static/images/tooltips/' + item.id + '.png'"
-                         style="zindex: 100; position: absolute; width: 500px;"/>
-                </td>
+                            <td v-html="item.statsHtml"></td>
 
-                <td>{{ item.name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <td>{{ item.price }}</td>
+            </section>
 
-                <td v-for="stat in filterStats">
-                    {{ item.statsObject[stat] }}
-                </td>
+            <br><br><br><br><br><br><br><br><br>
+            <hr>
+            <footer>
+                <p>
+                    <small>Now go rush Dagon!</small>
+                </p>
+                <p>
+                    <small><a href="https://github.com/adamyala/dota2-item-explorer/">Source Code</a></small>
+                </p>
+            </footer>
 
-                <td v-for="stat in filterStats">
-                    {{ Math.round(item.price / nonNumericToNumeric(item.statsObject[stat])) }}
-                </td>
-
-                <td v-html="item.statsHtml"></td>
-
-            </tr>
-            </tbody>
-        </table>
-
-    </section>
-
-    <br><br><br><br><br><br><br><br><br>
-    <hr>
-    <footer>
-        <p>
-            <small>Now go rush Dagon!</small>
-        </p>
-        <p>
-            <small><a href="https://github.com/adamyala/dota2-item-explorer/">Source Code</a></small>
-        </p>
-    </footer>
-
-</main>
+        </main>
 
 
-</body>
+    </body>
 
 </html>

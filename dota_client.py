@@ -1,5 +1,6 @@
-import httpx
 import io
+
+import httpx
 from bs4 import BeautifulSoup
 from PIL import Image
 

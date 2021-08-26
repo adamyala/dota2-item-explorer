@@ -70,10 +70,7 @@ class Item:
             del self.stats["Spell Lifesteal (Creeps)"]
 
         elif self.item_id == "guardian-greaves":
-            self.stats_html += (
-                f"+ 2.5 HP Regeneration (Aura)<br>"
-                f"+ 3 Armor (Aura)"
-            )
+            self.stats_html += f"+ 2.5 HP Regeneration (Aura)<br>" f"+ 3 Armor (Aura)"
 
         elif self.item_id == "headdress":
             self.stats_html = "+ 2 HP Regeneration (Aura)"
@@ -105,8 +102,7 @@ class Item:
             self.stats["Magic Resistance"] = "40%"
 
             self.stats_html += (
-                "+ 2.5 HP Regeneration (Aura)<br>" 
-                "+ 10% Magic Resistance (Aura)"
+                "+ 2.5 HP Regeneration (Aura)<br>" "+ 10% Magic Resistance (Aura)"
             )
 
         elif self.item_id == "power-treads":
@@ -205,25 +201,29 @@ class Item:
         computed_stats = self.stats.copy()
 
         for key, value in self.stats.items():
-            if key == 'Agility':
+            if key == "Agility":
                 value = float(value)
-                current_attack_speed = getattr(self.stats, 'Attack Speed', 0)
-                computed_stats['Attack Speed'] = round(current_attack_speed + value, 2)
-                current_armor = getattr(self.stats, 'Armor', 0)
-                computed_stats['Armor'] = round(current_armor + (value * 0.167), 2)
+                current_attack_speed = getattr(self.stats, "Attack Speed", 0)
+                computed_stats["Attack Speed"] = round(current_attack_speed + value, 2)
+                current_armor = getattr(self.stats, "Armor", 0)
+                computed_stats["Armor"] = round(current_armor + (value * 0.167), 2)
 
-            if key == 'Strength':
+            if key == "Strength":
                 value = float(value)
-                current_health = float(self.stats.get('Health', 0))
-                computed_stats['Health'] = round(current_health + (value * 20), 2)
-                current_hp_regen = float(self.stats.get('HP Regeneration', 0))
-                computed_stats['HP Regeneration'] = round(current_hp_regen + (value * 0.1), 2)
+                current_health = float(self.stats.get("Health", 0))
+                computed_stats["Health"] = round(current_health + (value * 20), 2)
+                current_hp_regen = float(self.stats.get("HP Regeneration", 0))
+                computed_stats["HP Regeneration"] = round(
+                    current_hp_regen + (value * 0.1), 2
+                )
 
-            if key == 'Intelligence':
+            if key == "Intelligence":
                 value = float(value)
-                current_mana = float(self.stats.get('Mana', 0))
-                computed_stats['Mana'] = round(current_mana + (value * 12), 2)
-                current_mana_regen = float(self.stats.get('Mana Regeneration', 0))
-                computed_stats['Mana Regeneration'] = round(current_mana_regen + (value * 0.1), 2)
+                current_mana = float(self.stats.get("Mana", 0))
+                computed_stats["Mana"] = round(current_mana + (value * 12), 2)
+                current_mana_regen = float(self.stats.get("Mana Regeneration", 0))
+                computed_stats["Mana Regeneration"] = round(
+                    current_mana_regen + (value * 0.1), 2
+                )
 
         self.stats = computed_stats
