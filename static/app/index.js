@@ -1,3 +1,5 @@
+"use strict";
+
 let appData = {
     el: '#app',
     data: {

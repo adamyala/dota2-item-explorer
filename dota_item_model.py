@@ -35,10 +35,11 @@ class Item:
 
     def patch_stats(self):
         if self.item_id == "aether-lens":
-            self.stats["Cast Range"] = 250
+            self.stats["Cast Range"] = 225
+
+            self.stats_html += f"+ {self.stats['Cast Range']} Cast Range"
 
         elif self.item_id == "assault-cuirass":
-
             self.stats["Attack Speed"] = 60
             self.stats["Armor"] = 15
 
@@ -75,6 +76,10 @@ class Item:
         elif self.item_id == "headdress":
             self.stats_html = "+ 2 HP Regeneration (Aura)"
 
+        elif self.item_id == 'helm-of-the-overlord':
+            # add vlad's stats here
+            pass
+
         elif self.item_id == "mask-of-madness":
             self.stats["Lifesteal"] = "20%"
 
@@ -98,8 +103,8 @@ class Item:
             del self.stats["Damage (RANGED)"]
 
         elif self.item_id == "pipe-of-insight":
-            self.stats["HP Regeneration"] = 11
-            self.stats["Magic Resistance"] = "40%"
+            self.stats["HP Regeneration"] = 8.5
+            self.stats["Magic Resistance"] = "30%"
 
             self.stats_html += (
                 "+ 2.5 HP Regeneration (Aura)<br>" "+ 10% Magic Resistance (Aura)"
