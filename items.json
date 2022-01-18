@@ -132,6 +132,36 @@
         }
     },
     {
+        "id": "aether-lens",
+        "imageUrl": "/assets/items/aether-lens-15b26a22fb71575f1659a2965fd7ab04844a2404b2629893d9c843b7dd46ff60.jpg",
+        "name": "Aether Lens",
+        "price": 2275,
+        "statsArray": [
+            "Mana",
+            "Mana Regeneration",
+            "Cast Range"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div></div>+ 225 Cast Range",
+        "statsObject": {
+            "Cast Range": 225.0,
+            "Mana": 300.0,
+            "Mana Regeneration": 2.5
+        }
+    },
+    {
+        "id": "boots-of-travel",
+        "imageUrl": "/assets/items/boots-of-travel-f8de4cb0e5f64b22527fd9b779b8a0ade80c3f079c87c2438d98668ad429e55c.jpg",
+        "name": "Boots of Travel",
+        "price": 2500,
+        "statsArray": [
+            "Movement Speed"
+        ],
+        "statsHtml": "+ 100 Movement Speed",
+        "statsObject": {
+            "Movement Speed": 100.0
+        }
+    },
+    {
         "id": "null-talisman",
         "imageUrl": "/assets/items/null-talisman-8f96732319676c92aeb382899ab1584c69742f4af12e636200f4b96a9f05e7dc.jpg",
         "name": "Null Talisman",
@@ -150,36 +180,6 @@
             "Mana Regeneration": 0.6,
             "Spell Amplification": "3%",
             "Strength": 2.0
-        }
-    },
-    {
-        "id": "boots-of-travel",
-        "imageUrl": "/assets/items/boots-of-travel-f8de4cb0e5f64b22527fd9b779b8a0ade80c3f079c87c2438d98668ad429e55c.jpg",
-        "name": "Boots of Travel",
-        "price": 2500,
-        "statsArray": [
-            "Movement Speed"
-        ],
-        "statsHtml": "+ 100 Movement Speed",
-        "statsObject": {
-            "Movement Speed": 100.0
-        }
-    },
-    {
-        "id": "aether-lens",
-        "imageUrl": "/assets/items/aether-lens-15b26a22fb71575f1659a2965fd7ab04844a2404b2629893d9c843b7dd46ff60.jpg",
-        "name": "Aether Lens",
-        "price": 2275,
-        "statsArray": [
-            "Mana",
-            "Mana Regeneration",
-            "Cast Range"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div></div>+ 225 Cast Range",
-        "statsObject": {
-            "Cast Range": 225.0,
-            "Mana": 300.0,
-            "Mana Regeneration": 2.5
         }
     },
     {
@@ -220,10 +220,10 @@
             "Attack Speed",
             "Armor"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.5</span> <span class=\"label\">Armor</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Agility": 5.0,
-            "Armor": 1.5,
+            "Armor": 2.0,
             "Attack Speed": 5.0,
             "Intelligence": 2.0,
             "Strength": 2.0
@@ -262,90 +262,18 @@
         }
     },
     {
-        "id": "echo-sabre",
-        "imageUrl": "/assets/items/echo-sabre-ba3590cd4b6b9787a5a0791b3320adaa4b1b221f7c25dfbff47ff41ede1371ff.jpg",
-        "name": "Echo Sabre",
-        "price": 2500,
-        "statsArray": [
-            "Damage",
-            "Strength",
-            "Intelligence",
-            "Attack Speed",
-            "Mana Regeneration",
-            "Can Disassemble"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">13</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.75</span> <span class=\"label\">Mana Regeneration</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 10.0,
-            "Can Disassemble": 1.0,
-            "Damage": 15.0,
-            "Intelligence": 10.0,
-            "Mana Regeneration": 1.75,
-            "Strength": 13.0
-        }
-    },
-    {
-        "id": "blade-mail",
-        "imageUrl": "/assets/items/blade-mail-1f51a7490785400d1e9848b5890956adb717218eae81602ea410931c0af21df5.jpg",
-        "name": "Blade Mail",
-        "price": 2125,
-        "statsArray": [
-            "Damage",
-            "Armor"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">28</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div></div>",
-        "statsObject": {
-            "Armor": 6.0,
-            "Damage": 28.0
-        }
-    },
-    {
         "id": "silver-edge",
         "imageUrl": "/assets/items/silver-edge-48e3bb6a9033cac9d950bf140e92cd2c6c5f9a3944c67f97d3a1a8729518feee.jpg",
         "name": "Silver Edge",
-        "price": 5300,
+        "price": 5450,
         "statsArray": [
             "Damage",
             "Attack Speed"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">60</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">52</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div></div>",
         "statsObject": {
-            "Attack Speed": 40.0,
-            "Damage": 60.0
-        }
-    },
-    {
-        "id": "maelstrom",
-        "imageUrl": "/assets/items/maelstrom-13e9eaf3a8cd4536c3a66b5d29c3b9ff38dbd7ffcdb84b69b740682710f609fc.jpg",
-        "name": "Maelstrom",
-        "price": 2700,
-        "statsArray": [
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 24.0
-        }
-    },
-    {
-        "id": "bracer",
-        "imageUrl": "/assets/items/bracer-fa9d8020277b98bede35048eb758e09017b344f7c2d0cb35291f3c38459524b5.jpg",
-        "name": "Bracer",
-        "price": 505,
-        "statsArray": [
-            "Strength",
-            "Agility",
-            "Intelligence",
-            "Damage",
-            "HP Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "Agility": 2.0,
-            "Damage": 3.0,
-            "HP Regeneration": 1.0,
-            "Intelligence": 2.0,
-            "Strength": 5.0
+            "Attack Speed": 35.0,
+            "Damage": 52.0
         }
     },
     {
@@ -370,16 +298,24 @@
         }
     },
     {
-        "id": "glimmer-cape",
-        "imageUrl": "/assets/items/glimmer-cape-df174888f27bc0a1b70479503ddb990ffedb08481274954027450fcf2426e7f5.jpg",
-        "name": "Glimmer Cape",
-        "price": 1950,
+        "id": "bracer",
+        "imageUrl": "/assets/items/bracer-fa9d8020277b98bede35048eb758e09017b344f7c2d0cb35291f3c38459524b5.jpg",
+        "name": "Bracer",
+        "price": 505,
         "statsArray": [
-            "Magic Resistance"
+            "Strength",
+            "Agility",
+            "Intelligence",
+            "Damage",
+            "HP Regeneration"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15%</span> <span class=\"label\">Magic Resistance</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
         "statsObject": {
-            "Magic Resistance": "15%"
+            "Agility": 2.0,
+            "Damage": 3.0,
+            "HP Regeneration": 1.0,
+            "Intelligence": 2.0,
+            "Strength": 5.0
         }
     },
     {
@@ -395,6 +331,60 @@
         "statsObject": {
             "Armor": 2.0,
             "Strength": 6.0
+        }
+    },
+    {
+        "id": "desolator",
+        "imageUrl": "/assets/items/desolator-8669c6a24957fd9b306ade5ce69eca1ea54e17d3423025dc97ee0c1838ef20e4.jpg",
+        "name": "Desolator",
+        "price": 3500,
+        "statsArray": [
+            "Damage"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">55</span> <span class=\"label\">Damage</span></div></div>",
+        "statsObject": {
+            "Damage": 55.0
+        }
+    },
+    {
+        "id": "maelstrom",
+        "imageUrl": "/assets/items/maelstrom-13e9eaf3a8cd4536c3a66b5d29c3b9ff38dbd7ffcdb84b69b740682710f609fc.jpg",
+        "name": "Maelstrom",
+        "price": 2700,
+        "statsArray": [
+            "Damage"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div></div>",
+        "statsObject": {
+            "Damage": 24.0
+        }
+    },
+    {
+        "id": "blade-mail",
+        "imageUrl": "/assets/items/blade-mail-1f51a7490785400d1e9848b5890956adb717218eae81602ea410931c0af21df5.jpg",
+        "name": "Blade Mail",
+        "price": 2125,
+        "statsArray": [
+            "Damage",
+            "Armor"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">28</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div></div>",
+        "statsObject": {
+            "Armor": 6.0,
+            "Damage": 28.0
+        }
+    },
+    {
+        "id": "glimmer-cape",
+        "imageUrl": "/assets/items/glimmer-cape-94f2842fa50062e38fb0bc93acc49796e25e52f1fa929b5308d8a486d217adfe.jpg",
+        "name": "Glimmer Cape",
+        "price": 1950,
+        "statsArray": [
+            "Magic Resistance"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15%</span> <span class=\"label\">Magic Resistance</span></div></div>",
+        "statsObject": {
+            "Magic Resistance": "15%"
         }
     },
     {
@@ -419,16 +409,63 @@
         }
     },
     {
-        "id": "desolator",
-        "imageUrl": "/assets/items/desolator-8669c6a24957fd9b306ade5ce69eca1ea54e17d3423025dc97ee0c1838ef20e4.jpg",
-        "name": "Desolator",
-        "price": 3500,
+        "id": "magic-stick",
+        "imageUrl": "/assets/items/magic-stick-57e54e01e81dba9055ec12e2e77a3e023e2998e2c111eef70dc8e8cbeda562d9.jpg",
+        "name": "Magic Stick",
+        "price": 200,
+        "statsArray": [],
+        "statsHtml": "",
+        "statsObject": {}
+    },
+    {
+        "id": "skull-basher",
+        "imageUrl": "/assets/items/skull-basher-d3528869d93c0afcc64621971d86bbf9b6617f44c51e4001625c2bfa4c2ccc63.jpg",
+        "name": "Skull Basher",
+        "price": 2875,
         "statsArray": [
-            "Damage"
+            "Damage",
+            "Strength"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">55</span> <span class=\"label\">Damage</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
-            "Damage": 55.0
+            "Damage": 25.0,
+            "Strength": 10.0
+        }
+    },
+    {
+        "id": "ogre-axe",
+        "imageUrl": "/assets/items/ogre-axe-54c2abab2bcd09b65c8fc84e692f12bbcd2e1f6e13d120e83008e1040fff830d.jpg",
+        "name": "Ogre Axe",
+        "price": 1000,
+        "statsArray": [
+            "Strength"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Strength": 10.0
+        }
+    },
+    {
+        "id": "echo-sabre",
+        "imageUrl": "/assets/items/echo-sabre-ba3590cd4b6b9787a5a0791b3320adaa4b1b221f7c25dfbff47ff41ede1371ff.jpg",
+        "name": "Echo Sabre",
+        "price": 2500,
+        "statsArray": [
+            "Damage",
+            "Strength",
+            "Intelligence",
+            "Attack Speed",
+            "Mana Regeneration",
+            "Can Disassemble"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">13</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.75</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 10.0,
+            "Can Disassemble": 1.0,
+            "Damage": 15.0,
+            "Intelligence": 10.0,
+            "Mana Regeneration": 1.75,
+            "Strength": 13.0
         }
     },
     {
@@ -445,25 +482,261 @@
         }
     },
     {
-        "id": "magic-stick",
-        "imageUrl": "/assets/items/magic-stick-57e54e01e81dba9055ec12e2e77a3e023e2998e2c111eef70dc8e8cbeda562d9.jpg",
-        "name": "Magic Stick",
-        "price": 200,
-        "statsArray": [],
-        "statsHtml": "",
-        "statsObject": {}
+        "id": "hand-of-midas",
+        "imageUrl": "/assets/items/hand-of-midas-89ef501a8e9d6e2102b1cda4c0453ac6fb83ea5582598d22359290ad91c02c8d.jpg",
+        "name": "Hand of Midas",
+        "price": 2200,
+        "statsArray": [
+            "Attack Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 40.0
+        }
     },
     {
-        "id": "ogre-axe",
-        "imageUrl": "/assets/items/ogre-axe-54c2abab2bcd09b65c8fc84e692f12bbcd2e1f6e13d120e83008e1040fff830d.jpg",
-        "name": "Ogre Axe",
-        "price": 1000,
+        "id": "dragon-lance",
+        "imageUrl": "/assets/items/dragon-lance-faaab3936ded26364e65b911371d2a1abdba1700ccb02be7eb8af483cac3f841.jpg",
+        "name": "Dragon Lance",
+        "price": 1900,
         "statsArray": [
+            "Agility",
+            "Strength",
+            "Can Disassemble"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Agility": 16.0,
+            "Can Disassemble": 1.0,
+            "Strength": 12.0
+        }
+    },
+    {
+        "id": "monkey-king-bar",
+        "imageUrl": "/assets/items/monkey-king-bar-4fe50b583da3993bb5a11da6a98987b73fc37b9109e9c114024500fd2fc9d7c3.jpg",
+        "name": "Monkey King Bar",
+        "price": 4975,
+        "statsArray": [
+            "Damage",
+            "Attack Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 45.0,
+            "Damage": 40.0
+        }
+    },
+    {
+        "id": "ghost-scepter",
+        "imageUrl": "/assets/items/ghost-scepter-9cb129c54c53d7f1fac7706647e775533bbb4f800739aa6895b69a60687b71b3.jpg",
+        "name": "Ghost Scepter",
+        "price": 1500,
+        "statsArray": [
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">All Attributes</span></div></div>",
+        "statsObject": {
+            "Agility": 5.0,
+            "Intelligence": 5.0,
+            "Strength": 5.0
+        }
+    },
+    {
+        "id": "iron-branch",
+        "imageUrl": "/assets/items/iron-branch-7ce75578432b26e78f4e6f75de3cd36ce9fe271a442b6f2e7ab88a1f890379e2.jpg",
+        "name": "Iron Branch",
+        "price": 50,
+        "statsArray": [
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1</span> <span class=\"label\">All Attributes</span></div></div>",
+        "statsObject": {
+            "Agility": 1.0,
+            "Intelligence": 1.0,
+            "Strength": 1.0
+        }
+    },
+    {
+        "id": "battle-fury",
+        "imageUrl": "/assets/items/battle-fury-3064de936be9a16fbdecba66799a1f07d2031e37fed276960663d8ca203358be.jpg",
+        "name": "Battle Fury",
+        "price": 4130,
+        "statsArray": [
+            "Damage",
+            "HP Regeneration",
+            "Mana Regeneration"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">60</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.75</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "Damage": 60.0,
+            "HP Regeneration": 7.5,
+            "Mana Regeneration": 2.75
+        }
+    },
+    {
+        "id": "wind-lace",
+        "imageUrl": "/assets/items/wind-lace-e5c623c212c20f6b14584a41ab184597fa09f4da18cca549da496d401e4ece0e.jpg",
+        "name": "Wind Lace",
+        "price": 250,
+        "statsArray": [
+            "Movement Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Movement Speed</span></div></div>",
+        "statsObject": {
+            "Movement Speed": 20.0
+        }
+    },
+    {
+        "id": "satanic",
+        "imageUrl": "/assets/items/satanic-66ae6b1f6935d9c2db28c70128aa7e88bbe4f80954c750fbff1057df9079d76b.jpg",
+        "name": "Satanic",
+        "price": 5050,
+        "statsArray": [
+            "Strength",
+            "Damage",
+            "Lifesteal"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Damage</span></div></div>+ 25% Lifesteal",
+        "statsObject": {
+            "Damage": 45.0,
+            "Lifesteal": "25%",
+            "Strength": 25.0
+        }
+    },
+    {
+        "id": "shadow-blade",
+        "imageUrl": "/assets/items/shadow-blade-ba7d77cff1f5f8e93b4b8c2f0b489cff75393620c684422b13e39c569bb2562d.jpg",
+        "name": "Shadow Blade",
+        "price": 3000,
+        "statsArray": [
+            "Damage",
+            "Attack Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 35.0,
+            "Damage": 20.0
+        }
+    },
+    {
+        "id": "linkens-sphere",
+        "imageUrl": "/assets/items/linkens-sphere-b46f17668a22fb89d82fe1a7f73a1fef3fcacf47fded639dc721884a0d7eb8b4.jpg",
+        "name": "Linken's Sphere",
+        "price": 4600,
+        "statsArray": [
+            "HP Regeneration",
+            "Mana Regeneration",
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "Agility": 16.0,
+            "HP Regeneration": 7.0,
+            "Intelligence": 16.0,
+            "Mana Regeneration": 5.0,
+            "Strength": 16.0
+        }
+    },
+    {
+        "id": "orb-of-corrosion",
+        "imageUrl": "/assets/items/orb-of-corrosion-43d8b7b7d2aa5fe4c6ab2e9557c7ef8a9999db66c014e5d634d9ede0a4b5552a.jpg",
+        "name": "Orb of Corrosion",
+        "price": 925,
+        "statsArray": [
+            "Health"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">150</span> <span class=\"label\">Health</span></div></div>",
+        "statsObject": {
+            "Health": 150.0
+        }
+    },
+    {
+        "id": "morbid-mask",
+        "imageUrl": "/assets/items/morbid-mask-4c40dd6b36074d0336a10eb2f5938a11a0065fc066fee94da6e1475debda037c.jpg",
+        "name": "Morbid Mask",
+        "price": 900,
+        "statsArray": [
+            "Lifesteal"
+        ],
+        "statsHtml": "+ 15% Lifesteal",
+        "statsObject": {
+            "Lifesteal": "15%"
+        }
+    },
+    {
+        "id": "hurricane-pike",
+        "imageUrl": "/assets/items/hurricane-pike-23fe62cd6b477b1eaad042d0c28e4af4e3cd695b81f1cc048625a3c2d78ee0c5.jpg",
+        "name": "Hurricane Pike",
+        "price": 4450,
+        "statsArray": [
+            "Intelligence",
+            "Health",
+            "Agility",
             "Strength"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Strength</span></div></div>",
         "statsObject": {
+            "Agility": 20.0,
+            "Health": 200.0,
+            "Intelligence": 15.0,
+            "Strength": 15.0
+        }
+    },
+    {
+        "id": "heart-of-tarrasque",
+        "imageUrl": "/assets/items/heart-of-tarrasque-0d474b6da9f169851768f2a01e4e9882ba21f3cf02ae5b0c768d6488e80fe8e2.jpg",
+        "name": "Heart of Tarrasque",
+        "price": 5000,
+        "statsArray": [
+            "Strength",
+            "Health",
+            "Max Health Regen"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.6%</span> <span class=\"label\">Max Health Regen</span></div></div>",
+        "statsObject": {
+            "Health": 250.0,
+            "Max Health Regen": "1.6%",
+            "Strength": 45.0
+        }
+    },
+    {
+        "id": "abyssal-blade",
+        "imageUrl": "/assets/items/abyssal-blade-7dabda3d13e68326de8e0189ff7b83957a3f6936163374500d1aa168e0de0c59.jpg",
+        "name": "Abyssal Blade",
+        "price": 6250,
+        "statsArray": [
+            "Damage",
+            "Health",
+            "HP Regeneration",
+            "Strength"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">10.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Damage": 25.0,
+            "HP Regeneration": 10.0,
+            "Health": 250.0,
             "Strength": 10.0
+        }
+    },
+    {
+        "id": "aeon-disk",
+        "imageUrl": "/assets/items/aeon-disk-13063939f5c662a1eaafb045fec17a9e301cd033e417b67d9ee1921f7e4f3155.jpg",
+        "name": "Aeon Disk",
+        "price": 3000,
+        "statsArray": [
+            "Health",
+            "Mana"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Mana</span></div><div class=\"stat effect\"><span class=\"label\">COOLDOWN:</span> <span class=\"other\">105.0</span> / <span class=\"other\">125.0</span> / <span class=\"other\">145.0</span> / <span class=\"other\">165.0</span></div></div>",
+        "statsObject": {
+            "Health": 250.0,
+            "Mana": 300.0
         }
     },
     {
@@ -492,226 +765,6 @@
         }
     },
     {
-        "id": "skull-basher",
-        "imageUrl": "/assets/items/skull-basher-d3528869d93c0afcc64621971d86bbf9b6617f44c51e4001625c2bfa4c2ccc63.jpg",
-        "name": "Skull Basher",
-        "price": 2950,
-        "statsArray": [
-            "Damage",
-            "Strength"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Damage": 25.0,
-            "Strength": 10.0
-        }
-    },
-    {
-        "id": "monkey-king-bar",
-        "imageUrl": "/assets/items/monkey-king-bar-4fe50b583da3993bb5a11da6a98987b73fc37b9109e9c114024500fd2fc9d7c3.jpg",
-        "name": "Monkey King Bar",
-        "price": 4975,
-        "statsArray": [
-            "Damage",
-            "Attack Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Attack Speed</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 45.0,
-            "Damage": 40.0
-        }
-    },
-    {
-        "id": "ghost-scepter",
-        "imageUrl": "/assets/items/ghost-scepter-010a07ff33b0016fceb7fc7e348c464ea57f22a5a11adf4ea25c049ce686bcb5.jpg",
-        "name": "Ghost Scepter",
-        "price": 1500,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">All Attributes</span></div></div>",
-        "statsObject": {
-            "Agility": 5.0,
-            "Intelligence": 5.0,
-            "Strength": 5.0
-        }
-    },
-    {
-        "id": "hand-of-midas",
-        "imageUrl": "/assets/items/hand-of-midas-89ef501a8e9d6e2102b1cda4c0453ac6fb83ea5582598d22359290ad91c02c8d.jpg",
-        "name": "Hand of Midas",
-        "price": 2200,
-        "statsArray": [
-            "Attack Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Attack Speed</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 40.0
-        }
-    },
-    {
-        "id": "satanic",
-        "imageUrl": "/assets/items/satanic-66ae6b1f6935d9c2db28c70128aa7e88bbe4f80954c750fbff1057df9079d76b.jpg",
-        "name": "Satanic",
-        "price": 5050,
-        "statsArray": [
-            "Strength",
-            "Damage",
-            "Lifesteal"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">55</span> <span class=\"label\">Damage</span></div></div>+ 25% Lifesteal",
-        "statsObject": {
-            "Damage": 55.0,
-            "Lifesteal": "25%",
-            "Strength": 25.0
-        }
-    },
-    {
-        "id": "dragon-lance",
-        "imageUrl": "/assets/items/dragon-lance-faaab3936ded26364e65b911371d2a1abdba1700ccb02be7eb8af483cac3f841.jpg",
-        "name": "Dragon Lance",
-        "price": 1900,
-        "statsArray": [
-            "Agility",
-            "Strength",
-            "Can Disassemble"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Agility": 16.0,
-            "Can Disassemble": 1.0,
-            "Strength": 12.0
-        }
-    },
-    {
-        "id": "wind-lace",
-        "imageUrl": "/assets/items/wind-lace-d6165297b0ce8097590e5f5d3655a15ebcc7105ee6a5a43c511ffe058597baf2.jpg",
-        "name": "Wind Lace",
-        "price": 250,
-        "statsArray": [
-            "Movement Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Movement Speed</span></div></div>",
-        "statsObject": {
-            "Movement Speed": 20.0
-        }
-    },
-    {
-        "id": "aeon-disk",
-        "imageUrl": "/assets/items/aeon-disk-13063939f5c662a1eaafb045fec17a9e301cd033e417b67d9ee1921f7e4f3155.jpg",
-        "name": "Aeon Disk",
-        "price": 3000,
-        "statsArray": [
-            "Health",
-            "Mana"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Mana</span></div><div class=\"stat effect\"><span class=\"label\">COOLDOWN:</span> <span class=\"other\">105.0</span> / <span class=\"other\">125.0</span> / <span class=\"other\">145.0</span> / <span class=\"other\">165.0</span></div></div>",
-        "statsObject": {
-            "Health": 250.0,
-            "Mana": 300.0
-        }
-    },
-    {
-        "id": "battle-fury",
-        "imageUrl": "/assets/items/battle-fury-3064de936be9a16fbdecba66799a1f07d2031e37fed276960663d8ca203358be.jpg",
-        "name": "Battle Fury",
-        "price": 4130,
-        "statsArray": [
-            "Damage",
-            "HP Regeneration",
-            "Mana Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">55</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.75</span> <span class=\"label\">Mana Regeneration</span></div></div>",
-        "statsObject": {
-            "Damage": 55.0,
-            "HP Regeneration": 7.5,
-            "Mana Regeneration": 2.75
-        }
-    },
-    {
-        "id": "shadow-blade",
-        "imageUrl": "/assets/items/shadow-blade-ba7d77cff1f5f8e93b4b8c2f0b489cff75393620c684422b13e39c569bb2562d.jpg",
-        "name": "Shadow Blade",
-        "price": 3000,
-        "statsArray": [
-            "Damage",
-            "Attack Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 35.0,
-            "Damage": 25.0
-        }
-    },
-    {
-        "id": "heart-of-tarrasque",
-        "imageUrl": "/assets/items/heart-of-tarrasque-0d474b6da9f169851768f2a01e4e9882ba21f3cf02ae5b0c768d6488e80fe8e2.jpg",
-        "name": "Heart of Tarrasque",
-        "price": 5100,
-        "statsArray": [
-            "Strength",
-            "Health",
-            "Max Health Regen"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">45</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.6%</span> <span class=\"label\">Max Health Regen</span></div></div>",
-        "statsObject": {
-            "Health": 250.0,
-            "Max Health Regen": "1.6%",
-            "Strength": 45.0
-        }
-    },
-    {
-        "id": "iron-branch",
-        "imageUrl": "/assets/items/iron-branch-7ce75578432b26e78f4e6f75de3cd36ce9fe271a442b6f2e7ab88a1f890379e2.jpg",
-        "name": "Iron Branch",
-        "price": 50,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1</span> <span class=\"label\">All Attributes</span></div></div>",
-        "statsObject": {
-            "Agility": 1.0,
-            "Intelligence": 1.0,
-            "Strength": 1.0
-        }
-    },
-    {
-        "id": "orb-of-corrosion",
-        "imageUrl": "/assets/items/orb-of-corrosion-43d8b7b7d2aa5fe4c6ab2e9557c7ef8a9999db66c014e5d634d9ede0a4b5552a.jpg",
-        "name": "Orb of Corrosion",
-        "price": 925,
-        "statsArray": [
-            "Health"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">150</span> <span class=\"label\">Health</span></div></div>",
-        "statsObject": {
-            "Health": 150.0
-        }
-    },
-    {
-        "id": "abyssal-blade",
-        "imageUrl": "/assets/items/abyssal-blade-7dabda3d13e68326de8e0189ff7b83957a3f6936163374500d1aa168e0de0c59.jpg",
-        "name": "Abyssal Blade",
-        "price": 6325,
-        "statsArray": [
-            "Damage",
-            "Health",
-            "HP Regeneration",
-            "Strength"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">10.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Damage": 25.0,
-            "HP Regeneration": 10.0,
-            "Health": 250.0,
-            "Strength": 10.0
-        }
-    },
-    {
         "id": "enchanted-mango",
         "imageUrl": "/assets/items/enchanted-mango-295d89cf82682615cdea3aa40cac73115ccd059306f2d0ac48e80980fcdd00f5.jpg",
         "name": "Enchanted Mango",
@@ -725,33 +778,22 @@
         }
     },
     {
-        "id": "morbid-mask",
-        "imageUrl": "/assets/items/morbid-mask-4c40dd6b36074d0336a10eb2f5938a11a0065fc066fee94da6e1475debda037c.jpg",
-        "name": "Morbid Mask",
-        "price": 900,
+        "id": "armlet-of-mordiggian",
+        "imageUrl": "/assets/items/armlet-of-mordiggian-3ab4e8a0f67eff43c9af2cf8c3c383f9d9831095c3669bc94dfc4c6d57580b48.jpg",
+        "name": "Armlet of Mordiggian",
+        "price": 2500,
         "statsArray": [
-            "Lifesteal"
-        ],
-        "statsHtml": "+ 15% Lifesteal",
-        "statsObject": {
-            "Lifesteal": "15%"
-        }
-    },
-    {
-        "id": "assault-cuirass",
-        "imageUrl": "/assets/items/assault-cuirass-8df7fef7ce0fd4379d10e30d1adf87f904302990f5c343d413789c5583c5a09d.jpg",
-        "name": "Assault Cuirass",
-        "price": 5125,
-        "statsArray": [
+            "Damage",
             "Attack Speed",
             "Armor",
-            "Aura"
+            "HP Regeneration"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Armor</span></div></div>+ 30 Attack Speed (Aura)<br>+ 5 Armor (Aura)",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">HP Regeneration</span></div></div>",
         "statsObject": {
-            "Armor": 15.0,
-            "Attack Speed": 60.0,
-            "Aura": 1.0
+            "Armor": 6.0,
+            "Attack Speed": 25.0,
+            "Damage": 15.0,
+            "HP Regeneration": 5.0
         }
     },
     {
@@ -797,43 +839,39 @@
         }
     },
     {
-        "id": "hurricane-pike",
-        "imageUrl": "/assets/items/hurricane-pike-23fe62cd6b477b1eaad042d0c28e4af4e3cd695b81f1cc048625a3c2d78ee0c5.jpg",
-        "name": "Hurricane Pike",
-        "price": 4550,
+        "id": "assault-cuirass",
+        "imageUrl": "/assets/items/assault-cuirass-8df7fef7ce0fd4379d10e30d1adf87f904302990f5c343d413789c5583c5a09d.jpg",
+        "name": "Assault Cuirass",
+        "price": 5125,
         "statsArray": [
-            "Intelligence",
-            "Health",
-            "Agility",
-            "Strength"
+            "Attack Speed",
+            "Armor",
+            "Aura"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Strength</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Armor</span></div></div>+ 30 Attack Speed (Aura)<br>+ 5 Armor (Aura)",
         "statsObject": {
-            "Agility": 20.0,
-            "Health": 200.0,
-            "Intelligence": 15.0,
-            "Strength": 15.0
+            "Armor": 15.0,
+            "Attack Speed": 60.0,
+            "Aura": 1.0
         }
     },
     {
-        "id": "linkens-sphere",
-        "imageUrl": "/assets/items/linkens-sphere-b46f17668a22fb89d82fe1a7f73a1fef3fcacf47fded639dc721884a0d7eb8b4.jpg",
-        "name": "Linken's Sphere",
-        "price": 4600,
+        "id": "mask-of-madness",
+        "imageUrl": "/assets/items/mask-of-madness-d2938630e56388bb0a13e3792b39086f81fd3ed18786c6489725c006884e754d.jpg",
+        "name": "Mask of Madness",
+        "price": 1775,
         "statsArray": [
-            "HP Regeneration",
-            "Mana Regeneration",
-            "Intelligence",
-            "Strength",
-            "Agility"
+            "Damage",
+            "Attack Speed",
+            "Lifesteal",
+            "Can Disassemble"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div></div>+ 20% Lifesteal",
         "statsObject": {
-            "Agility": 14.0,
-            "HP Regeneration": 7.0,
-            "Intelligence": 14.0,
-            "Mana Regeneration": 5.0,
-            "Strength": 14.0
+            "Attack Speed": 10.0,
+            "Can Disassemble": 1.0,
+            "Damage": 10.0,
+            "Lifesteal": "20%"
         }
     },
     {
@@ -858,6 +896,23 @@
         }
     },
     {
+        "id": "rod-of-atos",
+        "imageUrl": "/assets/items/rod-of-atos-c1bff51ed6f7cafef2f5763decc4640b9af5dde8bbb1d4b46e16349a05e384cf.jpg",
+        "name": "Rod of Atos",
+        "price": 2750,
+        "statsArray": [
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 12.0,
+            "Intelligence": 24.0,
+            "Strength": 12.0
+        }
+    },
+    {
         "id": "mjollnir",
         "imageUrl": "/assets/items/mjollnir-ba73ab3bc62e5925cddaf84ad218892e69bdabeea3df23339d931589849d9453.jpg",
         "name": "Mjollnir",
@@ -866,9 +921,9 @@
             "Damage",
             "Attack Speed"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">65</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">70</span> <span class=\"label\">Attack Speed</span></div></div>",
         "statsObject": {
-            "Attack Speed": 65.0,
+            "Attack Speed": 70.0,
             "Damage": 24.0
         }
     },
@@ -894,42 +949,6 @@
         }
     },
     {
-        "id": "rod-of-atos",
-        "imageUrl": "/assets/items/rod-of-atos-c1bff51ed6f7cafef2f5763decc4640b9af5dde8bbb1d4b46e16349a05e384cf.jpg",
-        "name": "Rod of Atos",
-        "price": 2750,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 12.0,
-            "Intelligence": 24.0,
-            "Strength": 12.0
-        }
-    },
-    {
-        "id": "mask-of-madness",
-        "imageUrl": "/assets/items/mask-of-madness-d2938630e56388bb0a13e3792b39086f81fd3ed18786c6489725c006884e754d.jpg",
-        "name": "Mask of Madness",
-        "price": 1775,
-        "statsArray": [
-            "Damage",
-            "Attack Speed",
-            "Lifesteal",
-            "Can Disassemble"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Attack Speed</span></div></div>+ 20% Lifesteal",
-        "statsObject": {
-            "Attack Speed": 10.0,
-            "Can Disassemble": 1.0,
-            "Damage": 10.0,
-            "Lifesteal": "20%"
-        }
-    },
-    {
         "id": "diffusal-blade",
         "imageUrl": "/assets/items/diffusal-blade-b0907160439f7a6d18218c7b12966de487fa5844635854c2577e1cb92c0c3bca.jpg",
         "name": "Diffusal Blade",
@@ -945,20 +964,35 @@
         }
     },
     {
-        "id": "pipe-of-insight",
-        "imageUrl": "/assets/items/pipe-of-insight-1feb05f08de2abea881df1fc9601a029acf2dc570e26049fe414ce54e54cda4e.jpg",
-        "name": "Pipe of Insight",
-        "price": 3475,
+        "id": "scythe-of-vyse",
+        "imageUrl": "/assets/items/scythe-of-vyse-7acddec6186e80029f0bc0c6aabec6d0d87969ae525ba02e6cc51911079ba62e.jpg",
+        "name": "Scythe of Vyse",
+        "price": 5675,
         "statsArray": [
-            "HP Regeneration",
-            "Magic Resistance",
-            "Aura"
+            "Strength",
+            "Agility",
+            "Intelligence",
+            "Mana Regeneration"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">30%</span> <span class=\"label\">Magic Resistance</span></div></div>+ 2.5 HP Regeneration (Aura)<br>+ 10% Magic Resistance (Aura)",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">9.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
         "statsObject": {
-            "Aura": 1.0,
-            "HP Regeneration": 8.5,
-            "Magic Resistance": "30%"
+            "Agility": 10.0,
+            "Intelligence": 35.0,
+            "Mana Regeneration": 9.0,
+            "Strength": 10.0
+        }
+    },
+    {
+        "id": "staff-of-wizardry",
+        "imageUrl": "/assets/items/staff-of-wizardry-34788f2c2462ce4f87cde0f33725bebd6d97801bcbfccd48027896762eb7e780.jpg",
+        "name": "Staff of Wizardry",
+        "price": 1000,
+        "statsArray": [
+            "Intelligence"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Intelligence": 10.0
         }
     },
     {
@@ -983,32 +1017,6 @@
         }
     },
     {
-        "id": "crystalys",
-        "imageUrl": "/assets/items/crystalys-d82a1eed322ee54eb311ac722b23bd38fa4c68488009b22412e1da3050ee7854.jpg",
-        "name": "Crystalys",
-        "price": 1950,
-        "statsArray": [
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">32</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 32.0
-        }
-    },
-    {
-        "id": "staff-of-wizardry",
-        "imageUrl": "/assets/items/staff-of-wizardry-34788f2c2462ce4f87cde0f33725bebd6d97801bcbfccd48027896762eb7e780.jpg",
-        "name": "Staff of Wizardry",
-        "price": 1000,
-        "statsArray": [
-            "Intelligence"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Intelligence": 10.0
-        }
-    },
-    {
         "id": "butterfly",
         "imageUrl": "/assets/items/butterfly-476e2a8684fae3a88c5c6f4213e0cfd8a53cab77a9cd92cf3be626fae80da391.jpg",
         "name": "Butterfly",
@@ -1025,240 +1033,6 @@
             "Attack Speed": 30.0,
             "Damage": 25.0,
             "Evasion": "35%"
-        }
-    },
-    {
-        "id": "scythe-of-vyse",
-        "imageUrl": "/assets/items/scythe-of-vyse-7acddec6186e80029f0bc0c6aabec6d0d87969ae525ba02e6cc51911079ba62e.jpg",
-        "name": "Scythe of Vyse",
-        "price": 5675,
-        "statsArray": [
-            "Strength",
-            "Agility",
-            "Intelligence",
-            "Mana Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">9.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
-        "statsObject": {
-            "Agility": 10.0,
-            "Intelligence": 35.0,
-            "Mana Regeneration": 9.0,
-            "Strength": 10.0
-        }
-    },
-    {
-        "id": "guardian-greaves",
-        "imageUrl": "/assets/items/guardian-greaves-9e3fd7755d15dc56c9ee4def1e010801a7182cfa56cab0f27c75142b07f3b32b.jpg",
-        "name": "Guardian Greaves",
-        "price": 5200,
-        "statsArray": [
-            "Movement Speed",
-            "Mana",
-            "Armor",
-            "Aura"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">50</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">Armor</span></div></div>+ 2.5 HP Regeneration (Aura)<br>+ 3 Armor (Aura)",
-        "statsObject": {
-            "Armor": 4.0,
-            "Aura": 1.0,
-            "Mana": 250.0,
-            "Movement Speed": 50.0
-        }
-    },
-    {
-        "id": "orb-of-venom",
-        "imageUrl": "/assets/items/orb-of-venom-4390aaa3f78a491bae67c17290747ed04f10a19d5d285e27a081257fe967a730.jpg",
-        "name": "Orb of Venom",
-        "price": 275,
-        "statsArray": [],
-        "statsHtml": "",
-        "statsObject": {}
-    },
-    {
-        "id": "gleipnir",
-        "imageUrl": "/assets/items/gleipnir-a669b443f46c1df3316faf8c7dc30a359dd9f306b4d201e67aebeeecc24f1f10.jpg",
-        "name": "Gleipnir",
-        "price": 6150,
-        "statsArray": [
-            "Damage",
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 14.0,
-            "Damage": 30.0,
-            "Intelligence": 24.0,
-            "Strength": 14.0
-        }
-    },
-    {
-        "id": "vanguard",
-        "imageUrl": "/assets/items/vanguard-7037ee4a436b89ddc4421a3bb64ca494f35f3080bf790fb90ba2b45aee73569c.jpg",
-        "name": "Vanguard",
-        "price": 1825,
-        "statsArray": [
-            "Health",
-            "HP Regeneration",
-            "Can Disassemble"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "Can Disassemble": 1.0,
-            "HP Regeneration": 7.0,
-            "Health": 250.0
-        }
-    },
-    {
-        "id": "urn-of-shadows",
-        "imageUrl": "/assets/items/urn-of-shadows-53899a823610a35d10c0e6ac103afac1eff22d48851a0ca637a993ee0ad91cc7.jpg",
-        "name": "Urn of Shadows",
-        "price": 840,
-        "statsArray": [
-            "Mana Regeneration",
-            "Armor",
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1.4</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
-        "statsObject": {
-            "Agility": 2.0,
-            "Armor": 2.0,
-            "Intelligence": 2.0,
-            "Mana Regeneration": 1.4,
-            "Strength": 2.0
-        }
-    },
-    {
-        "id": "point-booster",
-        "imageUrl": "/assets/items/point-booster-8b23ced5160f1628384eaa997b10b382f88790c5079a3411e0fa0c6dd89a47d4.jpg",
-        "name": "Point Booster",
-        "price": 1200,
-        "statsArray": [
-            "Mana",
-            "Health"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Health</span></div></div>",
-        "statsObject": {
-            "Health": 175.0,
-            "Mana": 175.0
-        }
-    },
-    {
-        "id": "hood-of-defiance",
-        "imageUrl": "/assets/items/hood-of-defiance-4ab191c4a09e705f960ff52845865ba6bc31a0178312949de5e8d8e8b8e26abd.jpg",
-        "name": "Hood of Defiance",
-        "price": 1500,
-        "statsArray": [
-            "HP Regeneration",
-            "Magic Resistance"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Magic Resistance</span></div></div>",
-        "statsObject": {
-            "HP Regeneration": 8.5,
-            "Magic Resistance": "20%"
-        }
-    },
-    {
-        "id": "mithril-hammer",
-        "imageUrl": "/assets/items/mithril-hammer-e24907d1f3a2d163da88ffde268ceeb63ec07b8abe3aaa8a541d47a5e1c73fbf.jpg",
-        "name": "Mithril Hammer",
-        "price": 1600,
-        "statsArray": [
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 24.0
-        }
-    },
-    {
-        "id": "refresher-orb",
-        "imageUrl": "/assets/items/refresher-orb-d1e1ccf11cf0063b767deaea2b3c6c7c03103dd96355ce1d9d3706dcf9cc454d.jpg",
-        "name": "Refresher Orb",
-        "price": 5000,
-        "statsArray": [
-            "HP Regeneration",
-            "Mana Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">13</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">12.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
-        "statsObject": {
-            "HP Regeneration": 13.0,
-            "Mana Regeneration": 12.0
-        }
-    },
-    {
-        "id": "shivas-guard",
-        "imageUrl": "/assets/items/shivas-guard-e6ef12a2bd3a86f727c538514e9a87b53b2221d9511f15375e2de3d04c9f74e1.jpg",
-        "name": "Shiva's Guard",
-        "price": 4850,
-        "statsArray": [
-            "Intelligence",
-            "Armor"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
-        "statsObject": {
-            "Armor": 15.0,
-            "Intelligence": 30.0
-        }
-    },
-    {
-        "id": "ethereal-blade",
-        "imageUrl": "/assets/items/ethereal-blade-ca7b73af09e2a975e0ebafae718dd9627e904773478bfa8a73117b049620d63e.jpg",
-        "name": "Ethereal Blade",
-        "price": 4300,
-        "statsArray": [
-            "Agility",
-            "Strength",
-            "Intelligence",
-            "Can Disassemble"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Agility": 40.0,
-            "Can Disassemble": 1.0,
-            "Intelligence": 10.0,
-            "Strength": 10.0
-        }
-    },
-    {
-        "id": "armlet-of-mordiggian",
-        "imageUrl": "/assets/items/armlet-of-mordiggian-3ab4e8a0f67eff43c9af2cf8c3c383f9d9831095c3669bc94dfc4c6d57580b48.jpg",
-        "name": "Armlet of Mordiggian",
-        "price": 2475,
-        "statsArray": [
-            "Damage",
-            "Attack Speed",
-            "Armor",
-            "HP Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">5</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "Armor": 6.0,
-            "Attack Speed": 25.0,
-            "Damage": 15.0,
-            "HP Regeneration": 5.0
-        }
-    },
-    {
-        "id": "kaya",
-        "imageUrl": "/assets/items/kaya-8888e81fe39589394ed06fd66beabb645f0f6b016758964728874416a5afc466.jpg",
-        "name": "Kaya",
-        "price": 2050,
-        "statsArray": [
-            "Intelligence",
-            "Spell Amplification",
-            "Mana Regen Amplification",
-            "Spell Lifesteal Amplification"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">50%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">24%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
-        "statsObject": {
-            "Intelligence": 16.0,
-            "Mana Regen Amplification": "50%",
-            "Spell Amplification": "8%",
-            "Spell Lifesteal Amplification": "24%"
         }
     },
     {
@@ -1289,16 +1063,295 @@
         }
     },
     {
-        "id": "radiance",
-        "imageUrl": "/assets/items/radiance-d8059134d09f9a7a3e25c7fb01311728b709f1f8858d93c485c830727b488c5d.jpg",
-        "name": "Radiance",
-        "price": 5150,
+        "id": "refresher-orb",
+        "imageUrl": "/assets/items/refresher-orb-d1e1ccf11cf0063b767deaea2b3c6c7c03103dd96355ce1d9d3706dcf9cc454d.jpg",
+        "name": "Refresher Orb",
+        "price": 5000,
+        "statsArray": [
+            "HP Regeneration",
+            "Mana Regeneration"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">13</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">12.0</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "HP Regeneration": 13.0,
+            "Mana Regeneration": 12.0
+        }
+    },
+    {
+        "id": "crystalys",
+        "imageUrl": "/assets/items/crystalys-d82a1eed322ee54eb311ac722b23bd38fa4c68488009b22412e1da3050ee7854.jpg",
+        "name": "Crystalys",
+        "price": 1950,
         "statsArray": [
             "Damage"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">60</span> <span class=\"label\">Damage</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">32</span> <span class=\"label\">Damage</span></div></div>",
         "statsObject": {
-            "Damage": 60.0
+            "Damage": 32.0
+        }
+    },
+    {
+        "id": "orb-of-venom",
+        "imageUrl": "/assets/items/orb-of-venom-4390aaa3f78a491bae67c17290747ed04f10a19d5d285e27a081257fe967a730.jpg",
+        "name": "Orb of Venom",
+        "price": 275,
+        "statsArray": [],
+        "statsHtml": "",
+        "statsObject": {}
+    },
+    {
+        "id": "guardian-greaves",
+        "imageUrl": "/assets/items/guardian-greaves-9e3fd7755d15dc56c9ee4def1e010801a7182cfa56cab0f27c75142b07f3b32b.jpg",
+        "name": "Guardian Greaves",
+        "price": 5100,
+        "statsArray": [
+            "Movement Speed",
+            "Mana",
+            "Armor",
+            "Aura"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">50</span> <span class=\"label\">Movement Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">Armor</span></div></div>+ 2.5 HP Regeneration (Aura)<br>+ 3 Armor (Aura)",
+        "statsObject": {
+            "Armor": 4.0,
+            "Aura": 1.0,
+            "Mana": 250.0,
+            "Movement Speed": 50.0
+        }
+    },
+    {
+        "id": "pipe-of-insight",
+        "imageUrl": "/assets/items/pipe-of-insight-1feb05f08de2abea881df1fc9601a029acf2dc570e26049fe414ce54e54cda4e.jpg",
+        "name": "Pipe of Insight",
+        "price": 3475,
+        "statsArray": [
+            "HP Regeneration",
+            "Magic Resistance",
+            "Aura"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">30%</span> <span class=\"label\">Magic Resistance</span></div></div>+ 2.5 HP Regeneration (Aura)<br>+ 10% Magic Resistance (Aura)",
+        "statsObject": {
+            "Aura": 1.0,
+            "HP Regeneration": 8.5,
+            "Magic Resistance": "30%"
+        }
+    },
+    {
+        "id": "shivas-guard",
+        "imageUrl": "/assets/items/shivas-guard-e6ef12a2bd3a86f727c538514e9a87b53b2221d9511f15375e2de3d04c9f74e1.jpg",
+        "name": "Shiva's Guard",
+        "price": 4850,
+        "statsArray": [
+            "Intelligence",
+            "Armor"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Armor</span></div></div>",
+        "statsObject": {
+            "Armor": 15.0,
+            "Intelligence": 30.0
+        }
+    },
+    {
+        "id": "mithril-hammer",
+        "imageUrl": "/assets/items/mithril-hammer-e24907d1f3a2d163da88ffde268ceeb63ec07b8abe3aaa8a541d47a5e1c73fbf.jpg",
+        "name": "Mithril Hammer",
+        "price": 1600,
+        "statsArray": [
+            "Damage"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Damage</span></div></div>",
+        "statsObject": {
+            "Damage": 24.0
+        }
+    },
+    {
+        "id": "hood-of-defiance",
+        "imageUrl": "/assets/items/hood-of-defiance-4ab191c4a09e705f960ff52845865ba6bc31a0178312949de5e8d8e8b8e26abd.jpg",
+        "name": "Hood of Defiance",
+        "price": 1500,
+        "statsArray": [
+            "HP Regeneration",
+            "Magic Resistance"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Magic Resistance</span></div></div>",
+        "statsObject": {
+            "HP Regeneration": 8.5,
+            "Magic Resistance": "20%"
+        }
+    },
+    {
+        "id": "point-booster",
+        "imageUrl": "/assets/items/point-booster-8b23ced5160f1628384eaa997b10b382f88790c5079a3411e0fa0c6dd89a47d4.jpg",
+        "name": "Point Booster",
+        "price": 1200,
+        "statsArray": [
+            "Mana",
+            "Health"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Mana</span></div><div class=\"stat attribute\">+ <span class=\"value\">175</span> <span class=\"label\">Health</span></div></div>",
+        "statsObject": {
+            "Health": 175.0,
+            "Mana": 175.0
+        }
+    },
+    {
+        "id": "urn-of-shadows",
+        "imageUrl": "/assets/items/urn-of-shadows-53899a823610a35d10c0e6ac103afac1eff22d48851a0ca637a993ee0ad91cc7.jpg",
+        "name": "Urn of Shadows",
+        "price": 840,
+        "statsArray": [
+            "Mana Regeneration",
+            "Armor",
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">1.4</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
+        "statsObject": {
+            "Agility": 2.0,
+            "Armor": 2.0,
+            "Intelligence": 2.0,
+            "Mana Regeneration": 1.4,
+            "Strength": 2.0
+        }
+    },
+    {
+        "id": "gleipnir",
+        "imageUrl": "/assets/items/gleipnir-a669b443f46c1df3316faf8c7dc30a359dd9f306b4d201e67aebeeecc24f1f10.jpg",
+        "name": "Gleipnir",
+        "price": 6150,
+        "statsArray": [
+            "Damage",
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">30</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">24</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 14.0,
+            "Damage": 30.0,
+            "Intelligence": 24.0,
+            "Strength": 14.0
+        }
+    },
+    {
+        "id": "meteor-hammer",
+        "imageUrl": "/assets/items/meteor-hammer-55995aff8ae7823200e4c59062deb00cf37998663a338e9d416f0a07881eedaf.jpg",
+        "name": "Meteor Hammer",
+        "price": 2350,
+        "statsArray": [
+            "HP Regeneration",
+            "Mana Regeneration",
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "Agility": 8.0,
+            "HP Regeneration": 6.5,
+            "Intelligence": 8.0,
+            "Mana Regeneration": 2.5,
+            "Strength": 8.0
+        }
+    },
+    {
+        "id": "vanguard",
+        "imageUrl": "/assets/items/vanguard-7037ee4a436b89ddc4421a3bb64ca494f35f3080bf790fb90ba2b45aee73569c.jpg",
+        "name": "Vanguard",
+        "price": 1825,
+        "statsArray": [
+            "Health",
+            "HP Regeneration",
+            "Can Disassemble"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
+        "statsObject": {
+            "Can Disassemble": 1.0,
+            "HP Regeneration": 7.0,
+            "Health": 250.0
+        }
+    },
+    {
+        "id": "ethereal-blade",
+        "imageUrl": "/assets/items/ethereal-blade-ca7b73af09e2a975e0ebafae718dd9627e904773478bfa8a73117b049620d63e.jpg",
+        "name": "Ethereal Blade",
+        "price": 4300,
+        "statsArray": [
+            "Agility",
+            "Strength",
+            "Intelligence",
+            "Can Disassemble"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">40</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Agility": 40.0,
+            "Can Disassemble": 1.0,
+            "Intelligence": 10.0,
+            "Strength": 10.0
+        }
+    },
+    {
+        "id": "kaya",
+        "imageUrl": "/assets/items/kaya-8888e81fe39589394ed06fd66beabb645f0f6b016758964728874416a5afc466.jpg",
+        "name": "Kaya",
+        "price": 2050,
+        "statsArray": [
+            "Intelligence",
+            "Spell Amplification",
+            "Mana Regen Amplification",
+            "Spell Lifesteal Amplification"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Spell Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">50%</span> <span class=\"label\">Mana Regen Amplification</span></div><div class=\"stat attribute\">+ <span class=\"value\">24%</span> <span class=\"label\">Spell Lifesteal Amplification</span></div></div>",
+        "statsObject": {
+            "Intelligence": 16.0,
+            "Mana Regen Amplification": "50%",
+            "Spell Amplification": "8%",
+            "Spell Lifesteal Amplification": "24%"
+        }
+    },
+    {
+        "id": "falcon-blade",
+        "imageUrl": "/assets/items/falcon-blade-a8b0b6dba1121ed128b3592f4d8489d436d5b2577a7f93bc8d894fa557dffb8b.jpg",
+        "name": "Falcon Blade",
+        "price": 1125,
+        "statsArray": [
+            "Health",
+            "Mana Regeneration",
+            "Damage"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.8</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Damage</span></div></div>",
+        "statsObject": {
+            "Damage": 12.0,
+            "Health": 200.0,
+            "Mana Regeneration": 1.8
+        }
+    },
+    {
+        "id": "blight-stone",
+        "imageUrl": "/assets/items/blight-stone-4521d4f942289986de1489aff7bd4c7705983a7b8ba076dadb7715ce9d9ddd14.jpg",
+        "name": "Blight Stone",
+        "price": 300,
+        "statsArray": [],
+        "statsHtml": "",
+        "statsObject": {}
+    },
+    {
+        "id": "witch-blade",
+        "imageUrl": "/assets/items/witch-blade-496d512a376bbf6d0a388830b575fbd8602fb10f9a9f0aed98192070ad52b141.jpg",
+        "name": "Witch Blade",
+        "price": 2600,
+        "statsArray": [
+            "Attack Speed",
+            "Intelligence",
+            "Armor",
+            "Projectile Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">14</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Projectile Speed</span></div></div>",
+        "statsObject": {
+            "Armor": 6.0,
+            "Attack Speed": 35.0,
+            "Intelligence": 14.0,
+            "Projectile Speed": 300.0
         }
     },
     {
@@ -1319,65 +1372,16 @@
         }
     },
     {
-        "id": "blight-stone",
-        "imageUrl": "/assets/items/blight-stone-4521d4f942289986de1489aff7bd4c7705983a7b8ba076dadb7715ce9d9ddd14.jpg",
-        "name": "Blight Stone",
-        "price": 300,
-        "statsArray": [],
-        "statsHtml": "",
-        "statsObject": {}
-    },
-    {
-        "id": "ring-of-basilius",
-        "imageUrl": "/assets/items/ring-of-basilius-7ed395db5ce51c8379fb5bad39e228250a471a22a0c13827ca2aee2b96b79db3.jpg",
-        "name": "Ring of Basilius",
-        "price": 425,
+        "id": "radiance",
+        "imageUrl": "/assets/items/radiance-d8059134d09f9a7a3e25c7fb01311728b709f1f8858d93c485c830727b488c5d.jpg",
+        "name": "Radiance",
+        "price": 5100,
         "statsArray": [
-            "Mana Regeneration",
-            "Aura"
+            "Damage"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">0.5</span> <span class=\"label\">Mana Regeneration</span></div></div>+ 1.0 Mana Regeneration (Aura)",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">60</span> <span class=\"label\">Damage</span></div></div>",
         "statsObject": {
-            "Aura": 1.0,
-            "Mana Regeneration": 0.5
-        }
-    },
-    {
-        "id": "witch-blade",
-        "imageUrl": "/assets/items/witch-blade-496d512a376bbf6d0a388830b575fbd8602fb10f9a9f0aed98192070ad52b141.jpg",
-        "name": "Witch Blade",
-        "price": 2600,
-        "statsArray": [
-            "Attack Speed",
-            "Intelligence",
-            "Armor",
-            "Projectile Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">300</span> <span class=\"label\">Projectile Speed</span></div></div>",
-        "statsObject": {
-            "Armor": 6.0,
-            "Attack Speed": 35.0,
-            "Intelligence": 12.0,
-            "Projectile Speed": 300.0
-        }
-    },
-    {
-        "id": "veil-of-discord",
-        "imageUrl": "/assets/items/veil-of-discord-7f4dd6d01082c1c8133e43b16c1645d5e319dab2fd9ef7d551f5b9beca7a6963.jpg",
-        "name": "Veil of Discord",
-        "price": 1525,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility",
-            "Aura"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>+ 1.75 Mana Regeneration (Aura)",
-        "statsObject": {
-            "Agility": 4.0,
-            "Aura": 1.0,
-            "Intelligence": 4.0,
-            "Strength": 4.0
+            "Damage": 60.0
         }
     },
     {
@@ -1397,6 +1401,19 @@
             "Damage": 30.0,
             "Intelligence": 25.0,
             "Mana Regeneration": 5.5
+        }
+    },
+    {
+        "id": "slippers-of-agility",
+        "imageUrl": "/assets/items/slippers-of-agility-6570d7715e903a50af0bb44bd3ecedc5278b7c21f9448e9ead9940b3c58ce940.jpg",
+        "name": "Slippers of Agility",
+        "price": 140,
+        "statsArray": [
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 3.0
         }
     },
     {
@@ -1425,19 +1442,6 @@
         }
     },
     {
-        "id": "overwhelming-blink",
-        "imageUrl": "/assets/items/overwhelming-blink-092bf42fa82378892923be7b7a5c8e131e11074a70af1846d780e9783880e7a2.jpg",
-        "name": "Overwhelming Blink",
-        "price": 6800,
-        "statsArray": [
-            "Strength"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Strength": 25.0
-        }
-    },
-    {
         "id": "ultimate-orb",
         "imageUrl": "/assets/items/ultimate-orb-b96f64b81c1fc4cb3566970709fc9c28143242fe173adaba880162e192b8b5e4.jpg",
         "name": "Ultimate Orb",
@@ -1455,41 +1459,50 @@
         }
     },
     {
-        "id": "crimson-guard",
-        "imageUrl": "/assets/items/crimson-guard-ac99c391cf9a3adfd202c9a882387f1ac1755e3cb940ff71af59efcb69356851.jpg",
-        "name": "Crimson Guard",
-        "price": 3700,
+        "id": "ring-of-basilius",
+        "imageUrl": "/assets/items/ring-of-basilius-7ed395db5ce51c8379fb5bad39e228250a471a22a0c13827ca2aee2b96b79db3.jpg",
+        "name": "Ring of Basilius",
+        "price": 425,
         "statsArray": [
-            "Health",
-            "HP Regeneration",
-            "Armor"
+            "Mana Regeneration",
+            "Aura"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">12.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.0</span> <span class=\"label\">Armor</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">0.5</span> <span class=\"label\">Mana Regeneration</span></div></div>+ 1.0 Mana Regeneration (Aura)",
         "statsObject": {
-            "Armor": 6.0,
-            "HP Regeneration": 12.0,
-            "Health": 250.0
+            "Aura": 1.0,
+            "Mana Regeneration": 0.5
         }
     },
     {
-        "id": "meteor-hammer",
-        "imageUrl": "/assets/items/meteor-hammer-55995aff8ae7823200e4c59062deb00cf37998663a338e9d416f0a07881eedaf.jpg",
-        "name": "Meteor Hammer",
-        "price": 2350,
+        "id": "overwhelming-blink",
+        "imageUrl": "/assets/items/overwhelming-blink-91c2f49b153dc27e67c7bf19aa03191011f190657bc07bda8a0c5a96e51854ee.jpg",
+        "name": "Overwhelming Blink",
+        "price": 6800,
         "statsArray": [
-            "HP Regeneration",
-            "Mana Regeneration",
+            "Strength"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Strength": 25.0
+        }
+    },
+    {
+        "id": "veil-of-discord",
+        "imageUrl": "/assets/items/veil-of-discord-7f4dd6d01082c1c8133e43b16c1645d5e319dab2fd9ef7d551f5b9beca7a6963.jpg",
+        "name": "Veil of Discord",
+        "price": 1525,
+        "statsArray": [
             "Intelligence",
             "Strength",
-            "Agility"
+            "Agility",
+            "Aura"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">8</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.5</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">All Attributes</span></div></div>+ 1.75 Mana Regeneration (Aura)",
         "statsObject": {
-            "Agility": 8.0,
-            "HP Regeneration": 6.5,
-            "Intelligence": 8.0,
-            "Mana Regeneration": 2.5,
-            "Strength": 8.0
+            "Agility": 4.0,
+            "Aura": 1.0,
+            "Intelligence": 4.0,
+            "Strength": 4.0
         }
     },
     {
@@ -1507,23 +1520,6 @@
             "Agility": 2.0,
             "Intelligence": 2.0,
             "Strength": 2.0
-        }
-    },
-    {
-        "id": "falcon-blade",
-        "imageUrl": "/assets/items/falcon-blade-a8b0b6dba1121ed128b3592f4d8489d436d5b2577a7f93bc8d894fa557dffb8b.jpg",
-        "name": "Falcon Blade",
-        "price": 1100,
-        "statsArray": [
-            "Health",
-            "Mana Regeneration",
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">200</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">1.8</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 12.0,
-            "Health": 200.0,
-            "Mana Regeneration": 1.8
         }
     },
     {
@@ -1563,20 +1559,20 @@
         }
     },
     {
-        "id": "yasha",
-        "imageUrl": "/assets/items/yasha-cc1a4701975eb584696a184e2f0e36004e13ddec0b3a9fbfbbeac8c17e9dcfa1.jpg",
-        "name": "Yasha",
-        "price": 2050,
+        "id": "crimson-guard",
+        "imageUrl": "/assets/items/crimson-guard-2a54a9c6c3197b489a3c321dace1e3a06eca28ff4234661f4e4b6127582a1f33.jpg",
+        "name": "Crimson Guard",
+        "price": 3600,
         "statsArray": [
-            "Agility",
-            "Attack Speed",
-            "Movement Speed"
+            "Health",
+            "HP Regeneration",
+            "Armor"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Movement Speed</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Health</span></div><div class=\"stat attribute\">+ <span class=\"value\">12.0</span> <span class=\"label\">HP Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">6.0</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
-            "Agility": 16.0,
-            "Attack Speed": 12.0,
-            "Movement Speed": "8%"
+            "Armor": 6.0,
+            "HP Regeneration": 12.0,
+            "Health": 250.0
         }
     },
     {
@@ -1597,6 +1593,36 @@
         }
     },
     {
+        "id": "gauntlets-of-strength",
+        "imageUrl": "/assets/items/gauntlets-of-strength-903b71a0967b77fb62c2c90502bcf9675978a33a87d0f3f9959c02238ad8710f.jpg",
+        "name": "Gauntlets of Strength",
+        "price": 140,
+        "statsArray": [
+            "Strength"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Strength": 3.0
+        }
+    },
+    {
+        "id": "yasha",
+        "imageUrl": "/assets/items/yasha-cc1a4701975eb584696a184e2f0e36004e13ddec0b3a9fbfbbeac8c17e9dcfa1.jpg",
+        "name": "Yasha",
+        "price": 2050,
+        "statsArray": [
+            "Agility",
+            "Attack Speed",
+            "Movement Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">16</span> <span class=\"label\">Agility</span></div><div class=\"stat attribute\">+ <span class=\"value\">12</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">8%</span> <span class=\"label\">Movement Speed</span></div></div>",
+        "statsObject": {
+            "Agility": 16.0,
+            "Attack Speed": 12.0,
+            "Movement Speed": "8%"
+        }
+    },
+    {
         "id": "blade-of-alacrity",
         "imageUrl": "/assets/items/blade-of-alacrity-054711c3d72369e92859d8f10d08d170bce9244c044ef27a163036fb3347495b.jpg",
         "name": "Blade of Alacrity",
@@ -1607,19 +1633,6 @@
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
             "Agility": 10.0
-        }
-    },
-    {
-        "id": "moon-shard",
-        "imageUrl": "/assets/items/moon-shard-49edadf54cb35a0600977b7b3602a2135d422f298c315f01807cbcf327f21979.jpg",
-        "name": "Moon Shard",
-        "price": 4000,
-        "statsArray": [
-            "Attack Speed"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">140</span> <span class=\"label\">Attack Speed</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 140.0
         }
     },
     {
@@ -1635,6 +1648,41 @@
         "statsObject": {
             "Armor": 4.0,
             "Aura": 1.0
+        }
+    },
+    {
+        "id": "moon-shard",
+        "imageUrl": "/assets/items/moon-shard-178cc98816d373eb26fe3d343a7df829142d8c75685dd4690b93c0f43eb24996.jpg",
+        "name": "Moon Shard",
+        "price": 4000,
+        "statsArray": [
+            "Attack Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">140</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 140.0
+        }
+    },
+    {
+        "id": "shadow-amulet",
+        "imageUrl": "/assets/items/shadow-amulet-097ea94df977e6e65b7ff1863419660599dd7af97e7de9f7e27a6bb1dc7a5e2a.jpg",
+        "name": "Shadow Amulet",
+        "price": 1000,
+        "statsArray": [],
+        "statsHtml": "",
+        "statsObject": {}
+    },
+    {
+        "id": "swift-blink",
+        "imageUrl": "/assets/items/swift-blink-de9c9371803d29ada0530e287e00ee0b8abbc2b2d912aa9138dd00ef5e7dad7e.jpg",
+        "name": "Swift Blink",
+        "price": 6800,
+        "statsArray": [
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 25.0
         }
     },
     {
@@ -1657,41 +1705,6 @@
             "Mana": 325.0,
             "Strength": 3.0
         }
-    },
-    {
-        "id": "swift-blink",
-        "imageUrl": "/assets/items/swift-blink-bc077f3b445775b8bc9bd94b7da2cc99938339b8f77f7c9c56254977678fcd60.jpg",
-        "name": "Swift Blink",
-        "price": 6800,
-        "statsArray": [
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 25.0
-        }
-    },
-    {
-        "id": "slippers-of-agility",
-        "imageUrl": "/assets/items/slippers-of-agility-6570d7715e903a50af0bb44bd3ecedc5278b7c21f9448e9ead9940b3c58ce940.jpg",
-        "name": "Slippers of Agility",
-        "price": 140,
-        "statsArray": [
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 3.0
-        }
-    },
-    {
-        "id": "shadow-amulet",
-        "imageUrl": "/assets/items/shadow-amulet-be12e48f15e688e58ebb26c69b0b144fd339788a4dfbe17abc04b4570a896fbd.jpg",
-        "name": "Shadow Amulet",
-        "price": 1000,
-        "statsArray": [],
-        "statsHtml": "",
-        "statsObject": {}
     },
     {
         "id": "vitality-booster",
@@ -1720,19 +1733,6 @@
         }
     },
     {
-        "id": "arcane-blink",
-        "imageUrl": "/assets/items/arcane-blink-be97b68e9e0d964affe38a13722380c7415c4e34f955f1411c727ce3364c807f.jpg",
-        "name": "Arcane Blink",
-        "price": 6800,
-        "statsArray": [
-            "Intelligence"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Intelligence": 25.0
-        }
-    },
-    {
         "id": "sages-mask",
         "imageUrl": "/assets/items/sages-mask-08e71c6d0dc9299ed19ea7705054584bca9aabc8af8129d3f60981d4b22bb845.jpg",
         "name": "Sage's Mask",
@@ -1744,6 +1744,28 @@
         "statsObject": {
             "Mana Regeneration": 0.7
         }
+    },
+    {
+        "id": "void-stone",
+        "imageUrl": "/assets/items/void-stone-7bdc03aed60e8f0a1f3c82f9b0de122c6bd65168d02f10c4b9ad34aab730fd92.jpg",
+        "name": "Void Stone",
+        "price": 825,
+        "statsArray": [
+            "Mana Regeneration"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2.25</span> <span class=\"label\">Mana Regeneration</span></div></div>",
+        "statsObject": {
+            "Mana Regeneration": 2.25
+        }
+    },
+    {
+        "id": "javelin",
+        "imageUrl": "/assets/items/javelin-a14a7f2e56cfe2a4a0a6c1a6dd208bb16bcb4c5e1e82c7efebe4da8d206e4d5e.jpg",
+        "name": "Javelin",
+        "price": 1100,
+        "statsArray": [],
+        "statsHtml": "",
+        "statsObject": {}
     },
     {
         "id": "buckler",
@@ -1758,36 +1780,6 @@
         "statsObject": {
             "Armor": 1.0,
             "Aura": 1.0
-        }
-    },
-    {
-        "id": "dagon-level-5",
-        "imageUrl": "/assets/items/dagon-level-5-cc3968d1db6fab01aa23f38d316b281478783be492d836ef22e29c1a653f07b2.jpg",
-        "name": "Dagon (level 5)",
-        "price": 7700,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"value\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 14.0,
-            "Intelligence": 22.0,
-            "Strength": 14.0
-        }
-    },
-    {
-        "id": "void-stone",
-        "imageUrl": "/assets/items/void-stone-7bdc03aed60e8f0a1f3c82f9b0de122c6bd65168d02f10c4b9ad34aab730fd92.jpg",
-        "name": "Void Stone",
-        "price": 825,
-        "statsArray": [
-            "Mana Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2.25</span> <span class=\"label\">Mana Regeneration</span></div></div>",
-        "statsObject": {
-            "Mana Regeneration": 2.25
         }
     },
     {
@@ -1821,62 +1813,6 @@
         }
     },
     {
-        "id": "gauntlets-of-strength",
-        "imageUrl": "/assets/items/gauntlets-of-strength-903b71a0967b77fb62c2c90502bcf9675978a33a87d0f3f9959c02238ad8710f.jpg",
-        "name": "Gauntlets of Strength",
-        "price": 140,
-        "statsArray": [
-            "Strength"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Strength": 3.0
-        }
-    },
-    {
-        "id": "javelin",
-        "imageUrl": "/assets/items/javelin-a14a7f2e56cfe2a4a0a6c1a6dd208bb16bcb4c5e1e82c7efebe4da8d206e4d5e.jpg",
-        "name": "Javelin",
-        "price": 1100,
-        "statsArray": [],
-        "statsHtml": "",
-        "statsObject": {}
-    },
-    {
-        "id": "vladmirs-offering",
-        "imageUrl": "/assets/items/vladmirs-offering-b05c6c4d774baef1123f9a5de040345a412d0e70897abfb1e3706325929dd912.jpg",
-        "name": "Vladmir's Offering",
-        "price": 2700,
-        "statsArray": [
-            "Lifesteal",
-            "Mana Regeneration",
-            "Damage",
-            "Armor",
-            "Aura"
-        ],
-        "statsHtml": "+ 15% Lifesteal (Aura)<br>+ 1.75 Mana Regeneration (Aura)<br>+ 18% Attack Damage (Aura)<br>+ 3 Armor (Aura)",
-        "statsObject": {
-            "Armor": 3.0,
-            "Aura": 1.0,
-            "Damage": "18%",
-            "Lifesteal": "15%",
-            "Mana Regeneration": 1.75
-        }
-    },
-    {
-        "id": "reaver",
-        "imageUrl": "/assets/items/reaver-d7240cc56de5897c90e841ce35a10eec57b23811d220a66bb1cdd8ed8a5592b8.jpg",
-        "name": "Reaver",
-        "price": 2800,
-        "statsArray": [
-            "Strength"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
-        "statsObject": {
-            "Strength": 25.0
-        }
-    },
-    {
         "id": "blitz-knuckles",
         "imageUrl": "/assets/items/blitz-knuckles-9bfe9a20a944440a1ae21ce7e3b751af4368a3e9e88b53e7154218b3542e35ef.jpg",
         "name": "Blitz Knuckles",
@@ -1887,45 +1823,6 @@
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">35</span> <span class=\"label\">Attack Speed</span></div></div>",
         "statsObject": {
             "Attack Speed": 35.0
-        }
-    },
-    {
-        "id": "faerie-fire",
-        "imageUrl": "/assets/items/faerie-fire-bd47f4f502e4afd5395ab47102ec2afba2799dab4640d51b1387ac5afa5ea8f2.jpg",
-        "name": "Faerie Fire",
-        "price": 70,
-        "statsArray": [
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 2.0
-        }
-    },
-    {
-        "id": "fluffy-hat",
-        "imageUrl": "/assets/items/fluffy-hat-1b5e4d3180810192c9108880acf98a3ff34d778d43cde15b139299dac57642e5.jpg",
-        "name": "Fluffy Hat",
-        "price": 250,
-        "statsArray": [
-            "Health"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">125</span> <span class=\"label\">Health</span></div></div>",
-        "statsObject": {
-            "Health": 125.0
-        }
-    },
-    {
-        "id": "energy-booster",
-        "imageUrl": "/assets/items/energy-booster-420ed766a8595982dfe7352e2f410afebb98c51035ed85bf57b1629883b1e07c.jpg",
-        "name": "Energy Booster",
-        "price": 800,
-        "statsArray": [
-            "Mana"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div></div>",
-        "statsObject": {
-            "Mana": 250.0
         }
     },
     {
@@ -1956,16 +1853,72 @@
         }
     },
     {
-        "id": "ring-of-protection",
-        "imageUrl": "/assets/items/ring-of-protection-4927ece93f496e3c006d7e213787f941a023a3f65819487effce66519293f37a.jpg",
-        "name": "Ring of Protection",
-        "price": 175,
+        "id": "faerie-fire",
+        "imageUrl": "/assets/items/faerie-fire-bd47f4f502e4afd5395ab47102ec2afba2799dab4640d51b1387ac5afa5ea8f2.jpg",
+        "name": "Faerie Fire",
+        "price": 70,
         "statsArray": [
-            "Armor"
+            "Damage"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2</span> <span class=\"label\">Damage</span></div></div>",
         "statsObject": {
-            "Armor": 2.0
+            "Damage": 2.0
+        }
+    },
+    {
+        "id": "dagon-level-5",
+        "imageUrl": "/assets/items/dagon-level-5-cc3968d1db6fab01aa23f38d316b281478783be492d836ef22e29c1a653f07b2.jpg",
+        "name": "Dagon (level 5)",
+        "price": 7700,
+        "statsArray": [
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"value\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"value\">14</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 14.0,
+            "Intelligence": 22.0,
+            "Strength": 14.0
+        }
+    },
+    {
+        "id": "reaver",
+        "imageUrl": "/assets/items/reaver-d7240cc56de5897c90e841ce35a10eec57b23811d220a66bb1cdd8ed8a5592b8.jpg",
+        "name": "Reaver",
+        "price": 2800,
+        "statsArray": [
+            "Strength"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Strength</span></div></div>",
+        "statsObject": {
+            "Strength": 25.0
+        }
+    },
+    {
+        "id": "fluffy-hat",
+        "imageUrl": "/assets/items/fluffy-hat-1b5e4d3180810192c9108880acf98a3ff34d778d43cde15b139299dac57642e5.jpg",
+        "name": "Fluffy Hat",
+        "price": 250,
+        "statsArray": [
+            "Health"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">125</span> <span class=\"label\">Health</span></div></div>",
+        "statsObject": {
+            "Health": 125.0
+        }
+    },
+    {
+        "id": "arcane-blink",
+        "imageUrl": "/assets/items/arcane-blink-be97b68e9e0d964affe38a13722380c7415c4e34f955f1411c727ce3364c807f.jpg",
+        "name": "Arcane Blink",
+        "price": 6800,
+        "statsArray": [
+            "Intelligence"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Intelligence": 25.0
         }
     },
     {
@@ -1982,6 +1935,40 @@
         }
     },
     {
+        "id": "energy-booster",
+        "imageUrl": "/assets/items/energy-booster-420ed766a8595982dfe7352e2f410afebb98c51035ed85bf57b1629883b1e07c.jpg",
+        "name": "Energy Booster",
+        "price": 800,
+        "statsArray": [
+            "Mana"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">250</span> <span class=\"label\">Mana</span></div></div>",
+        "statsObject": {
+            "Mana": 250.0
+        }
+    },
+    {
+        "id": "vladmirs-offering",
+        "imageUrl": "/assets/items/vladmirs-offering-b05c6c4d774baef1123f9a5de040345a412d0e70897abfb1e3706325929dd912.jpg",
+        "name": "Vladmir's Offering",
+        "price": 2600,
+        "statsArray": [
+            "Lifesteal",
+            "Mana Regeneration",
+            "Damage",
+            "Armor",
+            "Aura"
+        ],
+        "statsHtml": "+ 15% Lifesteal (Aura)<br>+ 1.75 Mana Regeneration (Aura)<br>+ 18% Attack Damage (Aura)<br>+ 3 Armor (Aura)",
+        "statsObject": {
+            "Armor": 3.0,
+            "Aura": 1.0,
+            "Damage": "18%",
+            "Lifesteal": "15%",
+            "Mana Regeneration": 1.75
+        }
+    },
+    {
         "id": "headdress",
         "imageUrl": "/assets/items/headdress-69af6f7d619f322796ba795a6686926f67a6a07b7c07cdda7daadf33fc95602d.jpg",
         "name": "Headdress",
@@ -1994,6 +1981,19 @@
         "statsObject": {
             "Aura": 1.0,
             "HP Regeneration": 0.5
+        }
+    },
+    {
+        "id": "mystic-staff",
+        "imageUrl": "/assets/items/mystic-staff-fd341ae297a87eac8272ab010557c7272ab9f5f2c3ed9492d1379f202cad4d1c.jpg",
+        "name": "Mystic Staff",
+        "price": 2800,
+        "statsArray": [
+            "Intelligence"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Intelligence": 25.0
         }
     },
     {
@@ -2027,6 +2027,19 @@
         }
     },
     {
+        "id": "ring-of-protection",
+        "imageUrl": "/assets/items/ring-of-protection-4927ece93f496e3c006d7e213787f941a023a3f65819487effce66519293f37a.jpg",
+        "name": "Ring of Protection",
+        "price": 175,
+        "statsArray": [
+            "Armor"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Armor</span></div></div>",
+        "statsObject": {
+            "Armor": 2.0
+        }
+    },
+    {
         "id": "cloak",
         "imageUrl": "/assets/items/cloak-42f2d830eed6a877dae3e132dafc252f8d271801777da8d0a072b255facd966a.jpg",
         "name": "Cloak",
@@ -2037,53 +2050,6 @@
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15%</span> <span class=\"label\">Magic Resistance</span></div></div>",
         "statsObject": {
             "Magic Resistance": "15%"
-        }
-    },
-    {
-        "id": "mystic-staff",
-        "imageUrl": "/assets/items/mystic-staff-fd341ae297a87eac8272ab010557c7272ab9f5f2c3ed9492d1379f202cad4d1c.jpg",
-        "name": "Mystic Staff",
-        "price": 2800,
-        "statsArray": [
-            "Intelligence"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Intelligence": 25.0
-        }
-    },
-    {
-        "id": "mage-slayer",
-        "imageUrl": "/assets/items/mage-slayer-c2ff448fbcfcc5a493376422aca47a5972ecc453011705f585868ed9c4dcfc72.jpg",
-        "name": "Mage Slayer",
-        "price": 2400,
-        "statsArray": [
-            "Magic Resistance",
-            "Attack Speed",
-            "Damage",
-            "Mana Regeneration",
-            "Intelligence"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Magic Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">15</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Attack Speed": 15.0,
-            "Damage": 20.0,
-            "Intelligence": 10.0,
-            "Magic Resistance": "20%",
-            "Mana Regeneration": 2.0
-        }
-    },
-    {
-        "id": "divine-rapier",
-        "imageUrl": "/assets/items/divine-rapier-766e80a5958d1b024996871bbe43feb770e8973eb6d82bcc31216acde6cccbd8.jpg",
-        "name": "Divine Rapier",
-        "price": 6000,
-        "statsArray": [
-            "Damage"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">350</span> <span class=\"label\">Damage</span></div></div>",
-        "statsObject": {
-            "Damage": 350.0
         }
     },
     {
@@ -2101,6 +2067,32 @@
             "Agility": 4.0,
             "Intelligence": 4.0,
             "Strength": 4.0
+        }
+    },
+    {
+        "id": "ring-of-health",
+        "imageUrl": "/assets/items/ring-of-health-82c602099c0b1a3a3307d3f7f3c90f9a50317a45eaea1c65157c43547146ff28.jpg",
+        "name": "Ring of Health",
+        "price": 825,
+        "statsArray": [
+            "HP Regeneration"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div></div>",
+        "statsObject": {
+            "HP Regeneration": 6.5
+        }
+    },
+    {
+        "id": "divine-rapier",
+        "imageUrl": "/assets/items/divine-rapier-766e80a5958d1b024996871bbe43feb770e8973eb6d82bcc31216acde6cccbd8.jpg",
+        "name": "Divine Rapier",
+        "price": 5950,
+        "statsArray": [
+            "Damage"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">350</span> <span class=\"label\">Damage</span></div></div>",
+        "statsObject": {
+            "Damage": 350.0
         }
     },
     {
@@ -2143,19 +2135,6 @@
         }
     },
     {
-        "id": "ring-of-health",
-        "imageUrl": "/assets/items/ring-of-health-82c602099c0b1a3a3307d3f7f3c90f9a50317a45eaea1c65157c43547146ff28.jpg",
-        "name": "Ring of Health",
-        "price": 825,
-        "statsArray": [
-            "HP Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6.5</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "HP Regeneration": 6.5
-        }
-    },
-    {
         "id": "quarterstaff",
         "imageUrl": "/assets/items/quarterstaff-c0a5e36df7853a129c1bf4716dfde90ea6140b5f540e45078809ae39cfad08bc.jpg",
         "name": "Quarterstaff",
@@ -2184,16 +2163,16 @@
         }
     },
     {
-        "id": "voodoo-mask",
-        "imageUrl": "/assets/items/voodoo-mask-975c89ca5a88e0db34d9b13cdba0571a3da092d8f64d342cd4d282dc02fcd7d8.jpg",
-        "name": "Voodoo Mask",
-        "price": 700,
+        "id": "mantle-of-intelligence",
+        "imageUrl": "/assets/items/mantle-of-intelligence-9eb4c7f2116bd97a0c3352f8fa7ff3d09b5b59cc4e2d0fdfbb1484e8b13b207a.jpg",
+        "name": "Mantle of Intelligence",
+        "price": 140,
         "statsArray": [
-            "Spell Lifesteal"
+            "Intelligence"
         ],
-        "statsHtml": "+2% Spell Lifesteal (Creep)<br>+10% Spell Lifesteal (Hero)",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Intelligence</span></div></div>",
         "statsObject": {
-            "Spell Lifesteal": "2% / 10%"
+            "Intelligence": 3.0
         }
     },
     {
@@ -2212,31 +2191,16 @@
         }
     },
     {
-        "id": "drum-of-endurance",
-        "imageUrl": "/assets/items/drum-of-endurance-6932a5cebd0b6e7483dde175f49660a3ad0608c55d11abb5989306bc53046140.jpg",
-        "name": "Drum of Endurance",
-        "price": 1700,
+        "id": "voodoo-mask",
+        "imageUrl": "/assets/items/voodoo-mask-975c89ca5a88e0db34d9b13cdba0571a3da092d8f64d342cd4d282dc02fcd7d8.jpg",
+        "name": "Voodoo Mask",
+        "price": 700,
         "statsArray": [
-            "Strength",
-            "Intelligence"
+            "Spell Lifesteal"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsHtml": "+2% Spell Lifesteal (Creep)<br>+10% Spell Lifesteal (Hero)",
         "statsObject": {
-            "Intelligence": 7.0,
-            "Strength": 7.0
-        }
-    },
-    {
-        "id": "mantle-of-intelligence",
-        "imageUrl": "/assets/items/mantle-of-intelligence-9eb4c7f2116bd97a0c3352f8fa7ff3d09b5b59cc4e2d0fdfbb1484e8b13b207a.jpg",
-        "name": "Mantle of Intelligence",
-        "price": 140,
-        "statsArray": [
-            "Intelligence"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">3</span> <span class=\"label\">Intelligence</span></div></div>",
-        "statsObject": {
-            "Intelligence": 3.0
+            "Spell Lifesteal": "2% / 10%"
         }
     },
     {
@@ -2257,6 +2221,42 @@
         }
     },
     {
+        "id": "mage-slayer",
+        "imageUrl": "/assets/items/mage-slayer-c2ff448fbcfcc5a493376422aca47a5972ecc453011705f585868ed9c4dcfc72.jpg",
+        "name": "Mage Slayer",
+        "price": 2400,
+        "statsArray": [
+            "Magic Resistance",
+            "Attack Speed",
+            "Damage",
+            "Mana Regeneration",
+            "Intelligence"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20%</span> <span class=\"label\">Magic Resistance</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Attack Speed</span></div><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Damage</span></div><div class=\"stat attribute\">+ <span class=\"value\">2.0</span> <span class=\"label\">Mana Regeneration</span></div><div class=\"stat attribute\">+ <span class=\"value\">10</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 20.0,
+            "Damage": 20.0,
+            "Intelligence": 10.0,
+            "Magic Resistance": "20%",
+            "Mana Regeneration": 2.0
+        }
+    },
+    {
+        "id": "drum-of-endurance",
+        "imageUrl": "/assets/items/drum-of-endurance-6932a5cebd0b6e7483dde175f49660a3ad0608c55d11abb5989306bc53046140.jpg",
+        "name": "Drum of Endurance",
+        "price": 1700,
+        "statsArray": [
+            "Strength",
+            "Intelligence"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Intelligence</span></div></div>",
+        "statsObject": {
+            "Intelligence": 7.0,
+            "Strength": 7.0
+        }
+    },
+    {
         "id": "chainmail",
         "imageUrl": "/assets/items/chainmail-56b4f2845838446cd0b550f0286b8ae52c230facc2fc033c8083c9e83eb8d094.jpg",
         "name": "Chainmail",
@@ -2267,6 +2267,19 @@
         "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">4</span> <span class=\"label\">Armor</span></div></div>",
         "statsObject": {
             "Armor": 4.0
+        }
+    },
+    {
+        "id": "eaglesong",
+        "imageUrl": "/assets/items/eaglesong-c993851159e9ae78cc9884675ef83c2802688b6393c08f0f191a4a1311898d39.jpg",
+        "name": "Eaglesong",
+        "price": 2800,
+        "statsArray": [
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 25.0
         }
     },
     {
@@ -2286,57 +2299,6 @@
             "Damage": 15.0,
             "Intelligence": 10.0,
             "Mana Regeneration": 1.25
-        }
-    },
-    {
-        "id": "eaglesong",
-        "imageUrl": "/assets/items/eaglesong-c993851159e9ae78cc9884675ef83c2802688b6393c08f0f191a4a1311898d39.jpg",
-        "name": "Eaglesong",
-        "price": 2800,
-        "statsArray": [
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">25</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 25.0
-        }
-    },
-    {
-        "id": "helm-of-the-overlord",
-        "imageUrl": "/assets/items/helm-of-the-overlord-1d49f1100268d8e64121be3b85e97aa5060d5c7c660d654e16241c226db3371e.jpg",
-        "name": "Helm of the Overlord",
-        "price": 6050,
-        "statsArray": [
-            "Armor",
-            "HP Regeneration",
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "Agility": 7.0,
-            "Armor": 7.0,
-            "HP Regeneration": 7.0,
-            "Intelligence": 7.0,
-            "Strength": 7.0
-        }
-    },
-    {
-        "id": "dagon",
-        "imageUrl": "/assets/items/dagon-f71c279563599dff17905f03ba94ac2cfa5b81f6ed2afd67f4145f2e64128b59.jpg",
-        "name": "Dagon",
-        "price": 2700,
-        "statsArray": [
-            "Intelligence",
-            "Strength",
-            "Agility"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
-        "statsObject": {
-            "Agility": 6.0,
-            "Intelligence": 14.0,
-            "Strength": 6.0
         }
     },
     {
@@ -2366,20 +2328,69 @@
         }
     },
     {
-        "id": "dagon-level-3",
-        "imageUrl": "/assets/items/dagon-level-3-2f7e5c36e65a6e4470ec4905dc0953055a6459bb0a8af63dc6d3633b131e458b.jpg",
-        "name": "Dagon (level 3)",
-        "price": 5200,
+        "id": "dagon",
+        "imageUrl": "/assets/items/dagon-f71c279563599dff17905f03ba94ac2cfa5b81f6ed2afd67f4145f2e64128b59.jpg",
+        "name": "Dagon",
+        "price": 2700,
         "statsArray": [
             "Intelligence",
             "Strength",
             "Agility"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"value\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">14</span> / <span class=\"other\">16</span> / <span class=\"other\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"value\">6</span> / <span class=\"other\">8</span> / <span class=\"other\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
         "statsObject": {
-            "Agility": 10.0,
-            "Intelligence": 18.0,
-            "Strength": 10.0
+            "Agility": 6.0,
+            "Intelligence": 14.0,
+            "Strength": 6.0
+        }
+    },
+    {
+        "id": "gloves-of-haste",
+        "imageUrl": "/assets/items/gloves-of-haste-ae6e290ea549bb1b8d443b3bb732c4b086fe06a1cb00752044d1d734e9cf9777.jpg",
+        "name": "Gloves of Haste",
+        "price": 450,
+        "statsArray": [
+            "Attack Speed"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsObject": {
+            "Attack Speed": 20.0
+        }
+    },
+    {
+        "id": "helm-of-the-overlord",
+        "imageUrl": "/assets/items/helm-of-the-overlord-1d49f1100268d8e64121be3b85e97aa5060d5c7c660d654e16241c226db3371e.jpg",
+        "name": "Helm of the Overlord",
+        "price": 6325,
+        "statsArray": [
+            "Armor",
+            "HP Regeneration",
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">All Attributes</span></div><div class=\"stat attribute\">+ <span class=\"value\">7</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">7.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
+        "statsObject": {
+            "Agility": 7.0,
+            "Armor": 7.0,
+            "HP Regeneration": 7.0,
+            "Intelligence": 7.0,
+            "Strength": 7.0
+        }
+    },
+    {
+        "id": "helm-of-iron-will",
+        "imageUrl": "/assets/items/helm-of-iron-will-5d1eacd861a61abd6f83af884c1e513fff0b7a08f553438983e2208b3a9f2132.jpg",
+        "name": "Helm of Iron Will",
+        "price": 975,
+        "statsArray": [
+            "Armor",
+            "HP Regeneration"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
+        "statsObject": {
+            "Armor": 6.0,
+            "HP Regeneration": 5.0
         }
     },
     {
@@ -2396,16 +2407,33 @@
         }
     },
     {
-        "id": "gloves-of-haste",
-        "imageUrl": "/assets/items/gloves-of-haste-ae6e290ea549bb1b8d443b3bb732c4b086fe06a1cb00752044d1d734e9cf9777.jpg",
-        "name": "Gloves of Haste",
-        "price": 450,
+        "id": "talisman-of-evasion",
+        "imageUrl": "/assets/items/talisman-of-evasion-882acd2ca111802a3744577a3985694788109c28e6a00eadd00bd76393a221eb.jpg",
+        "name": "Talisman of Evasion",
+        "price": 1300,
         "statsArray": [
-            "Attack Speed"
+            "Evasion"
         ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">20</span> <span class=\"label\">Attack Speed</span></div></div>",
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15%</span> <span class=\"label\">Evasion</span></div></div>",
         "statsObject": {
-            "Attack Speed": 20.0
+            "Evasion": "15%"
+        }
+    },
+    {
+        "id": "dagon-level-3",
+        "imageUrl": "/assets/items/dagon-level-3-2f7e5c36e65a6e4470ec4905dc0953055a6459bb0a8af63dc6d3633b131e458b.jpg",
+        "name": "Dagon (level 3)",
+        "price": 5200,
+        "statsArray": [
+            "Intelligence",
+            "Strength",
+            "Agility"
+        ],
+        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"other\">14</span> / <span class=\"other\">16</span> / <span class=\"value\">18</span> / <span class=\"other\">20</span> / <span class=\"other\">22</span> <span class=\"label\">Intelligence</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Strength</span></div><div class=\"stat attribute\">+ <span class=\"other\">6</span> / <span class=\"other\">8</span> / <span class=\"value\">10</span> / <span class=\"other\">12</span> / <span class=\"other\">14</span> <span class=\"label\">Agility</span></div></div>",
+        "statsObject": {
+            "Agility": 10.0,
+            "Intelligence": 18.0,
+            "Strength": 10.0
         }
     },
     {
@@ -2426,19 +2454,6 @@
         }
     },
     {
-        "id": "talisman-of-evasion",
-        "imageUrl": "/assets/items/talisman-of-evasion-882acd2ca111802a3744577a3985694788109c28e6a00eadd00bd76393a221eb.jpg",
-        "name": "Talisman of Evasion",
-        "price": 1300,
-        "statsArray": [
-            "Evasion"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">15%</span> <span class=\"label\">Evasion</span></div></div>",
-        "statsObject": {
-            "Evasion": "15%"
-        }
-    },
-    {
         "id": "dagon-level-4",
         "imageUrl": "/assets/items/dagon-level-4-2ea1e978f9ce38932f4c93ce467d049dbeedc978e31cd4473139a9862b360d1f.jpg",
         "name": "Dagon (level 4)",
@@ -2453,21 +2468,6 @@
             "Agility": 12.0,
             "Intelligence": 20.0,
             "Strength": 12.0
-        }
-    },
-    {
-        "id": "helm-of-iron-will",
-        "imageUrl": "/assets/items/helm-of-iron-will-5d1eacd861a61abd6f83af884c1e513fff0b7a08f553438983e2208b3a9f2132.jpg",
-        "name": "Helm of Iron Will",
-        "price": 925,
-        "statsArray": [
-            "Armor",
-            "HP Regeneration"
-        ],
-        "statsHtml": "<div class=\"stats\"><div class=\"stat attribute\">+ <span class=\"value\">6</span> <span class=\"label\">Armor</span></div><div class=\"stat attribute\">+ <span class=\"value\">5.0</span> <span class=\"label\">HP Regeneration</span></div></div>",
-        "statsObject": {
-            "Armor": 6.0,
-            "HP Regeneration": 5.0
         }
     },
     {
@@ -2489,7 +2489,7 @@
         "id": "sacred-relic",
         "imageUrl": "/assets/items/sacred-relic-9aad6a02f030533d365991192bdc3c6aa8f67870f207e5bd5c87715266b95459.jpg",
         "name": "Sacred Relic",
-        "price": 3800,
+        "price": 3750,
         "statsArray": [
             "Damage"
         ],
@@ -2502,7 +2502,7 @@
         "id": "helm-of-the-dominator",
         "imageUrl": "/assets/items/helm-of-the-dominator-58eaf6d82cfe3c0201d3c73afed83e8ece8e4516485d18b2d4449e7eecd53d88.jpg",
         "name": "Helm of the Dominator",
-        "price": 2350,
+        "price": 2400,
         "statsArray": [
             "Armor",
             "HP Regeneration",
