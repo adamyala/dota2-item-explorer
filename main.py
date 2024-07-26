@@ -81,6 +81,7 @@ def get_item_tooltips():
     op = Options()
     # disable JavaScript
     op.set_preference("javascript.enabled", False)
+    op.headless = True
 
     with webdriver.Firefox(executable_path="./geckodriver", options=op) as driver:
         driver.maximize_window()
@@ -100,5 +101,5 @@ def get_item_tooltips():
 
 
 get_items_json()
-get_image_thumbnails()
-get_item_tooltips()
+# get_image_thumbnails()
+# get_item_tooltips()
