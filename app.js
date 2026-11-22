@@ -92,6 +92,7 @@ const state = {
     search: "",
     hasActive: false,
     hasAura: false,
+    hasDispel: false,
     disassemble: false,
     maxCost: null,
     statPrices: {},
@@ -256,6 +257,9 @@ function normalize(data) {
             // No aura flag in the data: an ability named "... Aura" or aura ability values (aura_radius, armor_aura).
             hasAura: (entry.abilities ?? []).some((ability) => /\baura\b/i.test(ability.title))
                 || (entry.attrib ?? []).some((attrib) => /(^|_)aura(_|$)/.test(attrib.key)),
+            // Applies a dispel ("Dispel Type: Basic Dispel", "dispels the target"), not "cannot be dispelled".
+            hasDispel: (entry.abilities ?? []).some((ability) =>
+                /dispel/i.test(ability.description.replace(/(cannot|can't|not) be dispell?ed/gi, ""))),
             canDisassemble: DISASSEMBLE_ITEMS.has(slug),
             abilityText: (entry.abilities ?? [])
                 .map((ability) => `${ability.title} ${ability.description}`)
@@ -324,6 +328,7 @@ function baseItems() {
         if (!item.isShop) return false;
         if (state.hasActive && !item.hasActive) return false;
         if (state.hasAura && !item.hasAura) return false;
+        if (state.hasDispel && !item.hasDispel) return false;
         if (state.disassemble && !item.canDisassemble) return false;
         if (state.maxCost !== null && item.cost > state.maxCost) return false;
         return true;
@@ -579,6 +584,7 @@ function writeHash() {
     if (state.search) params.set("q", state.search);
     if (state.hasActive) params.set("active", "1");
     if (state.hasAura) params.set("aura", "1");
+    if (state.hasDispel) params.set("dispel", "1");
     if (state.disassemble) params.set("disassemble", "1");
     if (state.maxCost !== null) params.set("max", state.maxCost);
     if (state.computed) params.set("computed", "1");
@@ -597,6 +603,7 @@ function readHash() {
     state.search = params.get("q") ?? "";
     state.hasActive = params.get("active") === "1";
     state.hasAura = params.get("aura") === "1";
+    state.hasDispel = params.get("dispel") === "1";
     state.disassemble = params.get("disassemble") === "1";
     state.maxCost = parseCost(params.get("max"));
     state.computed = params.get("computed") === "1";
@@ -610,6 +617,7 @@ function syncControls() {
     $("#search").value = state.search;
     $("#has-active").checked = state.hasActive;
     $("#has-aura").checked = state.hasAura;
+    $("#has-dispel").checked = state.hasDispel;
     $("#disassemble").checked = state.disassemble;
     $("#max-cost").value = state.maxCost ?? "";
     $("#computed").checked = state.computed;
@@ -659,6 +667,7 @@ function goToItem(slug) {
         state.search = target.name;
         state.hasActive = false;
         state.hasAura = false;
+        state.hasDispel = false;
         state.disassemble = false;
         state.maxCost = null;
         state.stats = [];
@@ -676,6 +685,7 @@ function bindEvents() {
     $("#stat-search").addEventListener("input", (event) => { state.statSearch = event.target.value; renderChips(); });
     $("#has-active").addEventListener("change", (event) => { state.hasActive = event.target.checked; render(); });
     $("#has-aura").addEventListener("change", (event) => { state.hasAura = event.target.checked; render(); });
+    $("#has-dispel").addEventListener("change", (event) => { state.hasDispel = event.target.checked; render(); });
     $("#disassemble").addEventListener("change", (event) => { state.disassemble = event.target.checked; render(); });
     $("#max-cost").addEventListener("input", (event) => { state.maxCost = parseCost(event.target.value); render(); });
     $("#computed").addEventListener("change", (event) => {

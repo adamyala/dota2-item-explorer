@@ -19,7 +19,7 @@ Then open http://localhost:8000. It needs a server because `app.js` is an ES mod
 - Pick stats to add a value column and a "gold per 1 stat" column for each one.
 - Click any column header to sort. Items without that stat always sort last.
 - Search matches item names and ability text (e.g. "silence", "dispel").
-- Set a gold budget to see only items you can afford, or filter to items with an active, an aura, or that can be disassembled (`DISASSEMBLE_ITEMS` in `app.js`, a hand-maintained list).
+- Set a gold budget to see only items you can afford, or filter to items with an active, an aura, a dispel, or that can be disassembled (`DISASSEMBLE_ITEMS` in `app.js`, a hand-maintained list).
 - Gold efficiency: each stat is priced at the cheapest basic item that gives only that stat, and an item's stats are valued at those prices against its cost.
 - Only items you can buy in the shop are shown: no consumables, recipes, neutrals or removed items. Removed items that still have a gold cost in the data are listed in `REMOVED_ITEMS` in `app.js`.
 - The Cooldown column falls back to an ability value (for example Holy Locket's use cooldown) when an item has no main cooldown, and labels where the number came from.
