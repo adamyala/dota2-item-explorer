@@ -4,15 +4,15 @@ const DATA_URL = "https://raw.githubusercontent.com/odota/dotaconstants/refs/hea
 const IMAGE_HOST = "https://cdn.cloudflare.steamstatic.com";
 
 // Stats granted per point of each attribute, used by the "Include attribute bonuses" toggle.
-// Update these when a patch changes attribute scaling.
+// Checked against patch 7.42 notes; update these when a patch changes attribute scaling.
 const ATTRIBUTE_BONUSES = {
-    "Strength": { "Health": 22, "Health Regeneration": 0.1 },
+    "Strength": { "Health": 20, "Health Regeneration": 0.1 },
     "Agility": { "Armor": 1 / 6, "Attack Speed": 1 },
-    "Intelligence": { "Mana": 12, "Mana Regeneration": 0.05 },
+    "Intelligence": { "Mana": 12, "Mana Regeneration": 0.05, "Magic Resistance %": 0.125 },
 };
 
 // Attack damage per point of each attribute, by the hero's primary attribute.
-// Universal heroes get damage from all three attributes. Update these when a patch changes them.
+// Universal heroes get damage from all three attributes (0.45 since patch 7.38). Update these when a patch changes them.
 const PRIMARY_DAMAGE = {
     "Strength": { "Strength": 1 },
     "Agility": { "Agility": 1 },
@@ -40,21 +40,19 @@ const REMOVED_ITEMS = new Set([
     "caduceus",
 ]);
 
-// Items that can be disassembled. The data has no flag for this; the list comes from the
-// 7.30e version of this site, so check it against the current patch and edit as needed.
+// Items that can be disassembled. odota's data has no flag for this; the list is every item marked
+// "DOTA_ITEM_DISASSEMBLE_ALWAYS" in the game's scripts/npc/items.txt (patch 7.42), so update it from there.
 const DISASSEMBLE_ITEMS = new Set([
-    "arcane_boots",
-    "dragon_lance",
+    "angels_demise",
     "echo_sabre",
-    "ethereal_blade",
-    "heavens_halberd",
     "kaya_and_sange",
-    "lotus_orb",
     "mask_of_madness",
-    "octarine_core",
     "pers",
+    "radiance",
+    "ristuls_devotion",
     "sange_and_yasha",
     "vanguard",
+    "vladmir",
     "yasha_and_kaya",
 ]);
 
@@ -155,8 +153,8 @@ function addToStat(stats, label, amount) {
     const num = (existing?.num ?? 0) + amount;
     stats[label] = {
         num,
-        raw: formatNumber(num) + (existing?.pct ? "%" : ""),
-        pct: existing?.pct ?? false,
+        raw: formatNumber(num) + ((existing?.pct ?? label.endsWith(" %")) ? "%" : ""),
+        pct: existing?.pct ?? label.endsWith(" %"),
         derived: true,
     };
 }
@@ -620,10 +618,11 @@ function renderEfficiencyHelp() {
 // Built from the constants so the explanation always matches the math.
 function renderComputedHelp() {
     const perAttribute = Object.entries(ATTRIBUTE_BONUSES).map(([attribute, bonuses]) => {
-        const gains = Object.entries(bonuses)
-            .map(([label, perPoint]) => `${formatNumber(Math.round(perPoint * 100) / 100)} ${label}`)
-            .join(" and ");
-        return `each point of ${attribute} gives ${gains}`;
+        const gains = Object.entries(bonuses).map(([label, perPoint]) => {
+            const amount = String(Math.round(perPoint * 1000) / 1000);
+            return label.endsWith(" %") ? `${amount}% ${label.slice(0, -2)}` : `${amount} ${label}`;
+        });
+        return `each point of ${attribute} gives ${gains.slice(0, -1).join(", ")} and ${gains.at(-1)}`;
     });
     const universal = PRIMARY_DAMAGE.Universal.Strength;
     $("#computed-help").textContent =
