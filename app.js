@@ -38,12 +38,30 @@ const REMOVED_ITEMS = new Set([
     "skypiercer",
     "berserkers_sabatons",
     "caduceus",
+    // Removed in 7.41 / 7.42 (marked IsObsolete or ItemPurchasable 0 in the game's items.txt).
+    "cornucopia",
+    "eternal_shroud",
+    "helm_of_the_overlord",
+    "javelin",
+    "wraith_pact",
+    "angels_demise",
 ]);
+
+// odota's component lists miss some recipes; these come from the game's items.txt.
+// COMPONENT_FIXES replaces an item's components, ALSO_BUILDS_FROM adds alternate recipes for "Builds into".
+const COMPONENT_FIXES = {
+    "dagon_2": ["dagon"],
+    "dagon_3": ["dagon_2"],
+    "dagon_4": ["dagon_3"],
+    "dagon_5": ["dagon_4"],
+};
+const ALSO_BUILDS_FROM = {
+    "power_treads": ["robe", "boots_of_elves"],
+};
 
 // Items that can be disassembled. odota's data has no flag for this; the list is every item marked
 // "DOTA_ITEM_DISASSEMBLE_ALWAYS" in the game's scripts/npc/items.txt (patch 7.42), so update it from there.
 const DISASSEMBLE_ITEMS = new Set([
-    "angels_demise",
     "echo_sabre",
     "kaya_and_sange",
     "mask_of_madness",
@@ -243,7 +261,8 @@ function normalize(data) {
                 .map((ability) => `${ability.title} ${ability.description}`)
                 .join(" ")
                 .toLowerCase(),
-            components: (entry.components ?? []).filter(Boolean),
+            components: COMPONENT_FIXES[slug] ?? (entry.components ?? []).filter(Boolean),
+            buildsFrom: [...(COMPONENT_FIXES[slug] ?? entry.components ?? []), ...(ALSO_BUILDS_FROM[slug] ?? [])].filter(Boolean),
             lore: entry.lore || "",
             notes: entry.notes || "",
             hints: entry.hint ?? [],
@@ -471,7 +490,7 @@ function renderDetail(item, colspan) {
         </div>`).join("");
     const components = item.components.map(componentButton).join("");
     const buildsInto = state.items
-        .filter((other) => other.isShop && other.components.includes(item.slug))
+        .filter((other) => other.isShop && other.buildsFrom.includes(item.slug))
         .sort((a, b) => a.cost - b.cost)
         .map((other) => componentButton(other.slug))
         .join("");
