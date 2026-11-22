@@ -54,7 +54,11 @@ a { color: var(--accent); }
     align-items: center;
 }
 
-input[type="search"] {
+.control-row + .control-row { margin-top: 8px; }
+.budget { display: inline-flex; gap: 6px; align-items: center; }
+.budget input { width: 90px; }
+
+input[type="search"], input[type="number"] {
     font: inherit;
     color: var(--text);
     background: var(--bg);
@@ -65,6 +69,16 @@ input[type="search"] {
 
 #search { flex: 1 1 220px; max-width: 320px; }
 
+.help { margin: 8px 0 0; color: var(--muted); font-size: 12px; max-width: 760px; }
+.help summary { cursor: pointer; color: var(--accent); width: fit-content; user-select: none; }
+.help p { margin: 6px 0 0 14px; }
+table.prices { width: auto; margin: 8px 0 0 14px; font-size: 12px; }
+table.prices th, table.prices td { padding: 2px 10px 2px 0; border: none; position: static; background: none; cursor: default; }
+td.eff { cursor: help; }
+td.eff.good { color: var(--accent); font-weight: 600; }
+.primary { border: none; margin: 6px 0 0 24px; padding: 0; }
+.primary[hidden] { display: none; }
+.primary legend { float: left; font-weight: 600; margin-right: 4px; padding: 0; }
 .toggle { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; user-select: none; }
 
 .stat-picker { margin-top: 12px; }
@@ -99,6 +113,7 @@ input[type="search"] {
 .chip .count { color: var(--muted); margin-left: 4px; }
 .chip.selected { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
 .chip.selected .count { color: inherit; }
+.chip.empty:not(.selected) { opacity: 0.45; }
 
 .status { color: var(--muted); margin: 8px 0; }
 .status button { margin-left: 8px; }
@@ -144,6 +159,7 @@ td.icon { width: 56px; padding-right: 0; }
 td.icon img { width: 44px; height: 32px; border-radius: 3px; display: block; object-fit: cover; }
 td.name { font-weight: 500; white-space: nowrap; }
 td.summary { color: var(--muted); font-size: 12px; min-width: 200px; }
+.derived[title] { cursor: help; }
 td.abilities { font-size: 12px; min-width: 320px; max-width: 480px; }
 td.abilities p { margin: 0 0 4px; }
 td.abilities p:last-child { margin-bottom: 0; }
@@ -165,9 +181,6 @@ tr.detail-row > td { background: var(--bg); padding: 12px 16px; }
     cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--text); font: inherit; font-size: 12px;
 }
 .components img { width: 33px; height: 24px; }
-dl.attribs { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin: 0; font-size: 12px; }
-dl.attribs dt { color: var(--muted); }
-dl.attribs dd { margin: 0; font-variant-numeric: tabular-nums; }
 
 @keyframes flash { from { background: var(--accent-soft); } to { background: transparent; } }
 tr.flash { animation: flash 1.5s ease-out; }

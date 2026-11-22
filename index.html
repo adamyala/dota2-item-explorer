@@ -15,12 +15,46 @@
 
     <section class="controls">
         <div class="control-row">
-            <input id="search" type="search" placeholder="Search items…" autocomplete="off">
-            <label class="toggle"><input id="has-active" type="checkbox"> Has active</label>
-            <label class="toggle" title="Attributes add their derived stats (Strength → Health, Agility → Armor, etc.)">
-                <input id="computed" type="checkbox"> Computed stats
+            <input id="search" type="search" placeholder="Search names and abilities…" autocomplete="off">
+            <label class="budget">
+                Budget
+                <input id="max-cost" type="number" min="0" step="50" placeholder="any" inputmode="numeric">
+                gold
             </label>
         </div>
+        <div class="control-row">
+            <label class="toggle"><input id="has-active" type="checkbox"> Has active ability</label>
+            <label class="toggle"><input id="has-aura" type="checkbox"> Has aura</label>
+            <label class="toggle"><input id="disassemble" type="checkbox"> Can disassemble</label>
+        </div>
+        <div class="control-row">
+            <label class="toggle">
+                <input id="computed" type="checkbox"> Include attribute bonuses
+            </label>
+        </div>
+        <fieldset id="primary" class="control-row primary" hidden>
+            <legend>Hero's primary attribute (adds attack damage)</legend>
+            <label class="toggle"><input type="radio" name="primary" value="" checked> Don't count</label>
+            <label class="toggle"><input type="radio" name="primary" value="Strength"> Strength</label>
+            <label class="toggle"><input type="radio" name="primary" value="Agility"> Agility</label>
+            <label class="toggle"><input type="radio" name="primary" value="Intelligence"> Intelligence</label>
+            <label class="toggle"><input type="radio" name="primary" value="Universal"> Universal</label>
+        </fieldset>
+        <details class="help">
+            <summary>What are attribute bonuses?</summary>
+            <p id="computed-help"></p>
+        </details>
+        <details class="help">
+            <summary>How is gold efficiency calculated?</summary>
+            <p>
+                Each stat is priced at the cheapest basic item that gives only that stat, e.g. Gauntlets of Strength
+                (140 gold for 3 Strength) prices Strength at about 47 gold per point. An item's stats are added up at
+                those prices and compared to its cost: over 100% means the stats alone are worth more than you pay.
+                Stats with no basic item to price them (cast range, lifesteal, …) and abilities aren't counted, so
+                items whose value is mostly their abilities score low. Hover a percentage for the breakdown.
+            </p>
+            <div id="efficiency-prices"></div>
+        </details>
 
         <div class="stat-picker">
             <div class="stat-picker-header">
@@ -44,6 +78,7 @@
     <footer>
         <small>
             Data from <a href="https://github.com/odota/dotaconstants">odota/dotaconstants</a>, loaded live.
+            <a href="https://github.com/adamyala/dota2-item-explorer">Source code</a>.
             Now go rush Dagon!
         </small>
     </footer>
